@@ -1,0 +1,9 @@
+.navbar {
+  height: var(--navbar-height);
+  background-color: var(--secondary-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding: 0 20px;
+  gap: 15px;
+}

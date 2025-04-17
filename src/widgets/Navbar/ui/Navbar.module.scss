@@ -1,9 +1,14 @@
 .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: var(--navbar-height);
+  padding: 0 20px;
   background-color: var(--secondary-bg-color);
+  border-bottom: 1px solid var(--border-color);
+}
+.links  {
   display: flex;
   align-items: center;
-  justify-content: right;
-  padding: 0 20px;
-  gap: 15px;
+  gap: 20px;
 }

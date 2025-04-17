@@ -1,4 +1,3 @@
-import { ThemeSwitcher } from "@/features/ThemeSwitcher";
 import s from "./Navbar.module.scss";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import { AppLink } from "@/shared/ui/AppLink/AppLink";
@@ -12,10 +11,6 @@ export const Navbar = ({ className }: NavbarProps) => {
       <div className={s.links}>
         <AppLink to={"/"}>Главная</AppLink>
         <AppLink to={"/about"}>О нас</AppLink>
-      </div>
-
-      <div>
-        <ThemeSwitcher />
       </div>
     </div>
   );

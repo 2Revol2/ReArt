@@ -1,16 +1,19 @@
-@import url("./reset.scss");
-@import url("./themes/dark.scss");
-@import url("./themes/normal.scss");
-@import url("./variables/global.scss");
+@import "./reset";
+@import "./themes/dark";
+@import "./themes/normal";
+@import "./variables/global";
+
 .app {
   font: var(--font-m);
   background: var(--bg-color);
   color: var(--primary-color);
   min-height: 100vh;
 }
+
 .content_wrapper {
   display: flex;
 }
+
 .page_wrapper {
   flex: 1;
   padding: 20px;

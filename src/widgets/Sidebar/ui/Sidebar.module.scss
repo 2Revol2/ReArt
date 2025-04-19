@@ -6,6 +6,7 @@
   transition: all 0.3s ease-in-out;
   border-right: 1px solid var(--border-color);
 }
+
 .collapsed {
   width: var(--sidebar-width-collapsed);
 }
@@ -19,6 +20,7 @@
   text-align: center;
   bottom: 20px;
 }
+
 .themeButton {
   display: flex;
   justify-content: center;

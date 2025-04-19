@@ -2,8 +2,10 @@
   text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
+
 .primary {
   color: var(--primary-color);
+
   &:hover {
     color: var(--secondary-color);
   }
@@ -11,6 +13,7 @@
 
 .secondary {
   color: var(--secondary-color);
+
   &:hover {
     color: var(--primary-color);
   }

@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
   },
   extends: [
     "plugin:react/recommended",
@@ -23,9 +24,9 @@ module.exports = {
       2,
       { extensions: [".js", ".jsx", ".tsx"] },
     ],
-    "import/prefer-default-export": 0,
+    "import/prefer-default-export": "off",
     "linebreak-style": "off",
-    quotes: ["warn", "double"],
+    quotes: ["error", "double"],
     "react/function-component-definition": [
       2,
       { namedComponents: "arrow-function" },

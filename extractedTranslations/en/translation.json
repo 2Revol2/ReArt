@@ -1,5 +1,7 @@
 {
   "AboutUs": "AboutUs",
   "Language": "Language",
-  "MainPage": "MainPage"
+  "MainPage": "MainPage",
+  "pageNotFound": "pageNotFound",
+  "pageNotFount": "pageNotFount"
 }

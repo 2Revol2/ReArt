@@ -1,4 +1,6 @@
 {
   "Language": "English",
-  "pageNotFound": "Page not found"
+  "pageNotFound": "Page not found",
+  "anErrorOccurred": "An error occurred",
+  "reloadPage": "Reload page"
 }

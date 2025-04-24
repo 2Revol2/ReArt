@@ -1,7 +1,10 @@
 {
   "AboutUs": "AboutUs",
+  "An error occurred": "An error occurred",
   "Language": "Language",
   "MainPage": "MainPage",
+  "anErrorOccurred": "anErrorOccurred",
   "pageNotFound": "pageNotFound",
-  "pageNotFount": "pageNotFount"
+  "pageNotFount": "pageNotFount",
+  "reloadPage": "reloadPage"
 }

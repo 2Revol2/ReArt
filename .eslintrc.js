@@ -20,17 +20,11 @@ module.exports = {
   },
   plugins: ["react", "@typescript-eslint", "i18next"],
   rules: {
-    "react/jsx-filename-extension": [
-      2,
-      { extensions: [".js", ".jsx", ".tsx"] },
-    ],
+    "react/jsx-filename-extension": [2, { extensions: [".js", ".jsx", ".tsx"] }],
     "import/prefer-default-export": "off",
     "linebreak-style": "off",
     quotes: ["error", "double"],
-    "react/function-component-definition": [
-      2,
-      { namedComponents: "arrow-function" },
-    ],
+    "react/function-component-definition": [2, { namedComponents: "arrow-function" }],
     "react/react-in-jsx-scope": "off",
     "import/no-unresolved": "off",
     "import/extensions": "off",
@@ -49,9 +43,17 @@ module.exports = {
         endOfLine: "auto",
       },
     ],
-    "i18next/no-literal-string": ["warn", { markupOnly: true }],
+    "i18next/no-literal-string": ["warn", { markupOnly: true, ignoreAttribute: ["data-testid"] }],
   },
   globals: {
     __IS_DEV__: true,
   },
+  overrides: [
+    {
+      files: ["**/src/**/*.test.ts", "**/src/**/*.test.tsx"],
+      rules: {
+        "i18next/no-literal-string": "off",
+      },
+    },
+  ],
 };

@@ -15,12 +15,7 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
       loader: "babel-loader",
       options: {
         presets: ["@babel/preset-env"],
-        plugins: [
-          [
-            "i18next-extract",
-            { locales: ["en", "ru"], keyAsDefaultValue: true },
-          ],
-        ],
+        plugins: [["i18next-extract", { locales: ["en", "ru"], keyAsDefaultValue: true }]],
       },
     },
   };
@@ -38,11 +33,8 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
         loader: "css-loader",
         options: {
           modules: {
-            auto: (resourcePath: string) =>
-              Boolean(resourcePath.includes(".module.")),
-            localIdentName: isDev
-              ? "[path][name]__[local]--[hash:base64:5]"
-              : "[hash:base64:8]",
+            auto: (resourcePath: string) => Boolean(resourcePath.includes(".module.")),
+            localIdentName: isDev ? "[path][name]__[local]--[hash:base64:5]" : "[hash:base64:8]",
           },
         },
       },

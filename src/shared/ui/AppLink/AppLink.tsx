@@ -22,11 +22,7 @@ export const AppLink = ({
   ...otherProps
 }: AppLinkProps) => {
   return (
-    <Link
-      to={to}
-      className={classNames(s.appLink, {}, [className, s[theme]])}
-      {...otherProps}
-    >
+    <Link to={to} className={classNames(s.appLink, {}, [className, s[theme]])} {...otherProps}>
       {children}
     </Link>
   );

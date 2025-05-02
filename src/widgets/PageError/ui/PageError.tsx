@@ -1,10 +1,12 @@
 import { useTranslation } from "react-i18next";
 import s from "./PageError.module.scss";
 import { Button } from "@/shared/ui/Button/Button";
+
 export const PageError = () => {
   const { t } = useTranslation();
 
   const reloadPage = () => {
+    // eslint-disable-next-line no-restricted-globals
     location.reload();
   };
   return (

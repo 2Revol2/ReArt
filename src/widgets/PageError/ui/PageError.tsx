@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import s from "./PageError.module.scss";
-import { Button } from "@/shared/ui/Button/Button";
+import { Button, ButtonTheme } from "@/shared/ui/Button/Button";
 
 export const PageError = () => {
   const { t } = useTranslation();
@@ -12,7 +12,9 @@ export const PageError = () => {
   return (
     <div className={s.pageError}>
       <h3>{t("anErrorOccurred")}</h3>
-      <Button onClick={reloadPage}>{t("reloadPage")}</Button>
+      <Button theme={ButtonTheme.OUTLINE} onClick={reloadPage}>
+        {t("reloadPage")}
+      </Button>
     </div>
   );
 };

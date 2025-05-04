@@ -11,7 +11,8 @@
     "lint:fix": "npx eslint \"**/*.{ts,tsx}\" --fix && npx stylelint \"**/*.scss\" --fix",
     "unit": "jest --config ./config/jest/jest.config.ts",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build -c ./config/storybook",
+    "chromatic": "npx chromatic --project-token=chpt_7cff6dea8aca919"
   },
   "keywords": [],
   "author": "",
@@ -45,6 +46,7 @@
     "@typescript-eslint/parser": "^5.12.1",
     "babel-loader": "^9.2.1",
     "babel-plugin-i18next-extract": "^0.8.3",
+    "chromatic": "^11.28.2",
     "css-loader": "^6.6.0",
     "eslint": "^8.57.1",
     "eslint-config-airbnb": "^19.0.4",

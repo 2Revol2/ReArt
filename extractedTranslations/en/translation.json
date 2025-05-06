@@ -1,9 +1,14 @@
 {
+  "": "",
+  "About us": "About us",
   "AboutUs": "AboutUs",
   "An error occurred": "An error occurred",
   "Language": "Language",
   "MainPage": "MainPage",
+  "aboutUs": "aboutUs",
   "anErrorOccurred": "anErrorOccurred",
+  "language": "language",
+  "main": "main",
   "pageNotFound": "pageNotFound",
   "pageNotFount": "pageNotFount",
   "reloadPage": "reloadPage"

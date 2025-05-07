@@ -2,5 +2,5 @@
 /build
 *storybook.log
 /storybook-static
-.loki/report.json
-.loki/report.html
+/.loki/report.html
+/.loki/report.json

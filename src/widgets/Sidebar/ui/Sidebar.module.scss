@@ -25,3 +25,33 @@
   display: flex;
   justify-content: center;
 }
+
+.collapseBtn {
+  position: absolute;
+  right: -33px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.links {
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.link {
+  display: flex;
+  gap: 5px;
+}
+
+.icon {
+  fill: var(--primary-color);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    fill: var(--secondary-color);
+  }
+}

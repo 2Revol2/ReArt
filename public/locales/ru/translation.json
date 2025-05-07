@@ -1,8 +1,9 @@
 {
   "language": "Русский",
+  "shortLanguage": "Ru",
   "pageNotFound": "Страница не найдена",
   "anErrorOccurred": "Произошла ошибка",
   "reloadPage": "Обновить страницу",
-  "main": "Main",
-  "aboutUs": "About us"
+  "main": "Главная",
+  "aboutUs": "О нас"
 }

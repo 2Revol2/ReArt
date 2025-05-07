@@ -1,8 +1,9 @@
 {
   "language": "English",
+  "shortLanguage": "En",
   "pageNotFound": "Page not found",
   "anErrorOccurred": "An error occurred",
   "reloadPage": "Reload page",
-  "main": "Главная",
-  "aboutUs": "О нас"
+  "main": "Main",
+  "aboutUs": "About us"
 }

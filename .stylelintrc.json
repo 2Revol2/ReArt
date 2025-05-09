@@ -2,6 +2,9 @@
   "extends": ["stylelint-config-standard-scss"],
   "rules": {
     "selector-class-pattern": null,
-    "media-feature-range-notation": null
+    "media-feature-range-notation": null,
+    "declaration-block-no-redundant-longhand-properties": null,
+    "shorthand-property-no-redundant-values": null,
+    "color-function-notation": "legacy"
   }
 }

@@ -3,7 +3,7 @@
   width: var(--sidebar-width);
   background-color: var(--secondary-bg-color);
   height: calc(100vh - var(--navbar-height));
-  transition: all 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
   border-right: 1px solid var(--border-color);
 }
 

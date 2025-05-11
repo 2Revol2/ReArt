@@ -21,6 +21,7 @@ module.exports = {
   },
   plugins: ["react", "@typescript-eslint", "i18next", "react-hooks"],
   rules: {
+    indent: ["error", 2],
     "react/jsx-filename-extension": [2, { extensions: [".js", ".jsx", ".tsx"] }],
     "import/prefer-default-export": "off",
     "linebreak-style": "off",
@@ -51,6 +52,7 @@ module.exports = {
     "no-restricted-globals": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error",
+    "no-param-reassign": "off",
   },
   globals: {
     __IS_DEV__: true,

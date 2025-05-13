@@ -6,5 +6,7 @@
   "reloadPage": "Reload page",
   "main": "Main",
   "aboutUs": "About us",
-  "login": "Login"
+  "login": "Login",
+  "enterUsername": "Enter username",
+  "enterPassword": "Enter password"
 }

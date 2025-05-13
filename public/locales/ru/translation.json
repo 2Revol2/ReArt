@@ -6,5 +6,7 @@
   "reloadPage": "Обновить страницу",
   "main": "Главная",
   "aboutUs": "О нас",
-  "login": "Войти"
+  "login": "Войти",
+  "enterUsername": "Введите username",
+  "enterPassword": "Введите пароль"
 }

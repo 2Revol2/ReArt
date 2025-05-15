@@ -89,3 +89,11 @@ export const SquareSizeXL: Story = {
     size: ButtonSize.XL,
   },
 };
+
+export const Disabled: Story = {
+  args: {
+    children: "Text",
+    theme: ButtonTheme.OUTLINE,
+    disabled: true,
+  },
+};

@@ -8,5 +8,8 @@
   "aboutUs": "О нас",
   "login": "Войти",
   "enterUsername": "Введите username",
-  "enterPassword": "Введите пароль"
+  "enterPassword": "Введите пароль",
+  "authorizationForm": "Форма авторизации",
+  "logout": "Выйти",
+  "Incorrect username or password": "Вы ввели неправильный логин или пароль"
 }

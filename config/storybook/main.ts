@@ -1,8 +1,8 @@
-import type { StorybookConfig } from "@storybook/react-webpack5";
-import { buildCssLoader } from "config/build/loaders/buildCssLoader";
-import { buildSvgLoader } from "config/build/loaders/buildSvgLoader";
 import path from "path";
 import { DefinePlugin, RuleSetRule } from "webpack";
+import type { StorybookConfig } from "@storybook/react-webpack5";
+import { buildCssLoader } from "../build/loaders/buildCssLoader";
+import { buildSvgLoader } from "../build/loaders/buildSvgLoader";
 
 const config: StorybookConfig = {
   stories: ["../../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
@@ -24,16 +24,16 @@ const config: StorybookConfig = {
         "@": path.resolve(__dirname, "../../src"),
       };
     }
-    config.module.rules.push(buildCssLoader(true));
+    config.module?.rules?.push(buildCssLoader(true));
 
     // eslint-disable-next-line no-param-reassign
-    config.module.rules = config.module.rules.map((rule: RuleSetRule) => {
+    config.module!.rules = (config.module!.rules as RuleSetRule[]).map((rule: RuleSetRule) => {
       if (/svg/.test(rule.test as string)) {
         return { ...rule, exclude: /\.svg$/i };
       }
       return rule;
     });
-    config.module.rules.push(buildSvgLoader());
+    config.module?.rules.push(buildSvgLoader());
 
     config.plugins?.push(
       new DefinePlugin({

@@ -1,17 +1,13 @@
-import { useState } from "react";
-import { useTranslation } from "react-i18next";
+import { memo, useState } from "react";
 import s from "./Sidebar.module.scss";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import { ThemeSwitcher } from "@/features/ThemeSwitcher";
 import { LanguageSwitcher } from "@/features/LanguageSwitcher";
 import { Button, ButtonSize, ButtonTheme } from "@/shared/ui/Button/Button";
-import { AppLink } from "@/shared/ui/AppLink/AppLink";
-import { RoutePaths } from "@/shared/config/routeConfig/routeConfig";
-import MainIncon from "@/shared/assets/icons/main.svg";
-import AboutIcon from "@/shared/assets/icons/about.svg";
+import { SidebarItemList } from "../../model/item";
+import { SidebarItem } from "../SidebarItem/SidebarItem";
 
-export const Sidebar = () => {
-  const { t } = useTranslation();
+export const Sidebar = memo(() => {
   const [collapsed, setCollapsed] = useState(false);
 
   const toggleSidebar = () => {
@@ -31,14 +27,9 @@ export const Sidebar = () => {
       </Button>
 
       <div className={s.links}>
-        <AppLink className={s.link} to={RoutePaths.main}>
-          <MainIncon className={s.icon} />
-          {!collapsed && <span> {t("main")}</span>}
-        </AppLink>
-        <AppLink className={s.link} to={RoutePaths.about}>
-          <AboutIcon className={s.icon} />
-          {!collapsed && <span> {t("aboutUs")}</span>}
-        </AppLink>
+        {SidebarItemList.map((item) => (
+          <SidebarItem item={item} collapsed={collapsed} key={item.path} />
+        ))}
       </div>
 
       <div className={s.switchers}>
@@ -49,4 +40,4 @@ export const Sidebar = () => {
       </div>
     </div>
   );
-};
+});

@@ -25,5 +25,15 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+
+  "profile": {
+    "first": "Макс",
+    "lastname": "Револ",
+    "age": 17,
+    "currency": "UA",
+    "country": "Ukraine",
+    "city": "Zaporozhye",
+    "username": "admin",
+    "avatar": "https://cs-games.net/uploads/posts/2020-07/1595354020_3358.jpg"
+  }
 }

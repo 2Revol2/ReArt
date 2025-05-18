@@ -9,6 +9,9 @@
   "Language": "Language",
   "Logout": "Logout",
   "MainPage": "MainPage",
+  "Profile": "Profile",
+  "Profile Page": "Profile Page",
+  "ProfilePage": "ProfilePage",
   "aboutUs": "aboutUs",
   "anErrorOccurred": "anErrorOccurred",
   "authorizationForm": "authorizationForm",
@@ -21,5 +24,6 @@
   "main": "main",
   "pageNotFound": "pageNotFound",
   "pageNotFount": "pageNotFount",
-  "reloadPage": "reloadPage"
+  "reloadPage": "reloadPage",
+  "Профиль": "Профиль"
 }

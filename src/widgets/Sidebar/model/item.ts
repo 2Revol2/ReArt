@@ -12,17 +12,17 @@ export interface SidebarItemType {
 export const SidebarItemList: SidebarItemType[] = [
   {
     path: RoutePaths.main,
-    text: "main",
+    text: "links.Main",
     Icon: MainIcon,
   },
   {
     path: RoutePaths.about,
-    text: "aboutUs",
+    text: "links.AboutUs",
     Icon: AboutIcon,
   },
   {
     path: RoutePaths.profile,
-    text: "profile",
+    text: "links.Profile",
     Icon: ProfileIcon,
   },
 ];

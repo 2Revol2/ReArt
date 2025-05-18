@@ -11,9 +11,9 @@ export const PageError = () => {
   };
   return (
     <div className={s.pageError}>
-      <h3>{t("anErrorOccurred")}</h3>
+      <h3>{t("errors.Unexpected")}</h3>
       <Button theme={ButtonTheme.OUTLINE} onClick={reloadPage}>
-        {t("reloadPage")}
+        {t("actions.ReloadPage")}
       </Button>
     </div>
   );

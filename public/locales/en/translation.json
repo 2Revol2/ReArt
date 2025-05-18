@@ -1,16 +1,26 @@
 {
-  "language": "English",
-  "shortLanguage": "En",
-  "pageNotFound": "Page not found",
-  "anErrorOccurred": "An error occurred",
-  "reloadPage": "Reload page",
-  "main": "Main",
-  "aboutUs": "About us",
-  "profile": "Profile",
-  "login": "Login",
-  "enterUsername": "Enter username",
-  "enterPassword": "Enter password",
-  "authorizationForm": "Authorization form",
-  "logout": "Logout",
-  "Incorrect username or password": "Incorrect username or password"
+  "language": {
+    "long": "English",
+    "short": "En"
+  },
+  "links": {
+    "Main": "Main",
+    "AboutUs": "About us",
+    "Profile": "Profile"
+  },
+  "authByUsername": {
+    "EnterUsername": "Enter username",
+    "EnterPassword": "Enter password",
+    "FormTitle": "Authorization form",
+    "FormError": "Incorrect username or password"
+  },
+  "errors": {
+    "NotFoundPage": "Page not found",
+    "Unexpected": "An error occurred"
+  },
+  "actions": {
+    "ReloadPage": "Reload page",
+    "Login": "Login",
+    "Logout": "Logout"
+  }
 }

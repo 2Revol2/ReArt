@@ -3,6 +3,10 @@
   "About us": "About us",
   "AboutUs": "AboutUs",
   "An error occurred": "An error occurred",
+  "Au": "Au",
+  "Auth": {
+    "": ""
+  },
   "Authorization form": "Authorization form",
   "AuthorizationForm": "AuthorizationForm",
   "Incorrect username or password": "Incorrect username or password",
@@ -13,11 +17,33 @@
   "Profile Page": "Profile Page",
   "ProfilePage": "ProfilePage",
   "aboutUs": "aboutUs",
+  "ac": "ac",
+  "acions": {
+    "ReloadPage": "ReloadPage"
+  },
+  "acti": "acti",
+  "actions": {
+    "Login": "Login",
+    "Logout": "Logout",
+    "ReloadPage": "ReloadPage"
+  },
   "anErrorOccurred": "anErrorOccurred",
+  "auth": "auth",
+  "authByUsername": {
+    "EnterPassword": "EnterPassword",
+    "EnterUsername": "EnterUsername",
+    "FormTitle": "FormTitle"
+  },
   "authorizationForm": "authorizationForm",
+  "e": "e",
   "enter": "enter",
   "enterPassword": "enterPassword",
   "enterUsername": "enterUsername",
+  "errors": {
+    "NotFoundPage": "NotFoundPage",
+    "PageNotFound": "PageNotFound",
+    "Unexpected": "Unexpected"
+  },
   "language": "language",
   "login": "login",
   "logout": "logout",

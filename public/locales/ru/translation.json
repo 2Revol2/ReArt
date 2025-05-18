@@ -1,17 +1,26 @@
 {
-  "language": "Русский",
-  "shortLanguage": "Ru",
-  "pageNotFound": "Страница не найдена",
-  "anErrorOccurred": "Произошла ошибка",
-  "reloadPage": "Обновить страницу",
-  "main": "Главная",
-  "aboutUs": "О нас",
-  "profile": "Профиль",
-  
-  "login": "Войти",
-  "enterUsername": "Введите username",
-  "enterPassword": "Введите пароль",
-  "authorizationForm": "Форма авторизации",
-  "logout": "Выйти",
-  "Incorrect username or password": "Вы ввели неправильный логин или пароль"
+  "language": {
+    "long": "Русский",
+    "short": "Ru"
+  },
+  "links": {
+    "Main": "Главная",
+    "AboutUs": "О нас",
+    "Profile": "Профиль"
+  },
+  "authByUsername": {
+    "EnterUsername": "Введите логин",
+    "EnterPassword": "Введите пароль",
+    "FormTitle": "Форма авторизации",
+    "FormError": "Вы ввели неправильный логин или пароль"
+  },
+  "errors": {
+    "NotFoundPage": "Страница не найдена",
+    "Unexpected": "Произошла ошибка"
+  },
+  "actions": {
+    "ReloadPage": "Обновить страницу",
+    "Login": "Войти",
+    "Logout": "Выйти"
+  }
 }

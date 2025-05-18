@@ -57,7 +57,7 @@ const LoginForm = memo(({ onSuccess }: LoginFormProps) => {
   return (
     <DynamicModuleLoader removeAfterUnmout reducers={initialReducers}>
       <div className={classNames(s.loginModal, {}, [])}>
-        <Text title={t("authorizationForm")} />
+        <Text title={t("authByUsername.FormTitle")} />
         {error && <Text text={t("Incorrect username or password")} theme={TextTheme.ERROR} />}
 
         <Input
@@ -65,13 +65,13 @@ const LoginForm = memo(({ onSuccess }: LoginFormProps) => {
           value={username}
           autofocus
           type="text"
-          placeholder={t("enterUsername")}
+          placeholder={t("authByUsername.EnterUsername")}
         />
         <Input
           onChange={onChangePassword}
           value={password}
           type="text"
-          placeholder={t("enterPassword")}
+          placeholder={t("authByUsername.EnterPassword")}
         />
 
         <Button
@@ -80,7 +80,7 @@ const LoginForm = memo(({ onSuccess }: LoginFormProps) => {
           onClick={onLoginClick}
           disabled={isLoading}
         >
-          {t("login")}
+          {t("actions.Login")}
         </Button>
       </div>
     </DynamicModuleLoader>

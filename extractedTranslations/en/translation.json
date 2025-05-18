@@ -32,6 +32,7 @@
   "authByUsername": {
     "EnterPassword": "EnterPassword",
     "EnterUsername": "EnterUsername",
+    "FormError": "FormError",
     "FormTitle": "FormTitle"
   },
   "authorizationForm": "authorizationForm",

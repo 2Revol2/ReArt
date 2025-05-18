@@ -58,7 +58,7 @@ const LoginForm = memo(({ onSuccess }: LoginFormProps) => {
     <DynamicModuleLoader removeAfterUnmout reducers={initialReducers}>
       <div className={classNames(s.loginModal, {}, [])}>
         <Text title={t("authByUsername.FormTitle")} />
-        {error && <Text text={t("Incorrect username or password")} theme={TextTheme.ERROR} />}
+        {error && <Text text={t("authByUsername.FormError")} theme={TextTheme.ERROR} />}
 
         <Input
           onChange={onChangeUsermame}

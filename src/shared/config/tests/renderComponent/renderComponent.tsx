@@ -1,4 +1,3 @@
-import { DeepPartial } from "@reduxjs/toolkit";
 import { render } from "@testing-library/react";
 import { ReactNode } from "react";
 import { I18nextProvider } from "react-i18next";
@@ -15,10 +14,10 @@ interface renderComponentOptions {
 export const renderComponent = (children: ReactNode, options: renderComponentOptions = {}) => {
   const { path = "/", initialState } = options;
   return render(
-    <StoreProvider initialState={initialState}>
-      <MemoryRouter initialEntries={[path]}>
+    <MemoryRouter initialEntries={[path]}>
+      <StoreProvider initialState={initialState}>
         <I18nextProvider i18n={i18nForTests}>{children}</I18nextProvider>
-      </MemoryRouter>
-    </StoreProvider>,
+      </StoreProvider>
+    </MemoryRouter>,
   );
 };

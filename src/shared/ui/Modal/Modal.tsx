@@ -1,5 +1,5 @@
-import { ReactNode, useCallback, useEffect, useRef, useState } from "react";
-import { classNames } from "@/shared/lib/classNames/classNames";
+import { MutableRefObject, ReactNode, useCallback, useEffect, useRef, useState } from "react";
+import { classNames, Mods } from "@/shared/lib/classNames/classNames";
 import s from "./Modal.module.scss";
 import { Portal } from "../Portal/Portal";
 import { useTheme } from "@/app/providers/ThemeProvider";
@@ -17,7 +17,7 @@ const ANIMATION_DELAY = 200;
 export const Modal = ({ className, children, isOpen, onClose, lazy }: ModalProps) => {
   const [isClosing, setIsClosing] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
-  const timerRef = useRef<ReturnType<typeof setTimeout>>();
+  const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
 
   const { theme } = useTheme();
 
@@ -62,7 +62,7 @@ export const Modal = ({ className, children, isOpen, onClose, lazy }: ModalProps
     }
   }, [isOpen]);
 
-  const mods: Record<string, boolean> = {
+  const mods: Mods = {
     [s.opened]: isOpen,
     [s.isClosing]: isClosing,
   };

@@ -16,9 +16,7 @@ type Story = StoryObj<typeof LoginForm>;
 export const Light: Story = {
   args: {},
 };
-Light.decorators = [
-  (Story) => StoreDecorator({ loginForm: { username: "123", password: "123" } })(Story),
-];
+Light.decorators = [(Story) => StoreDecorator({ loginForm: { username: "123", password: "123" } })(Story)];
 
 export const Dark: Story = {
   args: {},

@@ -15,11 +15,7 @@ interface DynamicModuleLoaderProps {
   removeAfterUnmout?: boolean;
 }
 
-export const DynamicModuleLoader = ({
-  children,
-  reducers,
-  removeAfterUnmout,
-}: DynamicModuleLoaderProps) => {
+export const DynamicModuleLoader = ({ children, reducers, removeAfterUnmout }: DynamicModuleLoaderProps) => {
   const dispatch = useDispatch();
   const store = useStore() as ReduxStoreWithManager;
   useEffect(() => {

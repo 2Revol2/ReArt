@@ -21,10 +21,7 @@ Light.decorators = [(Story) => StoreDecorator({})(Story)];
 export const Dark: Story = {
   args: {},
 };
-Dark.decorators = [
-  (Story) => ThemeDecorator(Theme.DARK)(Story),
-  (Story) => StoreDecorator({})(Story),
-];
+Dark.decorators = [(Story) => ThemeDecorator(Theme.DARK)(Story), (Story) => StoreDecorator({})(Story)];
 
 export const AuthNavbar: Story = {
   args: {},

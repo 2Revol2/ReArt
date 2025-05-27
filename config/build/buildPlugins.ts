@@ -4,11 +4,7 @@ import webpack from "webpack";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import { BuildOptions } from "./types/config";
 
-export function buildPlugins({
-  paths,
-  isDev,
-  apiUrl,
-}: BuildOptions): webpack.WebpackPluginInstance[] {
+export function buildPlugins({ paths, isDev, apiUrl }: BuildOptions): webpack.WebpackPluginInstance[] {
   const plugin = [
     new HtmlWebpackPlugin({
       template: paths.html,

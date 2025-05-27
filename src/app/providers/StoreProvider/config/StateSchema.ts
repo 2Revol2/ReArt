@@ -1,11 +1,4 @@
-import {
-  AnyAction,
-  CombinedState,
-  Dispatch,
-  EnhancedStore,
-  Reducer,
-  ReducersMapObject,
-} from "@reduxjs/toolkit";
+import { AnyAction, CombinedState, Dispatch, EnhancedStore, Reducer, ReducersMapObject } from "@reduxjs/toolkit";
 import { AxiosInstance } from "axios";
 import { NavigateOptions, To } from "react-router-dom";
 import { CounterSchema } from "@/entities/Counter";

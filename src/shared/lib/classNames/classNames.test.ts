@@ -22,11 +22,8 @@ describe("classNames", () => {
   });
 
   test("With mods undefined", () => {
-    expect(
-      classNames("className", { hovered: true, selected: false, open: undefined }, [
-        "cls1",
-        "cls2",
-      ]),
-    ).toBe("className cls1 cls2 hovered");
+    expect(classNames("className", { hovered: true, selected: false, open: undefined }, ["cls1", "cls2"])).toBe(
+      "className cls1 cls2 hovered",
+    );
   });
 });

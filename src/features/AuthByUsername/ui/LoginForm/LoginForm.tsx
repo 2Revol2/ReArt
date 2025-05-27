@@ -12,10 +12,7 @@ import { getLoginUsername } from "../../model/selectors/getLoginUsername/getLogi
 import { getLoginPassword } from "../../model/selectors/getLoginPassword/getLoginPassword";
 import { getLoginIsLoading } from "../../model/selectors/getLoginIsLoading/getLoginIsLoading";
 import { getLoginError } from "../../model/selectors/getLoginError/getLoginError";
-import {
-  DynamicModuleLoader,
-  ReducersList,
-} from "@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
+import { DynamicModuleLoader, ReducersList } from "@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
 import { useAppDispatch } from "@/shared/hooks/useAppDispatch/useAppDispatch";
 
 const initialReducers: ReducersList = { loginForm: loginReducer };
@@ -75,12 +72,7 @@ const LoginForm = memo(({ onSuccess }: LoginFormProps) => {
           placeholder={t("authByUsername.EnterPassword")}
         />
 
-        <Button
-          className={s.loginBtn}
-          theme={ButtonTheme.OUTLINE}
-          onClick={onLoginClick}
-          disabled={isLoading}
-        >
+        <Button className={s.loginBtn} theme={ButtonTheme.OUTLINE} onClick={onLoginClick} disabled={isLoading}>
           {t("actions.Login")}
         </Button>
       </div>

@@ -9,6 +9,7 @@
   },
   "Authorization form": "Authorization form",
   "AuthorizationForm": "AuthorizationForm",
+  "Cancel": "Cancel",
   "Edit": "Edit",
   "Incorrect username or password": "Incorrect username or password",
   "Language": "Language",
@@ -17,6 +18,10 @@
   "Profile": "Profile",
   "Profile Page": "Profile Page",
   "ProfilePage": "ProfilePage",
+  "There was an error loading your profile": {
+    "": ""
+  },
+  "Try refresh the page": "Try refresh the page",
   "Yo": "Yo",
   "Your name": "Your name",
   "Your surname": "Your surname",

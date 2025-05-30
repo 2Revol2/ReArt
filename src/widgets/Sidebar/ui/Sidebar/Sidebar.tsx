@@ -1,4 +1,4 @@
-import { memo, useState } from "react";
+import { memo, useMemo, useState } from "react";
 import s from "./Sidebar.module.scss";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import { ThemeSwitcher } from "@/features/ThemeSwitcher";
@@ -13,6 +13,11 @@ export const Sidebar = memo(() => {
   const toggleSidebar = () => {
     setCollapsed((prev) => !prev);
   };
+
+  const itemList = useMemo(() => {
+    return SidebarItemList.map((item) => <SidebarItem item={item} collapsed={collapsed} key={item.path} />);
+  }, [collapsed]);
+
   return (
     <div data-testid="sidebar" className={classNames(s.sidebar, { [s.collapsed]: collapsed }, [])}>
       <Button
@@ -26,11 +31,7 @@ export const Sidebar = memo(() => {
         {collapsed ? ">" : "<"}
       </Button>
 
-      <div className={s.links}>
-        {SidebarItemList.map((item) => (
-          <SidebarItem item={item} collapsed={collapsed} key={item.path} />
-        ))}
-      </div>
+      <div className={s.links}>{itemList}</div>
 
       <div className={s.switchers}>
         <div className={s.themeButton}>

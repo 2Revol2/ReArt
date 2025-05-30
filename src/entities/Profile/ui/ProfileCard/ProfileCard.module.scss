@@ -19,3 +19,12 @@
   justify-content: center;
   height: 500px;
 }
+
+.avatarWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.editing {
+  border: 1px solid var(--secondary-color);
+}

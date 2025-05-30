@@ -5,5 +5,12 @@
   "Your surname": "Ваша фамилия",
   "There was an error loading your profile": "Произошла ошибка при загрузке профиля",
   "Try refresh the page": "Попробуйте перезагрузить страницу",
-  "Cancel": "Отмена"
+  "Cancel": "Отмена",
+  "Save": "Сохранить",
+  "Your age": "Ваш возраст",
+  "City": "Город",
+  "Your username": "Ваш ник",
+  "Your avatar": "Ваша аватарка",
+  "Select currency": "Укажите валюту",
+  "Select county": "Укажите страну"
 }

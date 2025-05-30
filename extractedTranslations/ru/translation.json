@@ -1,5 +1,6 @@
 {
   "": "",
+  " currency": " currency",
   "About us": "About us",
   "AboutUs": "AboutUs",
   "An error occurred": "An error occurred",
@@ -10,6 +11,7 @@
   "Authorization form": "Authorization form",
   "AuthorizationForm": "AuthorizationForm",
   "Cancel": "Cancel",
+  "City": "City",
   "Edit": "Edit",
   "Incorrect username or password": "Incorrect username or password",
   "Language": "Language",
@@ -18,15 +20,22 @@
   "Profile": "Profile",
   "Profile Page": "Profile Page",
   "ProfilePage": "ProfilePage",
+  "Save": "Save",
+  "Select county": "Select county",
+  "Select currency": "Select currency",
+  "Specify currency": "Specify currency",
   "There was an error loading your profile": {
     "": ""
   },
   "Try refresh the page": "Try refresh the page",
   "Yo": "Yo",
+  "Your age": "Your age",
+  "Your avatar": "Your avatar",
   "Your name": "Your name",
   "Your surname": "Your surname",
   "Your surpa": "Your surpa",
   "Your surpan": "Your surpan",
+  "Your username": "Your username",
   "aboutUs": "aboutUs",
   "ac": "ac",
   "acions": {

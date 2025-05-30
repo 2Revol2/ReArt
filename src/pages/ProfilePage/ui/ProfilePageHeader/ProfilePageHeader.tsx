@@ -4,7 +4,7 @@ import { useCallback } from "react";
 import { Button, ButtonTheme } from "@/shared/ui/Button/Button";
 import s from "./ProfilePageHeader.module.scss";
 import { Text } from "@/shared/ui/Text/Text";
-import { getProfileReadonly, profileActions } from "@/entities/Profile";
+import { getProfileReadonly, profileActions, updateProfileData } from "@/entities/Profile";
 import { useAppDispatch } from "@/shared/hooks/useAppDispatch/useAppDispatch";
 
 export const ProfilePageHeader = () => {
@@ -17,7 +17,11 @@ export const ProfilePageHeader = () => {
   }, [dispatch]);
 
   const onCancelEdit = useCallback(() => {
-    dispatch(profileActions.setReadonly(true));
+    dispatch(profileActions.cancelEdit());
+  }, [dispatch]);
+
+  const onSave = useCallback(() => {
+    dispatch(updateProfileData());
   }, [dispatch]);
 
   return (
@@ -28,9 +32,14 @@ export const ProfilePageHeader = () => {
           {t("Edit")}
         </Button>
       ) : (
-        <Button className={s.editBtn} theme={ButtonTheme.OUTLINE} onClick={onCancelEdit}>
-          {t("Cancel")}
-        </Button>
+        <div className={s.buttons}>
+          <Button theme={ButtonTheme.OUTLINE_RED} onClick={onCancelEdit}>
+            {t("Cancel")}
+          </Button>
+          <Button theme={ButtonTheme.OUTLINE} onClick={onSave}>
+            {t("Save")}
+          </Button>
+        </div>
       )}
     </div>
   );

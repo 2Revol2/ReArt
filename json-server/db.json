@@ -25,12 +25,11 @@
       "password": "123"
     }
   ],
-
   "profile": {
-    "first": "Макс",
+    "first": "Макc",
     "lastname": "Револ",
     "age": 17,
-    "currency": "UA",
+    "currency": "USD",
     "country": "Ukraine",
     "city": "Zaporozhye",
     "username": "admin",

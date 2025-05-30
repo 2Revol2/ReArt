@@ -19,6 +19,14 @@ export const Light: Story = {
   },
 };
 
+export const Disabled: Story = {
+  args: {
+    placeholder: "type any text",
+    value: "text",
+    readonly: true,
+  },
+};
+
 export const Dark: Story = {
   args: {
     placeholder: "type any text",

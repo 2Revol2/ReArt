@@ -5,5 +5,12 @@
   "Your surname": "Your surname",
   "There was an error loading your profile": "There was an error loading your profile",
   "Try refresh the page": "Try refresh the page",
-  "Cancel": "Cancel"
+  "Cancel": "Cancel",
+  "Save": "Save",
+  "Your age": "Your age",
+  "City": "City",
+  "Your username": "Your username",
+  "Your avatar": "Your avatar",
+  "Select currency": "Select currency",
+  "Select county": "Select county"
 }

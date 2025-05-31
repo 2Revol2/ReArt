@@ -12,5 +12,11 @@
   "Your username": "Your username",
   "Your avatar": "Your avatar",
   "Select currency": "Select currency",
-  "Select county": "Select county"
+  "Select county": "Select county",
+  "Incorrect age": "Incorrect age",
+  "Incorrect city": "Incorrect city",
+  "Incorrect country": "Incorrect country",
+  "First and last name are required": "First and last name are required",
+  "Data not found": "Data not found",
+  "Server error while saving": "Server error while saving"
 }

@@ -12,5 +12,11 @@
   "Your username": "Ваш ник",
   "Your avatar": "Ваша аватарка",
   "Select currency": "Укажите валюту",
-  "Select county": "Укажите страну"
+  "Select county": "Укажите страну",
+  "Incorrect age": "Некорректный возраст",
+  "Incorrect city": "Некорректный город",
+  "Incorrect country": "Некорректная страна",
+  "First and last name are required": "Имя и фамилия обязательны",
+  "Data not found": "Данные не указаны",
+  "Server error while saving": "Серверная ошибка при сохранении"
 }

@@ -21,15 +21,23 @@ Light.decorators = [(Story) => StoreDecorator({ loginForm: { username: "123", pa
 export const Dark: Story = {
   args: {},
 };
-
 Dark.decorators = [
   (Story) => ThemeDecorator(Theme.DARK)(Story),
+  (Story) => StoreDecorator({ loginForm: { username: "123", password: "123" } })(Story),
+];
+
+export const Red: Story = {
+  args: {},
+};
+Red.decorators = [
+  (Story) => ThemeDecorator(Theme.RED)(Story),
   (Story) => StoreDecorator({ loginForm: { username: "123", password: "123" } })(Story),
 ];
 
 export const WithError: Story = {
   args: {},
 };
+
 WithError.decorators = [
   (Story) =>
     StoreDecorator({

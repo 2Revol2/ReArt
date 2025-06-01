@@ -29,3 +29,13 @@ export const Dark: Story = {
 };
 
 Dark.decorators = [(Story) => ThemeDecorator(Theme.DARK)(Story)];
+
+export const Red: Story = {
+  args: {
+    isOpen: true,
+    children: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus facilis culpa ullam
+          placeat veritatis a totam obcaecati, qui doloremque atque voluptatibus molestias`,
+  },
+};
+
+Red.decorators = [(Story) => ThemeDecorator(Theme.RED)(Story)];

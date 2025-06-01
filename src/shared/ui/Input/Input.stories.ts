@@ -35,3 +35,12 @@ export const Dark: Story = {
 };
 
 Dark.decorators = [(Story) => ThemeDecorator(Theme.DARK)(Story)];
+
+export const Red: Story = {
+  args: {
+    placeholder: "type any text",
+    value: "text",
+  },
+};
+
+Red.decorators = [(Story) => ThemeDecorator(Theme.RED)(Story)];

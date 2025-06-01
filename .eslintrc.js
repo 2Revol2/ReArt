@@ -22,7 +22,6 @@ module.exports = {
   plugins: ["react", "@typescript-eslint", "i18next", "react-hooks"],
   rules: {
     "max-len": ["error", { code: 120, ignoreComments: true }],
-    indent: ["error", 2],
     "react/jsx-filename-extension": [2, { extensions: [".js", ".jsx", ".tsx"] }],
     "import/prefer-default-export": "off",
     "linebreak-style": "off",

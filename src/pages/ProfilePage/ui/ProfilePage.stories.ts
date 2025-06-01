@@ -61,3 +61,26 @@ Dark.decorators = [
       },
     })(Story),
 ];
+
+export const Red: Story = {
+  args: {},
+};
+
+Red.decorators = [
+  (Story) => ThemeDecorator(Theme.RED)(Story),
+  (Story) =>
+    StoreDecorator({
+      profile: {
+        form: {
+          first: "Макc",
+          lastname: "Револ",
+          age: 17,
+          currency: Currency.USD,
+          country: Country.Ukraine,
+          city: "Zaporozhye",
+          username: "admin",
+          avatar: "https://cs-games.net/uploads/posts/2020-07/1595354020_3358.jpg",
+        },
+      },
+    })(Story),
+];

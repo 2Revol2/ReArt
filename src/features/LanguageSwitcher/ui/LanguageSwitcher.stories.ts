@@ -1,19 +1,16 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import AboutPage from "./AboutPage";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 import { ThemeDecorator } from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { Theme } from "@/app/providers/ThemeProvider";
 
-const meta: Meta<typeof AboutPage> = {
-  title: "pages/AboutPage",
-  component: AboutPage,
+const meta: Meta<typeof LanguageSwitcher> = {
+  title: "features/LanguageSwitcher",
+  component: LanguageSwitcher,
   parameters: {},
-  args: {
-    to: "/",
-  },
 };
 
 export default meta;
-type Story = StoryObj<typeof AboutPage>;
+type Story = StoryObj<typeof LanguageSwitcher>;
 
 export const Light: Story = {
   args: {},

@@ -29,6 +29,14 @@ Dark.decorators = [
   (Story) => StoreDecorator({ user: { authData: {} } })(Story),
 ];
 
+export const Red: Story = {
+  args: {},
+};
+Red.decorators = [
+  (Story) => ThemeDecorator(Theme.RED)(Story),
+  (Story) => StoreDecorator({ user: { authData: {} } })(Story),
+];
+
 export const NotAuth: Story = {
   args: {},
 };

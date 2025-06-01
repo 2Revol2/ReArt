@@ -23,6 +23,11 @@ export const Dark: Story = {
 };
 Dark.decorators = [(Story) => ThemeDecorator(Theme.DARK)(Story), (Story) => StoreDecorator({})(Story)];
 
+export const Red: Story = {
+  args: {},
+};
+Red.decorators = [(Story) => ThemeDecorator(Theme.RED)(Story), (Story) => StoreDecorator({})(Story)];
+
 export const AuthNavbar: Story = {
   args: {},
 };

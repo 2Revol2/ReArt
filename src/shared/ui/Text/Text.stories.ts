@@ -53,6 +53,28 @@ export const OnlyTextDark: Story = {
 };
 OnlyTextDark.decorators = [(Story) => ThemeDecorator(Theme.DARK)(Story)];
 
+export const Red: Story = {
+  args: {
+    title: "Title",
+    text: "Text",
+  },
+};
+Red.decorators = [(Story) => ThemeDecorator(Theme.RED)(Story)];
+
+export const OnlyTextRed: Story = {
+  args: {
+    text: "Text",
+  },
+};
+OnlyTextRed.decorators = [(Story) => ThemeDecorator(Theme.RED)(Story)];
+
+export const OnlyTitleRed: Story = {
+  args: {
+    title: "Title",
+  },
+};
+OnlyTitleRed.decorators = [(Story) => ThemeDecorator(Theme.RED)(Story)];
+
 export const Error: Story = {
   args: {
     title: "Title",

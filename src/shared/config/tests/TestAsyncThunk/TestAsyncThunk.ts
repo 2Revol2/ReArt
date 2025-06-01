@@ -21,10 +21,10 @@ export class TestAsyncThunk<Return, Arg, rejectedValue> {
 
   navigate: jest.MockedFn<any>;
 
-  constructor(actionCreator: actionCreatorType<Return, Arg, rejectedValue>) {
+  constructor(actionCreator: actionCreatorType<Return, Arg, rejectedValue>, state?: DeepPartial<StateSchema>) {
     this.actionCreator = actionCreator;
     this.dispatch = jest.fn();
-    this.getState = jest.fn();
+    this.getState = jest.fn(() => state as StateSchema);
 
     this.api = mockedAxios;
     this.navigate = jest.fn();

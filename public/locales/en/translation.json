@@ -6,7 +6,8 @@
   "links": {
     "Main": "Main",
     "AboutUs": "About us",
-    "Profile": "Profile"
+    "Profile": "Profile",
+    "Articles": "Articles"
   },
   "authByUsername": {
     "EnterUsername": "Enter username",

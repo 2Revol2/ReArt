@@ -6,7 +6,8 @@
   "links": {
     "Main": "Главная",
     "AboutUs": "О нас",
-    "Profile": "Профиль"
+    "Profile": "Профиль",
+    "Articles": "Статьи"
   },
   "authByUsername": {
     "EnterUsername": "Введите логин",

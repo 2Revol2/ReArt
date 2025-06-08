@@ -1,9 +1,16 @@
 {
   "": "",
   " currency": " currency",
+  "A": "A",
   "About us": "About us",
   "AboutUs": "AboutUs",
+  "An ": "An ",
+  "An error ": "An error ",
   "An error occurred": "An error occurred",
+  "An error occurred ": "An error occurred ",
+  "An error occurred while loading ": "An error occurred while loading ",
+  "An error occurred while loading the article": "An error occurred while loading the article",
+  "Article not found": "Article not found",
   "Au": "Au",
   "Auth": {
     "": ""

@@ -7,7 +7,7 @@ import { Currency } from "@/entities/Currency";
 import { Country } from "@/entities/Country";
 
 const meta: Meta<typeof ProfileCard> = {
-  title: "entitites/ProfileCard",
+  title: "entities/ProfileCard",
   component: ProfileCard,
   parameters: {},
 };

@@ -19,6 +19,7 @@
   "AuthorizationForm": "AuthorizationForm",
   "Cancel": "Cancel",
   "City": "City",
+  "Comments": "Comments",
   "Data not found": "Data not found",
   "Data not specified": "Data not specified",
   "Data not ащгтв": "Data not ащгтв",
@@ -39,6 +40,9 @@
   "Select currency": "Select currency",
   "Server error while saving": "Server error while saving",
   "Specify currency": "Specify currency",
+  "There are no comments yet": {
+    "": ""
+  },
   "There was an error loading your profile": {
     "": ""
   },

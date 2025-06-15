@@ -5,10 +5,12 @@ import { classNames } from "@/shared/lib/classNames/classNames";
 import { Avatar } from "@/shared/ui/Avatar/Avatar";
 import { Text } from "@/shared/ui/Text/Text";
 import { Skeleton } from "@/shared/ui/Skeleton/Skeleton";
+import { AppLink } from "@/shared/ui/AppLink/AppLink";
+import { RoutePaths } from "@/shared/config/routeConfig/routeConfig";
 
 interface CommentItemProps {
   className?: string;
-  comment: Comment;
+  comment?: Comment;
   isLoading?: boolean;
 }
 
@@ -27,12 +29,16 @@ export const CommentItem = memo((props: CommentItemProps) => {
     );
   }
 
+  if (!comment) {
+    return null;
+  }
+
   return (
     <div className={classNames(s.commentItem, {}, [className])}>
-      <div className={s.header}>
+      <AppLink to={`${RoutePaths.profile}${comment.user.id}`} className={s.header}>
         {comment.user.avatar && <Avatar size={30} src={comment.user.avatar} alt={comment.user.username} />}
         <Text text={comment.user.username} />
-      </div>
+      </AppLink>
       <Text text={comment.text} />
     </div>
   );

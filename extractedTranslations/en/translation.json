@@ -24,6 +24,7 @@
   "Data not specified": "Data not specified",
   "Data not ащгтв": "Data not ащгтв",
   "Edit": "Edit",
+  "Enter comment text": "Enter comment text",
   "First and last name are required": "First and last name are required",
   "Incorrect age": "Incorrect age",
   "Incorrect city": "Incorrect city",
@@ -38,6 +39,7 @@
   "Save": "Save",
   "Select county": "Select county",
   "Select currency": "Select currency",
+  "Send": "Send",
   "Server error while saving": "Server error while saving",
   "Specify currency": "Specify currency",
   "There are no comments yet": {

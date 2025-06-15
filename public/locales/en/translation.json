@@ -24,5 +24,7 @@
     "Login": "Login",
     "Logout": "Logout"
   },
-  "There are no comments yet": "There are no comments yet"
+  "There are no comments yet": "There are no comments yet",
+  "Enter comment text": "Enter comment text",
+  "Send": "Send"
 }

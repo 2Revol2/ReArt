@@ -24,5 +24,7 @@
     "Login": "Войти",
     "Logout": "Выйти"
   },
-  "There are no comments yet": "Комментарии отсутствуют"
+  "There are no comments yet": "Комментарии отсутствуют",
+  "Enter comment text": "Введите текст комментария",
+  "Send": "Отправить"
 }

@@ -44,7 +44,7 @@ export const Input = memo(
     };
 
     return (
-      <div className={classNames(s.inputWrapper, { [s.readonly]: readonly }, [])}>
+      <div className={classNames(s.inputWrapper, { [s.readonly]: readonly }, [className])}>
         {placeholder && <div className={s.placeholder}>{`${placeholder}>`}</div>}
         <div className={s.caretWrapper}>
           <input

@@ -4,6 +4,7 @@ import { TestAsyncThunk } from "@/shared/config/tests/TestAsyncThunk/TestAsyncTh
 import { Country } from "@/entities/Country";
 
 const data = {
+  id: "1",
   first: "Макc",
   lastname: "Револ",
   age: 17,
@@ -18,7 +19,7 @@ describe("fetchProfileData.test.ts", () => {
   test("success", async () => {
     const thunk = new TestAsyncThunk(fetchProfileData);
     thunk.api.get.mockReturnValue(Promise.resolve({ data }));
-    const result = await thunk.callThunk();
+    const result = await thunk.callThunk("1");
 
     expect(thunk.api.get).toHaveBeenCalled();
     expect(result.meta.requestStatus).toBe("fulfilled");
@@ -28,7 +29,7 @@ describe("fetchProfileData.test.ts", () => {
   test("failed", async () => {
     const thunk = new TestAsyncThunk(fetchProfileData);
     thunk.api.get.mockReturnValue(Promise.resolve({ status: 403 }));
-    const result = await thunk.callThunk();
+    const result = await thunk.callThunk("1");
     expect(result.meta.requestStatus).toBe("rejected");
   });
 });

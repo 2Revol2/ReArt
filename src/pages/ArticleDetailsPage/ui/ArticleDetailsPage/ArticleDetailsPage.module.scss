@@ -2,6 +2,9 @@
   min-height: 100%;
 }
 
-.comments {
+.commentsWrapper {
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }

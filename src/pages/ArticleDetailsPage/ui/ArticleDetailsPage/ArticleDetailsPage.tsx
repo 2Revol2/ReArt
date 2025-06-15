@@ -1,4 +1,4 @@
-import { memo } from "react";
+import { memo, useCallback } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -12,6 +12,8 @@ import { getArticleDetailsCommentsIsLoading } from "../../model/selectors/commet
 import { useInitialEffect } from "@/shared/hooks/useInitialEffect/useInitialEffect";
 import { useAppDispatch } from "@/shared/hooks/useAppDispatch/useAppDispatch";
 import { fetchCommentsByArticleId } from "../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId";
+import { AddNewComment } from "@/features/AddNewComment";
+import { addCommentForArticle } from "../../model/services/addCommentForArticle/addCommentForArticle";
 
 const reducers: ReducersList = { articleDetailsComments: articleDetailsCommentsReducer };
 
@@ -21,9 +23,17 @@ const ArticleDetailsPage = () => {
   const comments = useSelector(getArticleCommets.selectAll);
   const dispatch = useAppDispatch();
   const commentsIsLoading = useSelector(getArticleDetailsCommentsIsLoading);
+
   useInitialEffect(() => {
     dispatch(fetchCommentsByArticleId(id));
   });
+
+  const onSendComment = useCallback(
+    (text: string) => {
+      dispatch(addCommentForArticle(text));
+    },
+    [dispatch],
+  );
 
   if (!id) {
     return <div>{t("Article not found")}</div>;
@@ -33,8 +43,11 @@ const ArticleDetailsPage = () => {
     <DynamicModuleLoader reducers={reducers} removeAfterUnmout>
       <div className={s.articleDetailsPage}>
         <ArticleDetails id={id} />
-        <Text title={t("Comments")} className={s.comments} />
-        <CommentList isLoading={commentsIsLoading} comments={comments} />
+        <div className={s.commentsWrapper}>
+          <Text title={t("Comments")} className={s.comments} />
+          <AddNewComment onSendComment={onSendComment} />
+          <CommentList isLoading={commentsIsLoading} comments={comments} />
+        </div>
       </div>
     </DynamicModuleLoader>
   );

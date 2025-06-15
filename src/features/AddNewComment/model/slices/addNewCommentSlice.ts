@@ -13,20 +13,6 @@ export const addNewCommentSlice = createSlice({
       state.text = action.payload;
     },
   },
-  // extraReducers: (builder) => {
-  //   builder
-  //     .addCase(loginByUsername.pending, (state, actions) => {
-  //       state.error = undefined;
-  //       state.isLoading = true;
-  //     })
-  //     .addCase(loginByUsername.fulfilled, (state, actions) => {
-  //       state.isLoading = false;
-  //     })
-  //     .addCase(loginByUsername.rejected, (state, actions) => {
-  //       state.isLoading = false;
-  //       state.error = actions.payload;
-  //     });
-  // },
 });
 
 // Action creators are generated for each case reducer function

@@ -2,10 +2,10 @@ import type { Meta, StoryObj } from "@storybook/react";
 
 import { ArticleDetails } from "./ArticleDetails";
 import { StoreDecorator } from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
-import { ArticleBlockType, ArticleType } from "../../model/types/article";
+import { Article, ArticleBlockType, ArticleType } from "../../model/types/article";
 
 const meta: Meta<typeof ArticleDetails> = {
-  title: "entities/ArticleDetails",
+  title: "entities/Article/ArticleDetails",
   component: ArticleDetails,
   parameters: {},
 };
@@ -13,7 +13,7 @@ const meta: Meta<typeof ArticleDetails> = {
 export default meta;
 type Story = StoryObj<typeof ArticleDetails>;
 
-const article = {
+const article: Article = {
   id: "1",
   title: "Javascript news",
   subtitle: "Что нового в JS за 2022 год?",
@@ -21,6 +21,10 @@ const article = {
   views: 1022,
   createdAt: "26.02.2022",
   type: [ArticleType.IT],
+  user: {
+    id: "1",
+    username: "Revol",
+  },
   blocks: [
     {
       id: "1",

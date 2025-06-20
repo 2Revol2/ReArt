@@ -59,9 +59,13 @@ const data = [
 
 describe("fetchArticlesList.test.ts", () => {
   test("success", async () => {
-    const thunk = new TestAsyncThunk(fetchArticlesList);
+    const thunk = new TestAsyncThunk(fetchArticlesList, {
+      articlesPage: {
+        limit: 5,
+      },
+    });
     thunk.api.get.mockReturnValue(Promise.resolve({ data }));
-    const result = await thunk.callThunk();
+    const result = await thunk.callThunk({ page: 1 });
 
     expect(thunk.api.get).toHaveBeenCalled();
     expect(result.meta.requestStatus).toBe("fulfilled");
@@ -71,7 +75,7 @@ describe("fetchArticlesList.test.ts", () => {
   test("failed", async () => {
     const thunk = new TestAsyncThunk(fetchArticlesList);
     thunk.api.get.mockReturnValue(Promise.resolve({ status: 403 }));
-    const result = await thunk.callThunk();
+    const result = await thunk.callThunk({ page: 1 });
     expect(result.meta.requestStatus).toBe("rejected");
   });
 });

@@ -41,12 +41,12 @@ export const Navbar = memo(({ className }: NavbarProps) => {
   }
 
   return (
-    <div className={classNames(s.navbar, {}, [className])}>
+    <header className={classNames(s.navbar, {}, [className])}>
       <Button theme={ButtonTheme.CLEAR} onClick={onShowModal} type="button">
         {t("actions.Login")}
       </Button>
 
       {isAuthModal && <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />}
-    </div>
+    </header>
   );
 });

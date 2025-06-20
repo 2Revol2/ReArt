@@ -1,11 +1,12 @@
 import { memo, useCallback } from "react";
 import { useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
 import { ArticleList } from "@/entities/Article/ui/ArticleList/ArticleList";
 import { DynamicModuleLoader, ReducersList } from "@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
 import { articlesPageAction, articlesPageReducer, getArticles } from "../../model/slices/articlesPageSlice";
 import { useAppDispatch } from "@/shared/hooks/useAppDispatch/useAppDispatch";
 import { useInitialEffect } from "@/shared/hooks/useInitialEffect/useInitialEffect";
-import { fetchArticlesList } from "../../model/services/fetchArticlesList";
+import { fetchArticlesList } from "../../model/services/fetchArticlesList/fetchArticlesList";
 import {
   getArticlePageError,
   getArticlePageIsLoading,
@@ -13,6 +14,9 @@ import {
 } from "../../model/selectors/articlePageSelectors";
 import { ArticleViewSelector } from "@/features/ArticleViewSelector";
 import { ArticleView } from "@/entities/Article";
+import { Page } from "@/shared/ui/Page/Page";
+import { fetchArticlesNextPage } from "../../model/services/fetchArticlesNextPage/fetchArticlesNextPage";
+import { Text } from "@/shared/ui/Text/Text";
 
 const reducers: ReducersList = {
   articlesPage: articlesPageReducer,
@@ -24,11 +28,16 @@ const ArticlesPage = () => {
   const isLoading = useSelector(getArticlePageIsLoading);
   const error = useSelector(getArticlePageError);
   const view = useSelector(getArticlePageView);
+  const { t } = useTranslation();
 
   useInitialEffect(() => {
-    dispatch(fetchArticlesList());
     dispatch(articlesPageAction.initState());
+    dispatch(fetchArticlesList({ page: 1 }));
   });
+
+  const onLoadNextPage = useCallback(() => {
+    dispatch(fetchArticlesNextPage());
+  }, [dispatch]);
 
   const onChangeView = useCallback(
     (view: ArticleView) => {
@@ -37,12 +46,18 @@ const ArticlesPage = () => {
     [dispatch],
   );
 
+  if (error) {
+    <Page>
+      <Text title={t("errors.Unexpected")} />
+    </Page>;
+  }
+
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmout>
-      <div>
+      <Page onScrollEnd={onLoadNextPage}>
         <ArticleViewSelector view={view} onViewClick={onChangeView} />
         <ArticleList articles={articles} view={view} isLoading={isLoading} />
-      </div>
+      </Page>
     </DynamicModuleLoader>
   );
 };

@@ -22,6 +22,7 @@ import { Country } from "@/entities/Country";
 import { Text, TextTheme } from "@/shared/ui/Text/Text";
 
 import { useInitialEffect } from "@/shared/hooks/useInitialEffect/useInitialEffect";
+import { Page } from "@/shared/ui/Page/Page";
 
 const reducers: ReducersList = { profile: profileReducer };
 
@@ -109,25 +110,27 @@ const ProfilePage = () => {
 
   return (
     <DynamicModuleLoader removeAfterUnmout reducers={reducers}>
-      <ProfilePageHeader />
-      {validateErrors?.length &&
-        validateErrors.map((error) => (
-          <Text key={error} theme={TextTheme.ERROR} text={validateErrorTranslates[error]} />
-        ))}
-      <ProfileCard
-        data={formData}
-        isLoading={isLoading}
-        error={error}
-        readonly={readonly}
-        onChangeFirstname={onChangeFirstname}
-        onChangeLastname={onChangeLastname}
-        onChangeAge={onChangeAge}
-        onChangeCity={onChangeCity}
-        onChangeUsername={onChangeUsername}
-        onChangeAvatar={onChangeAvatar}
-        onChangeCurrency={onChangeCurrency}
-        onChangeCountry={onChangeCountry}
-      />
+      <Page>
+        <ProfilePageHeader />
+        {validateErrors?.length &&
+          validateErrors.map((error) => (
+            <Text key={error} theme={TextTheme.ERROR} text={validateErrorTranslates[error]} />
+          ))}
+        <ProfileCard
+          data={formData}
+          isLoading={isLoading}
+          error={error}
+          readonly={readonly}
+          onChangeFirstname={onChangeFirstname}
+          onChangeLastname={onChangeLastname}
+          onChangeAge={onChangeAge}
+          onChangeCity={onChangeCity}
+          onChangeUsername={onChangeUsername}
+          onChangeAvatar={onChangeAvatar}
+          onChangeCurrency={onChangeCurrency}
+          onChangeCountry={onChangeCountry}
+        />
+      </Page>
     </DynamicModuleLoader>
   );
 };

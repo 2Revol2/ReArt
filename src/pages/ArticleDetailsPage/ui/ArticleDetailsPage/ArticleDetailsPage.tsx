@@ -16,6 +16,7 @@ import { AddNewComment } from "@/features/AddNewComment";
 import { addCommentForArticle } from "../../model/services/addCommentForArticle/addCommentForArticle";
 import { Button } from "@/shared/ui/Button/Button";
 import { RoutePaths } from "@/shared/config/routeConfig/routeConfig";
+import { Page } from "@/shared/ui/Page/Page";
 
 const reducers: ReducersList = { articleDetailsComments: articleDetailsCommentsReducer };
 
@@ -43,12 +44,12 @@ const ArticleDetailsPage = () => {
   );
 
   if (!id) {
-    return <div>{t("Article not found")}</div>;
+    return <Page className={s.articleDetailsPage}>{t("Article not found")}</Page>;
   }
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmout>
-      <div className={s.articleDetailsPage}>
+      <Page className={s.articleDetailsPage}>
         <Button onClick={onBackToList}>{t("Back to list")}</Button>
         <ArticleDetails id={id} />
         <div className={s.commentsWrapper}>
@@ -56,7 +57,7 @@ const ArticleDetailsPage = () => {
           <AddNewComment onSendComment={onSendComment} />
           <CommentList isLoading={commentsIsLoading} comments={comments} />
         </div>
-      </div>
+      </Page>
     </DynamicModuleLoader>
   );
 };

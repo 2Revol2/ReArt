@@ -18,10 +18,3 @@ body {
   display: flex;
   gap: 15px;
 }
-
-.page_wrapper {
-  flex: 1;
-  padding: 20px;
-  overflow: auto;
-  height: calc(100vh - 50px);
-}

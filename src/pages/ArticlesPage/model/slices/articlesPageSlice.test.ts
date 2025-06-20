@@ -16,6 +16,15 @@ describe("articlesPageSlice.testts", () => {
     const state: DeepPartial<ArticlesPageSchema> = {};
     expect(articlesPageReducer(state as ArticlesPageSchema, articlesPageAction.initState())).toEqual({
       view: ArticleView.BIG,
+      limit: 3,
+    });
+  });
+
+  test("test set page", () => {
+    localStorage.setItem(ARTICLES_VIEW_LOCALSTORAGE_KEY, ArticleView.BIG);
+    const state: DeepPartial<ArticlesPageSchema> = { page: 2 };
+    expect(articlesPageReducer(state as ArticlesPageSchema, articlesPageAction.setPage(3))).toEqual({
+      page: 3,
     });
   });
 });

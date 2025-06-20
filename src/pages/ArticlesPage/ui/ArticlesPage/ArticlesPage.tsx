@@ -36,7 +36,9 @@ const ArticlesPage = () => {
   });
 
   const onLoadNextPage = useCallback(() => {
-    dispatch(fetchArticlesNextPage());
+    if (__PROJECT__ !== "storybook") {
+      dispatch(fetchArticlesNextPage());
+    }
   }, [dispatch]);
 
   const onChangeView = useCallback(

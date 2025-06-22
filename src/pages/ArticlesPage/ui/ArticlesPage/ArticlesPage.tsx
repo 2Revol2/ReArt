@@ -9,6 +9,7 @@ import { useInitialEffect } from "@/shared/hooks/useInitialEffect/useInitialEffe
 import { fetchArticlesList } from "../../model/services/fetchArticlesList/fetchArticlesList";
 import {
   getArticlePageError,
+  getArticlePageInited,
   getArticlePageIsLoading,
   getArticlePageView,
 } from "../../model/selectors/articlePageSelectors";
@@ -17,6 +18,7 @@ import { ArticleView } from "@/entities/Article";
 import { Page } from "@/shared/ui/Page/Page";
 import { fetchArticlesNextPage } from "../../model/services/fetchArticlesNextPage/fetchArticlesNextPage";
 import { Text } from "@/shared/ui/Text/Text";
+import { initArticlesPage } from "../../model/services/initArticlesPage/initArticlesPage";
 
 const reducers: ReducersList = {
   articlesPage: articlesPageReducer,
@@ -28,11 +30,11 @@ const ArticlesPage = () => {
   const isLoading = useSelector(getArticlePageIsLoading);
   const error = useSelector(getArticlePageError);
   const view = useSelector(getArticlePageView);
+
   const { t } = useTranslation();
 
   useInitialEffect(() => {
-    dispatch(articlesPageAction.initState());
-    dispatch(fetchArticlesList({ page: 1 }));
+    dispatch(initArticlesPage());
   });
 
   const onLoadNextPage = useCallback(() => {
@@ -55,7 +57,7 @@ const ArticlesPage = () => {
   }
 
   return (
-    <DynamicModuleLoader reducers={reducers} removeAfterUnmout>
+    <DynamicModuleLoader reducers={reducers}>
       <Page onScrollEnd={onLoadNextPage}>
         <ArticleViewSelector view={view} onViewClick={onChangeView} />
         <ArticleList articles={articles} view={view} isLoading={isLoading} />

@@ -15,7 +15,7 @@ import {
 } from "../../model/selectors/articlePageSelectors";
 import { ArticleViewSelector } from "@/features/ArticleViewSelector";
 import { ArticleView } from "@/entities/Article";
-import { Page } from "@/shared/ui/Page/Page";
+import { Page } from "@/widgets/Page/Page";
 import { fetchArticlesNextPage } from "../../model/services/fetchArticlesNextPage/fetchArticlesNextPage";
 import { Text } from "@/shared/ui/Text/Text";
 import { initArticlesPage } from "../../model/services/initArticlesPage/initArticlesPage";

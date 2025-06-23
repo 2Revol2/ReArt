@@ -8,10 +8,12 @@ import { ArticleDetailsSchema } from "@/entities/Article";
 import { ArticleDetailsCommentsSchema } from "@/pages/ArticleDetailsPage";
 import { AddNewCommentSchema } from "@/features/AddNewComment";
 import { ArticlesPageSchema } from "@/pages/ArticlesPage";
+import { ScrollRecoverySchema } from "@/features/ScrollRecovery";
 
 export interface StateSchema {
   counter: CounterSchema;
   user: UserSchema;
+  scrollRecovery: ScrollRecoverySchema;
 
   // Async reducers
   loginForm?: LoginSchema;

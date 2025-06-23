@@ -22,7 +22,7 @@ import { Country } from "@/entities/Country";
 import { Text, TextTheme } from "@/shared/ui/Text/Text";
 
 import { useInitialEffect } from "@/shared/hooks/useInitialEffect/useInitialEffect";
-import { Page } from "@/shared/ui/Page/Page";
+import { Page } from "@/widgets/Page/Page";
 
 const reducers: ReducersList = { profile: profileReducer };
 

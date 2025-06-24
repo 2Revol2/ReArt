@@ -1,20 +1,17 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import MainPage from "./ArticlesPage";
+import ArticlesPage from "./ArticlesPage";
 import { ThemeDecorator } from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { Theme } from "@/app/providers/ThemeProvider";
 import { StoreDecorator } from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
 
-const meta: Meta<typeof MainPage> = {
-  title: "pages/ArticlesPage",
-  component: MainPage,
+const meta: Meta<typeof ArticlesPage> = {
+  title: "pages/Articles/ArticlesPage",
+  component: ArticlesPage,
   parameters: {},
-  args: {
-    to: "/",
-  },
 };
 
 export default meta;
-type Story = StoryObj<typeof MainPage>;
+type Story = StoryObj<typeof ArticlesPage>;
 
 export const Light: Story = {
   args: {},

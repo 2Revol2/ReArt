@@ -1,24 +1,21 @@
 import { memo, useCallback } from "react";
 import { useSelector } from "react-redux";
-import { useTranslation } from "react-i18next";
+import { useSearchParams } from "react-router-dom";
 import { ArticleList } from "@/entities/Article/ui/ArticleList/ArticleList";
 import { DynamicModuleLoader, ReducersList } from "@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
-import { articlesPageAction, articlesPageReducer, getArticles } from "../../model/slices/articlesPageSlice";
+import { articlesPageReducer, getArticles } from "../../model/slices/articlesPageSlice";
 import { useAppDispatch } from "@/shared/hooks/useAppDispatch/useAppDispatch";
 import { useInitialEffect } from "@/shared/hooks/useInitialEffect/useInitialEffect";
-import { fetchArticlesList } from "../../model/services/fetchArticlesList/fetchArticlesList";
 import {
   getArticlePageError,
-  getArticlePageInited,
   getArticlePageIsLoading,
   getArticlePageView,
 } from "../../model/selectors/articlePageSelectors";
-import { ArticleViewSelector } from "@/features/ArticleViewSelector";
-import { ArticleView } from "@/entities/Article";
 import { Page } from "@/widgets/Page/Page";
 import { fetchArticlesNextPage } from "../../model/services/fetchArticlesNextPage/fetchArticlesNextPage";
-import { Text } from "@/shared/ui/Text/Text";
 import { initArticlesPage } from "../../model/services/initArticlesPage/initArticlesPage";
+import { ArticlesPageFilters } from "../ArticlesPageFilters/ArticlesPageFilters";
+import s from "./ArticlesPage.module.scss";
 
 const reducers: ReducersList = {
   articlesPage: articlesPageReducer,
@@ -30,11 +27,10 @@ const ArticlesPage = () => {
   const isLoading = useSelector(getArticlePageIsLoading);
   const error = useSelector(getArticlePageError);
   const view = useSelector(getArticlePageView);
-
-  const { t } = useTranslation();
+  const [searchParams] = useSearchParams();
 
   useInitialEffect(() => {
-    dispatch(initArticlesPage());
+    dispatch(initArticlesPage(searchParams));
   });
 
   const onLoadNextPage = useCallback(() => {
@@ -43,23 +39,10 @@ const ArticlesPage = () => {
     }
   }, [dispatch]);
 
-  const onChangeView = useCallback(
-    (view: ArticleView) => {
-      dispatch(articlesPageAction.setView(view));
-    },
-    [dispatch],
-  );
-
-  if (error) {
-    <Page>
-      <Text title={t("errors.Unexpected")} />
-    </Page>;
-  }
-
   return (
     <DynamicModuleLoader reducers={reducers}>
       <Page onScrollEnd={onLoadNextPage}>
-        <ArticleViewSelector view={view} onViewClick={onChangeView} />
+        <ArticlesPageFilters className={s.filters} />
         <ArticleList articles={articles} view={view} isLoading={isLoading} />
       </Page>
     </DynamicModuleLoader>

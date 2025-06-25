@@ -20,7 +20,9 @@
       "views": 20000,
       "userId": "1",
       "createdAt": "26.03.2025",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -90,7 +92,9 @@
       "views": 2031,
       "userId": "1",
       "createdAt": "05.03.2025",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -142,7 +146,9 @@
       "views": 1874,
       "userId": "1",
       "createdAt": "08.03.2025",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -182,795 +188,482 @@
     },
     {
       "id": "4",
-      "title": "Javascript news 2023",
-      "subtitle": "Что нового в JS за 2023 год?",
-      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1122,
+      "title": "ИИ в повседневной жизни",
+      "subtitle": "Как искусственный интеллект меняет наш мир",
+      "img": "https://cdn-icons-png.flaticon.com/512/4712/4712054.png",
+      "views": 48921,
       "userId": "1",
-      "createdAt": "26.02.2023",
-      "type": ["IT"],
+      "createdAt": "14.03.2024",
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "Заголовок этого блока",
+          "title": "Что такое ИИ?",
           "paragraphs": [
-            "Программа, которую по традиции называют «Hello, world!», очень проста. Она выводит куда-либо фразу «Hello, world!», или другую подобную, средствами некоего языка.",
-            "JavaScript — это язык, программы на котором можно выполнять в разных средах. В нашем случае речь идёт о браузерах и о серверной платформе Node.js. Если до сих пор вы не написали ни строчки кода на JS и читаете этот текст в браузере, на настольном компьютере, это значит, что вы буквально в считанных секундах от своей первой JavaScript-программы.",
-            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном использовании программ на JavaScript, они загружаются в браузер для обеспечения работы веб-страниц. Как правило, код оформляют в виде отдельных файлов с расширением .js, которые подключают к веб-страницам, но программный код можно включать и непосредственно в код страницы. Всё это делается с помощью тега <script>. Когда браузер обнаруживает такой код, он выполняет его. Подробности о теге script можно посмотреть на сайте w3school.com. В частности, рассмотрим пример, демонстрирующий работу с веб-страницей средствами JavaScript, приведённый на этом ресурсе. Этот пример можно запустить и средствами данного ресурса (ищите кнопку Try it Yourself), но мы поступим немного иначе. А именно, создадим в каком-нибудь текстовом редакторе (например — в VS Code или в Notepad++) новый файл, который назовём hello.html, и добавим в него следующий код:"
-          ]
-        },
-        {
-          "id": "4",
-          "type": "CODE",
-          "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
-        },
-        {
-          "id": "5",
-          "type": "TEXT",
-          "title": "Заголовок этого блока",
-          "paragraphs": [
-            "Программа, которую по традиции называют «Hello, world!», очень проста. Она выводит куда-либо фразу «Hello, world!», или другую подобную, средствами некоего языка.",
-            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном использовании программ на JavaScript, они загружаются в браузер для обеспечения работы веб-страниц. Как правило, код оформляют в виде отдельных файлов с расширением .js, которые подключают к веб-страницам, но программный код можно включать и непосредственно в код страницы. Всё это делается с помощью тега <script>. Когда браузер обнаруживает такой код, он выполняет его. Подробности о теге script можно посмотреть на сайте w3school.com. В частности, рассмотрим пример, демонстрирующий работу с веб-страницей средствами JavaScript, приведённый на этом ресурсе. Этот пример можно запустить и средствами данного ресурса (ищите кнопку Try it Yourself), но мы поступим немного иначе. А именно, создадим в каком-нибудь текстовом редакторе (например — в VS Code или в Notepad++) новый файл, который назовём hello.html, и добавим в него следующий код:"
-          ]
-        },
-        {
-          "id": "2",
-          "type": "IMAGE",
-          "src": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png",
-          "title": "Рисунок 1 - скриншот сайта"
-        },
-        {
-          "id": "3",
-          "type": "CODE",
-          "code": "const path = require('path');\n\nconst server = jsonServer.create();\n\nconst router = jsonServer.router(path.resolve(__dirname, 'db.json'));\n\nserver.use(jsonServer.defaults({}));\nserver.use(jsonServer.bodyParser);"
-        },
-        {
-          "id": "7",
-          "type": "TEXT",
-          "title": "Заголовок этого блока",
-          "paragraphs": [
-            "JavaScript — это язык, программы на котором можно выполнять в разных средах. В нашем случае речь идёт о браузерах и о серверной платформе Node.js. Если до сих пор вы не написали ни строчки кода на JS и читаете этот текст в браузере, на настольном компьютере, это значит, что вы буквально в считанных секундах от своей первой JavaScript-программы.",
-            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном использовании программ на JavaScript, они загружаются в браузер для обеспечения работы веб-страниц. Как правило, код оформляют в виде отдельных файлов с расширением .js, которые подключают к веб-страницам, но программный код можно включать и непосредственно в код страницы. Всё это делается с помощью тега <script>. Когда браузер обнаруживает такой код, он выполняет его. Подробности о теге script можно посмотреть на сайте w3school.com. В частности, рассмотрим пример, демонстрирующий работу с веб-страницей средствами JavaScript, приведённый на этом ресурсе. Этот пример можно запустить и средствами данного ресурса (ищите кнопку Try it Yourself), но мы поступим немного иначе. А именно, создадим в каком-нибудь текстовом редакторе (например — в VS Code или в Notepad++) новый файл, который назовём hello.html, и добавим в него следующий код:"
-          ]
-        },
-        {
-          "id": "8",
-          "type": "IMAGE",
-          "src": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png",
-          "title": "Рисунок 1 - скриншот сайта"
-        },
-        {
-          "id": "9",
-          "type": "TEXT",
-          "title": "Заголовок этого блока",
-          "paragraphs": [
-            "JavaScript — это язык, программы на котором можно выполнять в разных средах. В нашем случае речь идёт о браузерах и о серверной платформе Node.js. Если до сих пор вы не написали ни строчки кода на JS и читаете этот текст в браузере, на настольном компьютере, это значит, что вы буквально в считанных секундах от своей первой JavaScript-программы."
+            "Искусственный интеллект (ИИ) — это область информатики, изучающая создание программ, способных к обучению, анализу и принятию решений.",
+            "ИИ уже применяется в голосовых помощниках, системах рекомендаций и медицинских диагностических системах."
           ]
         }
       ]
     },
     {
       "id": "5",
-      "title": "TypeScript news",
-      "subtitle": "Почему всё больше проектов переходят на TypeScript",
-      "img": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
-      "views": 2021,
+      "title": "Глобальное потепление",
+      "subtitle": "Научные данные и угрозы для планеты",
+      "img": "https://cdn-icons-png.flaticon.com/512/4122/4122700.png",
+      "views": 26745,
       "userId": "1",
-      "createdAt": "01.01.2024",
-      "type": ["IT"],
+      "createdAt": "21.03.2024",
+      "type": [
+        "SCIENCE"
+      ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "Что такое TypeScript?",
+          "title": "Что происходит с климатом?",
           "paragraphs": [
-            "TypeScript — это надмножество JavaScript, которое добавляет статическую типизацию. Он помогает разработчикам ловить ошибки до выполнения кода, ещё на этапе компиляции.",
-            "TS используется во многих крупных проектах, включая Angular, VS Code и даже части ядра Node.js. Его популярность растёт."
+            "Средняя температура на планете неуклонно растёт. Учёные связывают это с выбросами парниковых газов.",
+            "Последствия глобального потепления включают таяние ледников, повышение уровня моря и экстремальные погодные явления."
           ]
-        },
-        {
-          "id": "2",
-          "type": "CODE",
-          "code": "type User = {\n  id: number;\n  name: string;\n};\n\nfunction greet(user: User) {\n  return `Hello, ${user.name}`;\n}"
-        },
-        {
-          "id": "3",
-          "type": "IMAGE",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
-          "title": "Логотип TypeScript"
-        },
-        {
-          "id": "4",
-          "type": "TEXT",
-          "title": "Зачем использовать TypeScript?",
-          "paragraphs": [
-            "С ростом проекта становится сложнее отлаживать динамический код. TypeScript позволяет работать безопаснее, предоставляет автодополнение и упрощает навигацию.",
-            "Интеграция с редакторами, такими как VS Code, делает разработку значительно удобнее."
-          ]
-        },
-        {
-          "id": "5",
-          "type": "CODE",
-          "code": "interface Product {\n  title: string;\n  price: number;\n  inStock?: boolean;\n}\n\nconst book: Product = {\n  title: 'TypeScript Handbook',\n  price: 25.5,\n  inStock: true,\n};"
-        },
-        {
-          "id": "6",
-          "type": "IMAGE",
-          "src": "https://miro.medium.com/v2/resize:fit:501/1*6wp3OwIx8anJeKzwVpZ9OQ.png",
-          "title": "Пример кода с аннотациями типов"
         }
       ]
     },
     {
       "id": "6",
-      "title": "Node.js",
-      "subtitle": "Как JavaScript покорил backend",
-      "img": "https://images.seeklogo.com/logo-png/26/1/node-js-logo-png_seeklogo-269242.png",
-      "views": 34586,
+      "title": "Рынок акций",
+      "subtitle": "Как работают фондовые биржи",
+      "img": "https://cdn-icons-png.flaticon.com/512/2331/2331970.png",
+      "views": 19822,
       "userId": "1",
-      "createdAt": "21.05.2024",
-      "type": ["IT"],
+      "createdAt": "25.03.2024",
+      "type": [
+        "ECONOMICS"
+      ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "Что такое Node.js?",
+          "title": "Что такое фондовый рынок?",
           "paragraphs": [
-            "Node.js — это среда выполнения JavaScript вне браузера. Она построена на движке V8 от Google и позволяет писать серверный код на JS.",
-            "С момента своего появления Node.js стал невероятно популярным благодаря своей простоте, масштабируемости и большому количеству пакетов в npm."
+            "Фондовый рынок — это место, где торгуют ценными бумагами: акциями, облигациями и другими инструментами.",
+            "Инвесторы покупают акции компаний с целью получения прибыли или участия в росте бизнеса."
           ]
-        },
-        {
-          "id": "2",
-          "type": "CODE",
-          "code": "const http = require('http');\n\nconst server = http.createServer((req, res) => {\n  res.writeHead(200, {'Content-Type': 'text/plain'});\n  res.end('Hello from Node.js!');\n});\n\nserver.listen(3000);"
-        },
-        {
-          "id": "3",
-          "type": "IMAGE",
-          "src": "data:image/jpeg;base64,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",
-          "title": "Логотип Node.js"
-        },
-        {
-          "id": "4",
-          "type": "TEXT",
-          "title": "Преимущества Node.js",
-          "paragraphs": [
-            "Node.js обрабатывает тысячи соединений одновременно благодаря своей неблокирующей модели ввода‑вывода (non-blocking I/O). Это делает его идеальным для создания REST API, WebSocket‑приложений и микросервисов.",
-            "Он популярен также благодаря большому выбору библиотек в npm и активному сообществу."
-          ]
-        },
-        {
-          "id": "5",
-          "type": "CODE",
-          "code": "const fs = require('fs');\n\nfs.readFile('data.txt', 'utf-8', (err, data) => {\n  if (err) throw err;\n  console.log(data);\n});"
         }
       ]
     },
     {
       "id": "7",
-      "title": "Javascript",
-      "subtitle": "Что нового в JS за 2023 год?",
-      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 3452,
+      "title": "Робототехника",
+      "subtitle": "Будущее автоматизации уже здесь",
+      "img": "https://cdn-icons-png.flaticon.com/512/3104/3104685.png",
+      "views": 27890,
       "userId": "1",
-      "createdAt": "22.08.2023",
-      "type": ["IT"],
+      "createdAt": "29.03.2024",
+      "type": [
+        "SCIENCE"
+      ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "Заголовок этого блока",
+          "title": "Где используются роботы?",
           "paragraphs": [
-            "Программа, которую по традиции называют «Hello, world!», очень проста. Она выводит куда-либо фразу «Hello, world!», или другую подобную, средствами некоего языка.",
-            "JavaScript — это язык, программы на котором можно выполнять в разных средах. В нашем случае речь идёт о браузерах и о серверной платформе Node.js. Если до сих пор вы не написали ни строчки кода на JS и читаете этот текст в браузере, на настольном компьютере, это значит, что вы буквально в считанных секундах от своей первой JavaScript-программы.",
-            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном использовании программ на JavaScript, они загружаются в браузер для обеспечения работы веб-страниц. Как правило, код оформляют в виде отдельных файлов с расширением .js, которые подключают к веб-страницам, но программный код можно включать и непосредственно в код страницы. Всё это делается с помощью тега <script>. Когда браузер обнаруживает такой код, он выполняет его. Подробности о теге script можно посмотреть на сайте w3school.com. В частности, рассмотрим пример, демонстрирующий работу с веб-страницей средствами JavaScript, приведённый на этом ресурсе. Этот пример можно запустить и средствами данного ресурса (ищите кнопку Try it Yourself), но мы поступим немного иначе. А именно, создадим в каком-нибудь текстовом редакторе (например — в VS Code или в Notepad++) новый файл, который назовём hello.html, и добавим в него следующий код:"
-          ]
-        },
-        {
-          "id": "4",
-          "type": "CODE",
-          "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
-        },
-        {
-          "id": "5",
-          "type": "TEXT",
-          "title": "Заголовок этого блока",
-          "paragraphs": [
-            "Программа, которую по традиции называют «Hello, world!», очень проста. Она выводит куда-либо фразу «Hello, world!», или другую подобную, средствами некоего языка.",
-            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном использовании программ на JavaScript, они загружаются в браузер для обеспечения работы веб-страниц. Как правило, код оформляют в виде отдельных файлов с расширением .js, которые подключают к веб-страницам, но программный код можно включать и непосредственно в код страницы. Всё это делается с помощью тега <script>. Когда браузер обнаруживает такой код, он выполняет его. Подробности о теге script можно посмотреть на сайте w3school.com. В частности, рассмотрим пример, демонстрирующий работу с веб-страницей средствами JavaScript, приведённый на этом ресурсе. Этот пример можно запустить и средствами данного ресурса (ищите кнопку Try it Yourself), но мы поступим немного иначе. А именно, создадим в каком-нибудь текстовом редакторе (например — в VS Code или в Notepad++) новый файл, который назовём hello.html, и добавим в него следующий код:"
-          ]
-        },
-        {
-          "id": "2",
-          "type": "IMAGE",
-          "src": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png",
-          "title": "Рисунок 1 - скриншот сайта"
-        },
-        {
-          "id": "3",
-          "type": "CODE",
-          "code": "const path = require('path');\n\nconst server = jsonServer.create();\n\nconst router = jsonServer.router(path.resolve(__dirname, 'db.json'));\n\nserver.use(jsonServer.defaults({}));\nserver.use(jsonServer.bodyParser);"
-        },
-        {
-          "id": "7",
-          "type": "TEXT",
-          "title": "Заголовок этого блока",
-          "paragraphs": [
-            "JavaScript — это язык, программы на котором можно выполнять в разных средах. В нашем случае речь идёт о браузерах и о серверной платформе Node.js. Если до сих пор вы не написали ни строчки кода на JS и читаете этот текст в браузере, на настольном компьютере, это значит, что вы буквально в считанных секундах от своей первой JavaScript-программы.",
-            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном использовании программ на JavaScript, они загружаются в браузер для обеспечения работы веб-страниц. Как правило, код оформляют в виде отдельных файлов с расширением .js, которые подключают к веб-страницам, но программный код можно включать и непосредственно в код страницы. Всё это делается с помощью тега <script>. Когда браузер обнаруживает такой код, он выполняет его. Подробности о теге script можно посмотреть на сайте w3school.com. В частности, рассмотрим пример, демонстрирующий работу с веб-страницей средствами JavaScript, приведённый на этом ресурсе. Этот пример можно запустить и средствами данного ресурса (ищите кнопку Try it Yourself), но мы поступим немного иначе. А именно, создадим в каком-нибудь текстовом редакторе (например — в VS Code или в Notepad++) новый файл, который назовём hello.html, и добавим в него следующий код:"
-          ]
-        },
-        {
-          "id": "8",
-          "type": "IMAGE",
-          "src": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png",
-          "title": "Рисунок 1 - скриншот сайта"
-        },
-        {
-          "id": "9",
-          "type": "TEXT",
-          "title": "Заголовок этого блока",
-          "paragraphs": [
-            "JavaScript — это язык, программы на котором можно выполнять в разных средах. В нашем случае речь идёт о браузерах и о серверной платформе Node.js. Если до сих пор вы не написали ни строчки кода на JS и читаете этот текст в браузере, на настольном компьютере, это значит, что вы буквально в считанных секундах от своей первой JavaScript-программы."
+            "Роботы применяются в производстве, медицине, логистике и даже в космосе.",
+            "С каждым годом они становятся умнее и автономнее, заменяя людей в рутинных или опасных задачах."
           ]
         }
       ]
     },
     {
       "id": "8",
-      "title": "TypeScript уже здесь",
-      "subtitle": "Почему всё больше проектов переходят на TypeScript",
-      "img": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
-      "views": 4567,
+      "title": "Big Data",
+      "subtitle": "Как анализировать огромные объёмы информации",
+      "img": "https://cdn-icons-png.flaticon.com/512/991/991931.png",
+      "views": 24360,
       "userId": "1",
-      "createdAt": "15.03.2024",
-      "type": ["IT"],
+      "createdAt": "30.03.2024",
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "Что такое TypeScript?",
+          "title": "Что такое Big Data?",
           "paragraphs": [
-            "TypeScript — это надмножество JavaScript, которое добавляет статическую типизацию. Он помогает разработчикам ловить ошибки до выполнения кода, ещё на этапе компиляции.",
-            "TS используется во многих крупных проектах, включая Angular, VS Code и даже части ядра Node.js. Его популярность растёт."
+            "Big Data — это обработка и анализ огромных объёмов данных, поступающих из разных источников: интернета, датчиков, соцсетей и т. д.",
+            "Компании используют Big Data для предсказания поведения клиентов, оптимизации логистики и маркетинга."
           ]
-        },
-        {
-          "id": "2",
-          "type": "CODE",
-          "code": "type User = {\n  id: number;\n  name: string;\n};\n\nfunction greet(user: User) {\n  return `Hello, ${user.name}`;\n}"
-        },
-        {
-          "id": "3",
-          "type": "IMAGE",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
-          "title": "Логотип TypeScript"
-        },
-        {
-          "id": "4",
-          "type": "TEXT",
-          "title": "Зачем использовать TypeScript?",
-          "paragraphs": [
-            "С ростом проекта становится сложнее отлаживать динамический код. TypeScript позволяет работать безопаснее, предоставляет автодополнение и упрощает навигацию.",
-            "Интеграция с редакторами, такими как VS Code, делает разработку значительно удобнее."
-          ]
-        },
-        {
-          "id": "5",
-          "type": "CODE",
-          "code": "interface Product {\n  title: string;\n  price: number;\n  inStock?: boolean;\n}\n\nconst book: Product = {\n  title: 'TypeScript Handbook',\n  price: 25.5,\n  inStock: true,\n};"
-        },
-        {
-          "id": "6",
-          "type": "IMAGE",
-          "src": "https://miro.medium.com/v2/resize:fit:501/1*6wp3OwIx8anJeKzwVpZ9OQ.png",
-          "title": "Пример кода с аннотациями типов"
         }
       ]
     },
     {
       "id": "9",
-      "title": "Cерверный JavaScript",
-      "subtitle": "Как JavaScript покорил backend",
-      "img": "https://images.seeklogo.com/logo-png/26/1/node-js-logo-png_seeklogo-269242.png",
-      "views": 63489,
+      "title": "Цифровые валюты",
+      "subtitle": "Будущее денег уже наступило?",
+      "img": "https://cdn-icons-png.flaticon.com/512/7461/7461746.png",
+      "views": 35123,
       "userId": "1",
-      "createdAt": "24.12.2023",
-      "type": ["IT"],
+      "createdAt": "01.04.2024",
+      "type": [
+        "ECONOMICS"
+      ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "Что такое Node.js?",
+          "title": "Что такое цифровая валюта?",
           "paragraphs": [
-            "Node.js — это среда выполнения JavaScript вне браузера. Она построена на движке V8 от Google и позволяет писать серверный код на JS.",
-            "С момента своего появления Node.js стал невероятно популярным благодаря своей простоте, масштабируемости и большому количеству пакетов в npm."
+            "Цифровые валюты, такие как Bitcoin или цифровые валюты центробанков (CBDC), существуют только в электронной форме.",
+            "Они меняют банковскую систему, создавая новые возможности и риски."
           ]
-        },
-        {
-          "id": "2",
-          "type": "CODE",
-          "code": "const http = require('http');\n\nconst server = http.createServer((req, res) => {\n  res.writeHead(200, {'Content-Type': 'text/plain'});\n  res.end('Hello from Node.js!');\n});\n\nserver.listen(3000);"
-        },
-        {
-          "id": "3",
-          "type": "IMAGE",
-          "src": "data:image/jpeg;base64,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",
-          "title": "Логотип Node.js"
-        },
-        {
-          "id": "4",
-          "type": "TEXT",
-          "title": "Преимущества Node.js",
-          "paragraphs": [
-            "Node.js обрабатывает тысячи соединений одновременно благодаря своей неблокирующей модели ввода‑вывода (non-blocking I/O). Это делает его идеальным для создания REST API, WebSocket‑приложений и микросервисов.",
-            "Он популярен также благодаря большому выбору библиотек в npm и активному сообществу."
-          ]
-        },
-        {
-          "id": "5",
-          "type": "CODE",
-          "code": "const fs = require('fs');\n\nfs.readFile('data.txt', 'utf-8', (err, data) => {\n  if (err) throw err;\n  console.log(data);\n});"
         }
       ]
     },
     {
       "id": "10",
-      "title": "Javascript news again",
-      "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1234,
+      "title": "Кибербезопасность",
+      "subtitle": "Как защититься от онлайн-угроз",
+      "img": "https://cdn-icons-png.flaticon.com/512/7009/7009763.png",
+      "views": 28944,
       "userId": "1",
-      "createdAt": "26.03.2024",
-      "type": ["IT"],
+      "createdAt": "04.04.2024",
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "Заголовок этого блока",
+          "title": "Основы кибербезопасности",
           "paragraphs": [
-            "Программа, которую по традиции называют «Hello, world!», очень проста. Она выводит куда-либо фразу «Hello, world!», или другую подобную, средствами некоего языка.",
-            "JavaScript — это язык, программы на котором можно выполнять в разных средах. В нашем случае речь идёт о браузерах и о серверной платформе Node.js. Если до сих пор вы не написали ни строчки кода на JS и читаете этот текст в браузере, на настольном компьютере, это значит, что вы буквально в считанных секундах от своей первой JavaScript-программы.",
-            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном использовании программ на JavaScript, они загружаются в браузер для обеспечения работы веб-страниц. Как правило, код оформляют в виде отдельных файлов с расширением .js, которые подключают к веб-страницам, но программный код можно включать и непосредственно в код страницы. Всё это делается с помощью тега <script>. Когда браузер обнаруживает такой код, он выполняет его. Подробности о теге script можно посмотреть на сайте w3school.com. В частности, рассмотрим пример, демонстрирующий работу с веб-страницей средствами JavaScript, приведённый на этом ресурсе. Этот пример можно запустить и средствами данного ресурса (ищите кнопку Try it Yourself), но мы поступим немного иначе. А именно, создадим в каком-нибудь текстовом редакторе (например — в VS Code или в Notepad++) новый файл, который назовём hello.html, и добавим в него следующий код:"
-          ]
-        },
-        {
-          "id": "4",
-          "type": "CODE",
-          "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
-        },
-        {
-          "id": "5",
-          "type": "TEXT",
-          "title": "Заголовок этого блока",
-          "paragraphs": [
-            "Программа, которую по традиции называют «Hello, world!», очень проста. Она выводит куда-либо фразу «Hello, world!», или другую подобную, средствами некоего языка.",
-            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном использовании программ на JavaScript, они загружаются в браузер для обеспечения работы веб-страниц. Как правило, код оформляют в виде отдельных файлов с расширением .js, которые подключают к веб-страницам, но программный код можно включать и непосредственно в код страницы. Всё это делается с помощью тега <script>. Когда браузер обнаруживает такой код, он выполняет его. Подробности о теге script можно посмотреть на сайте w3school.com. В частности, рассмотрим пример, демонстрирующий работу с веб-страницей средствами JavaScript, приведённый на этом ресурсе. Этот пример можно запустить и средствами данного ресурса (ищите кнопку Try it Yourself), но мы поступим немного иначе. А именно, создадим в каком-нибудь текстовом редакторе (например — в VS Code или в Notepad++) новый файл, который назовём hello.html, и добавим в него следующий код:"
-          ]
-        },
-        {
-          "id": "2",
-          "type": "IMAGE",
-          "src": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png",
-          "title": "Рисунок 1 - скриншот сайта"
-        },
-        {
-          "id": "3",
-          "type": "CODE",
-          "code": "const path = require('path');\n\nconst server = jsonServer.create();\n\nconst router = jsonServer.router(path.resolve(__dirname, 'db.json'));\n\nserver.use(jsonServer.defaults({}));\nserver.use(jsonServer.bodyParser);"
-        },
-        {
-          "id": "7",
-          "type": "TEXT",
-          "title": "Заголовок этого блока",
-          "paragraphs": [
-            "JavaScript — это язык, программы на котором можно выполнять в разных средах. В нашем случае речь идёт о браузерах и о серверной платформе Node.js. Если до сих пор вы не написали ни строчки кода на JS и читаете этот текст в браузере, на настольном компьютере, это значит, что вы буквально в считанных секундах от своей первой JavaScript-программы.",
-            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном использовании программ на JavaScript, они загружаются в браузер для обеспечения работы веб-страниц. Как правило, код оформляют в виде отдельных файлов с расширением .js, которые подключают к веб-страницам, но программный код можно включать и непосредственно в код страницы. Всё это делается с помощью тега <script>. Когда браузер обнаруживает такой код, он выполняет его. Подробности о теге script можно посмотреть на сайте w3school.com. В частности, рассмотрим пример, демонстрирующий работу с веб-страницей средствами JavaScript, приведённый на этом ресурсе. Этот пример можно запустить и средствами данного ресурса (ищите кнопку Try it Yourself), но мы поступим немного иначе. А именно, создадим в каком-нибудь текстовом редакторе (например — в VS Code или в Notepad++) новый файл, который назовём hello.html, и добавим в него следующий код:"
-          ]
-        },
-        {
-          "id": "8",
-          "type": "IMAGE",
-          "src": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png",
-          "title": "Рисунок 1 - скриншот сайта"
-        },
-        {
-          "id": "9",
-          "type": "TEXT",
-          "title": "Заголовок этого блока",
-          "paragraphs": [
-            "JavaScript — это язык, программы на котором можно выполнять в разных средах. В нашем случае речь идёт о браузерах и о серверной платформе Node.js. Если до сих пор вы не написали ни строчки кода на JS и читаете этот текст в браузере, на настольном компьютере, это значит, что вы буквально в считанных секундах от своей первой JavaScript-программы."
+            "Кибербезопасность включает защиту систем, сетей и данных от цифровых атак.",
+            "Для пользователей важно использовать сложные пароли, антивирусы и двухфакторную аутентификацию."
           ]
         }
       ]
     },
     {
       "id": "11",
-      "title": "TypeScript",
-      "subtitle": "Почему всё больше проектов переходят на TypeScript",
-      "img": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
-      "views": 54671,
+      "title": "JavaScript в 2025",
+      "subtitle": "Какие функции языка изменят подход к разработке",
+      "img": "https://cdn-icons-png.flaticon.com/512/5968/5968292.png",
+      "views": 65832,
       "userId": "1",
-      "createdAt": "01.02.2024",
-      "type": ["IT"],
+      "createdAt": "03.04.2024",
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "Что такое TypeScript?",
+          "title": "Эволюция JavaScript",
           "paragraphs": [
-            "TypeScript — это надмножество JavaScript, которое добавляет статическую типизацию. Он помогает разработчикам ловить ошибки до выполнения кода, ещё на этапе компиляции.",
-            "TS используется во многих крупных проектах, включая Angular, VS Code и даже части ядра Node.js. Его популярность растёт."
+            "С момента своего появления в 1995 году JavaScript стал основным языком для веб-разработки.",
+            "Сейчас, в 2025 году, новые фичи — такие как `Pipeline operator`, `Temporal API`, `Pattern Matching` — становятся всё ближе к стабильному использованию."
           ]
         },
         {
           "id": "2",
           "type": "CODE",
-          "code": "type User = {\n  id: number;\n  name: string;\n};\n\nfunction greet(user: User) {\n  return `Hello, ${user.name}`;\n}"
+          "code": "const prices = [100, 200, 300];\nconst total = prices\n  .map(p => p * 0.9)\n  .reduce((sum, val) => sum + val, 0);\nconsole.log(total);"
         },
         {
           "id": "3",
           "type": "IMAGE",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
-          "title": "Логотип TypeScript"
+          "src": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+          "title": "Логотип JavaScript"
         },
         {
           "id": "4",
           "type": "TEXT",
-          "title": "Зачем использовать TypeScript?",
+          "title": "Почему это важно?",
           "paragraphs": [
-            "С ростом проекта становится сложнее отлаживать динамический код. TypeScript позволяет работать безопаснее, предоставляет автодополнение и упрощает навигацию.",
-            "Интеграция с редакторами, такими как VS Code, делает разработку значительно удобнее."
+            "Современный JS делает код декларативным и безопасным. Улучшается производительность движков браузеров.",
+            "Большинство крупных фреймворков (Next.js, Vue 3, SolidJS) используют новые стандарты языка."
           ]
-        },
-        {
-          "id": "5",
-          "type": "CODE",
-          "code": "interface Product {\n  title: string;\n  price: number;\n  inStock?: boolean;\n}\n\nconst book: Product = {\n  title: 'TypeScript Handbook',\n  price: 25.5,\n  inStock: true,\n};"
-        },
-        {
-          "id": "6",
-          "type": "IMAGE",
-          "src": "https://miro.medium.com/v2/resize:fit:501/1*6wp3OwIx8anJeKzwVpZ9OQ.png",
-          "title": "Пример кода с аннотациями типов"
         }
       ]
     },
     {
       "id": "12",
-      "title": "JavaScript серверный",
-      "subtitle": "Как JavaScript покорил backend",
-      "img": "https://images.seeklogo.com/logo-png/26/1/node-js-logo-png_seeklogo-269242.png",
-      "views": 46351,
+      "title": "Экономика внимания",
+      "subtitle": "Почему YouTube и TikTok борются за твоё время",
+      "img": "data:image/png;base64,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",
+      "views": 44110,
       "userId": "1",
-      "createdAt": "09.01.2022",
-      "type": ["IT"],
+      "createdAt": "06.04.2024",
+      "type": [
+        "ECONOMICS"
+      ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "Что такое Node.js?",
+          "title": "Что такое экономика внимания?",
           "paragraphs": [
-            "Node.js — это среда выполнения JavaScript вне браузера. Она построена на движке V8 от Google и позволяет писать серверный код на JS.",
-            "С момента своего появления Node.js стал невероятно популярным благодаря своей простоте, масштабируемости и большому количеству пакетов в npm."
+            "В экономике внимания основным ресурсом становится не товар, а человеческое внимание. Платформы борются за каждую секунду, которую ты проводишь в приложении.",
+            "Компании инвестируют в UX-дизайн, алгоритмы рекомендаций и поведенческую аналитику, чтобы удерживать пользователей дольше."
           ]
         },
         {
           "id": "2",
-          "type": "CODE",
-          "code": "const http = require('http');\n\nconst server = http.createServer((req, res) => {\n  res.writeHead(200, {'Content-Type': 'text/plain'});\n  res.end('Hello from Node.js!');\n});\n\nserver.listen(3000);"
+          "type": "IMAGE",
+          "src": "data:image/jpeg;base64,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",
+          "title": "Иконка лайка — символ экономики внимания"
         },
         {
           "id": "3",
-          "type": "IMAGE",
-          "src": "data:image/jpeg;base64,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",
-          "title": "Логотип Node.js"
+          "type": "CODE",
+          "code": "// Пример алгоритма рекомендации\nfunction recommend(userHistory) {\n  return trending.filter(video =>\n    userHistory.some(h => h.tags.includes(video.tag))\n  );\n}"
         },
         {
           "id": "4",
           "type": "TEXT",
-          "title": "Преимущества Node.js",
+          "title": "Влияние на экономику",
           "paragraphs": [
-            "Node.js обрабатывает тысячи соединений одновременно благодаря своей неблокирующей модели ввода‑вывода (non-blocking I/O). Это делает его идеальным для создания REST API, WebSocket‑приложений и микросервисов.",
-            "Он популярен также благодаря большому выбору библиотек в npm и активному сообществу."
+            "Платформы зарабатывают на рекламе и партнёрствах, увеличивая прибыль за счёт времени, проведённого пользователями.",
+            "Именно внимание сегодня стало новой цифровой валютой — его анализируют, прогнозируют и монетизируют."
           ]
-        },
-        {
-          "id": "5",
-          "type": "CODE",
-          "code": "const fs = require('fs');\n\nfs.readFile('data.txt', 'utf-8', (err, data) => {\n  if (err) throw err;\n  console.log(data);\n});"
         }
       ]
     },
     {
       "id": "13",
-      "title": "JS news",
-      "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 46579,
+      "title": "Генетический код",
+      "subtitle": "Как наука переписывает жизнь",
+      "img": "https://cdn-icons-png.flaticon.com/512/2784/2784460.png",
+      "views": 39002,
       "userId": "1",
-      "createdAt": "22.09.2021",
-      "type": ["IT"],
+      "createdAt": "07.04.2024",
+      "type": [
+        "SCIENCE"
+      ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "Заголовок этого блока",
+          "title": "Что такое ДНК?",
           "paragraphs": [
-            "Программа, которую по традиции называют «Hello, world!», очень проста. Она выводит куда-либо фразу «Hello, world!», или другую подобную, средствами некоего языка.",
-            "JavaScript — это язык, программы на котором можно выполнять в разных средах. В нашем случае речь идёт о браузерах и о серверной платформе Node.js. Если до сих пор вы не написали ни строчки кода на JS и читаете этот текст в браузере, на настольном компьютере, это значит, что вы буквально в считанных секундах от своей первой JavaScript-программы.",
-            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном использовании программ на JavaScript, они загружаются в браузер для обеспечения работы веб-страниц. Как правило, код оформляют в виде отдельных файлов с расширением .js, которые подключают к веб-страницам, но программный код можно включать и непосредственно в код страницы. Всё это делается с помощью тега <script>. Когда браузер обнаруживает такой код, он выполняет его. Подробности о теге script можно посмотреть на сайте w3school.com. В частности, рассмотрим пример, демонстрирующий работу с веб-страницей средствами JavaScript, приведённый на этом ресурсе. Этот пример можно запустить и средствами данного ресурса (ищите кнопку Try it Yourself), но мы поступим немного иначе. А именно, создадим в каком-нибудь текстовом редакторе (например — в VS Code или в Notepad++) новый файл, который назовём hello.html, и добавим в него следующий код:"
-          ]
-        },
-        {
-          "id": "4",
-          "type": "CODE",
-          "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
-        },
-        {
-          "id": "5",
-          "type": "TEXT",
-          "title": "Заголовок этого блока",
-          "paragraphs": [
-            "Программа, которую по традиции называют «Hello, world!», очень проста. Она выводит куда-либо фразу «Hello, world!», или другую подобную, средствами некоего языка.",
-            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном использовании программ на JavaScript, они загружаются в браузер для обеспечения работы веб-страниц. Как правило, код оформляют в виде отдельных файлов с расширением .js, которые подключают к веб-страницам, но программный код можно включать и непосредственно в код страницы. Всё это делается с помощью тега <script>. Когда браузер обнаруживает такой код, он выполняет его. Подробности о теге script можно посмотреть на сайте w3school.com. В частности, рассмотрим пример, демонстрирующий работу с веб-страницей средствами JavaScript, приведённый на этом ресурсе. Этот пример можно запустить и средствами данного ресурса (ищите кнопку Try it Yourself), но мы поступим немного иначе. А именно, создадим в каком-нибудь текстовом редакторе (например — в VS Code или в Notepad++) новый файл, который назовём hello.html, и добавим в него следующий код:"
+            "ДНК — это молекула, которая содержит инструкции для создания всех биологических структур в живых организмах.",
+            "Геном человека состоит из более чем 3 миллиардов пар оснований, и современные технологии позволяют их точно анализировать."
           ]
         },
         {
           "id": "2",
           "type": "IMAGE",
-          "src": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png",
-          "title": "Рисунок 1 - скриншот сайта"
+          "src": "data:image/png;base64,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",
+          "title": "Структура двойной спирали ДНК"
         },
         {
           "id": "3",
+          "type": "TEXT",
+          "title": "Редактирование генов",
+          "paragraphs": [
+            "Технология CRISPR позволяет «вырезать» и заменять участки генетического кода. Это открывает путь к лечению наследственных заболеваний.",
+            "Тем не менее, редактирование генома вызывает этические споры и требует строгого контроля."
+          ]
+        },
+        {
+          "id": "4",
           "type": "CODE",
-          "code": "const path = require('path');\n\nconst server = jsonServer.create();\n\nconst router = jsonServer.router(path.resolve(__dirname, 'db.json'));\n\nserver.use(jsonServer.defaults({}));\nserver.use(jsonServer.bodyParser);"
-        },
-        {
-          "id": "7",
-          "type": "TEXT",
-          "title": "Заголовок этого блока",
-          "paragraphs": [
-            "JavaScript — это язык, программы на котором можно выполнять в разных средах. В нашем случае речь идёт о браузерах и о серверной платформе Node.js. Если до сих пор вы не написали ни строчки кода на JS и читаете этот текст в браузере, на настольном компьютере, это значит, что вы буквально в считанных секундах от своей первой JavaScript-программы.",
-            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном использовании программ на JavaScript, они загружаются в браузер для обеспечения работы веб-страниц. Как правило, код оформляют в виде отдельных файлов с расширением .js, которые подключают к веб-страницам, но программный код можно включать и непосредственно в код страницы. Всё это делается с помощью тега <script>. Когда браузер обнаруживает такой код, он выполняет его. Подробности о теге script можно посмотреть на сайте w3school.com. В частности, рассмотрим пример, демонстрирующий работу с веб-страницей средствами JavaScript, приведённый на этом ресурсе. Этот пример можно запустить и средствами данного ресурса (ищите кнопку Try it Yourself), но мы поступим немного иначе. А именно, создадим в каком-нибудь текстовом редакторе (например — в VS Code или в Notepad++) новый файл, который назовём hello.html, и добавим в него следующий код:"
-          ]
-        },
-        {
-          "id": "8",
-          "type": "IMAGE",
-          "src": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png",
-          "title": "Рисунок 1 - скриншот сайта"
-        },
-        {
-          "id": "9",
-          "type": "TEXT",
-          "title": "Заголовок этого блока",
-          "paragraphs": [
-            "JavaScript — это язык, программы на котором можно выполнять в разных средах. В нашем случае речь идёт о браузерах и о серверной платформе Node.js. Если до сих пор вы не написали ни строчки кода на JS и читаете этот текст в браузере, на настольном компьютере, это значит, что вы буквально в считанных секундах от своей первой JavaScript-программы."
-          ]
+          "code": "# Псевдокод редактирования генов\nsequence = 'AGTCAGTCA...'\nmutation = sequence.replace('CAG', 'TAG')\nprint(mutation)"
         }
       ]
     },
     {
       "id": "14",
-      "title": "TS: будущее JS уже здесь",
-      "subtitle": "Почему всё больше проектов переходят на TypeScript",
-      "img": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
-      "views": 45623,
+      "title": "Машинное обучение",
+      "subtitle": "От теории к применению в бизнесе",
+      "img": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAKAA9wMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAABAUCAwYBB//EAE0QAAIBAwMCAwYCBAgLBgcAAAECAwAEEQUSIRMxBkFRFCIyYXGBkaEVI0KxFlJicpKUwdEkJTNVVoKistPh8GNlo9Ti8SY0NURTg5P/xAAZAQEBAQEBAQAAAAAAAAAAAAAAAQIDBAX/xAAiEQEBAAICAgMAAwEAAAAAAAAAAQIRAyExQQQSUWFxkRP/2gAMAwEAAhEDEQA/APuFKUrAUpSgV4eRUPVNRt9LtGurt9seQqgDLOx4CqPMn0qmfT77XF6utzS2OnkZGnQS7C6/9tIOf9VSB6k1qRKnXfiPSrad7Y3XXuk+K3tUaZx9QucfetZ124cAwaFqbqfVUT8i1VsniXw9oCCw09IEEfaC1QAL9lqN/Dp3yYtOuSPXpNz+IFb/AOd9RyvPhOrV0fEDxruutF1SED0iEn5KT+6pWn67peoTmC1vIzcL8UD5SQf6jYP5Vz0fjyFSParK5iHmxjbA/KrRZvD/AIstNkiWt4inhXALIfUHup+Ywalw16XHlxy8Vf5r2ub9n1Tw+N9tNcarpo7wTtvuIR/IfvIB6Nlvme1Xen3lvf2kdzaSrJFIMhh+75H5VnX46bSaUFV1zfmKdo0QHaeWd9oz6D8azpVjxSqZdZYAvLCuxQWba/Kgck4PoKtx3q2WG2VKUqBSlKBSlKBSlKBSlKBSlKBSlKBSlKBSlKBWLOqqzOQFUZJPlWVUfi2Qtp0djGdr6hOlqCP4rcv/ALIarJsRtIgOsX/8ILz3oUyumxN8Mcf7UpH8dvXyXAGMnPP67qk/iOdoYJ5INGiYr+rYq92wOCSw5WMeQHLeoHfqfFEjWPhyeO1/VlwltHt/Z3sIxj6bq4HUme0vvZbZykMShVVX2gDEpz8JycRgV345uvL8nOzHUbbl7bSLCRrWGNWVCY41XBdh9Oea0nVI5pjCw9zfw3ILAOPl5jP7qrr43cV4i3DTRs+xeZQSVxKTyAMcqv4VHv3ZYXjE8jF4pso0pOR0nP7wD9q1lyY45/WnB8DPl+Plzy9Yru2MxlgWfpqT736iRtp5PBBrO5trSS9jVXe2v9peO4tvcdfv2I+R4qoEz9UOt/M0gLEf4Rbc8lj+x8zU60d3je3gjmg1GUb5JbpQW2+TcYBHkFGMc5ArrY8Pc7jtPC/iG4nmGla3s9t2kw3EY2pdKPPH7LjzHY9x6DZqUR8PakdYtSF0+5ZV1G3xwrHgTr6Edm9Rz3HNBOrwaZNfMrk2pR0mUY2uGB/DGQcetd1c21tqVoI7mNJoXAIUjIrzZyS9Po8GVzw7b0niYJtkQ7vhww5+lVdxYRXVzLLcXMBiZ16aFEYBgAM5bPPHlj71p8KAfo9rOZUafTpntS2OcKcqfupU1c+zxYA6ceAcgbR3rn4dvKvj0y2OYo5vcyeokaRru9QcDsfP1qXeX0FkitOWBc4VVXJNZS2wbDROYX3hi0YALY8j6gjP9nIqvv7UXxUTlbe4y6KGxIsi+oGQfTj8QaTsvTfbaxbSyrEVeJn+DcBhvTkVYg5qgj0a668XWuY2iRgxZAQzYOQNvPy5yat7aaR5p0eB0VGwrnGG4HzpZ+Ev6k0pSsqUpmvM0HtKUoFKUoFKUoFKUoFKUoFKUoFUWt+9r3h9CPdFzK/3EL4/eavaofEzezz6RfsQI7W9Xqk+SyK0efxYVrHyle+M0dvD08kYJNvJFcYHfEciufyU1x2rwxfwkldJC8SwpNHtHEgO/jP0kH419LYAghgCD3zXMyaVe6WrLp9rFqOnk5Fm7BJYe/EbHgj0U4x6+Vb48tOXNxTOOLvYBLpizMStwsZWNMBt7AnauCOeexrVZ6E+o3T2to4dDEx3CNVymSvxY4BGavb2DS5blWuNN8RxNjaYBp8kqn5blDKPx+vFXFjosupk+32stnpgHu2byDfcN/Gl2nt6Ln6+ldrnPLzYcGc6t6cvPp+me3yw+INc01GCjCI2QfpzwQfvnFbrWKyubQRs+p6rqEZzDLYWTgdhz1GVY+ecgtjnHOMnuriDTtPsxCtpHGjkJHDboAznyC4xz8/LGTgc1z82u3d5cy21uouUhwjtDP07eF84KSTEe82fJOfUDzx98snecOOKQIZLhoH8QSWenWUTh4tPWUMXYdjK3AJB52rxnHJq3ju4WuB7IbmQdMhYlgZY2x2IYgKD5d8GoFrod9ktNqK2hOMrYQKpI+btlm+tSR4YsGbdPNfXB/7W8k/cCBXO2e3aT8adFm/+KtbjCuqSW9rdBXG0hmEiHj1/VCuhPAqrs9CsNPmluNOgEV1JGEaQuzbgMkA5PIBJ/E1sub2VIegERr9kDdFTwwyAxXOM4BzjPHHqM5vfhUH9IXN7qJisnEUcWW9/bi4XBHunk8Hn7fPiwsJ5LpWF3ZPBLC+0l9pV2A+JMEnHPc4NU1jY3lrcQSLZHIkTqE7QMY2kj9YcDBJwBVzeajBaSLE4keZ8YSNCx54GcdsnjJwKtSX9eqz2iqspaSFFYtcSOAUA7bu2Rjz+XPrWuG1llnkaWdntvih2OQTuOTn6HgfKpFlcwX1vHcWsgkhcZVgf3+YPyPIrySF4MyWoLBUwtsCFX7ccGoqLLdrZXJtrW3nuZigkcdQYRc4HJPc88fKptjdx31ss8W4KSQVYYKkcEH71VXVit9evNby2/WVVjuIZV37DjK5APBw2foa2aJHcaez2M8ZcFmkWdFOGzySfIc5GO/H3pZNJ7btU1NrSQQwoDJs3ln+FRnA/Pj7ivdO1B7h+lOgWQruUr2I4z9MZHf1+uI1/CTqLvKrsCi9MKrFWHmCAO4POc+fyqfY2UUESN01WUr77Ac5Pf7VetL2ktIqjLMAPmaLIr/CQw9Qc1z+t2VzNdPKLU3agDpqCuF9QckYz6/P7V5osc6ajlbeWGHY3ULoUBPGO/c9+2akx6HR5rzPNVevrI8MIVZjF1My9HO7GPlzWWiCYWkgmjmQdVumspywX7/PNTXRtYNNGhw7qpPkTiswc1yWpiNNTu21GNmLf/Lltp3IFHYckAEvnscnz7joNFSZNNhS5VlkA7N3xnjPfyxxk4q2ahtOpSlZUpSlApSlAql8UXEKWS2LW63U9+3RhtiSN/GWJxyFABJPl96s7u5is7aW5uJBHDEpd3bsAO9UugWst3dS69qMZS5uF6dtC3/28GcgfzmOGY/zR+yK1J7SqfxL4bnh9jk0VdUkJZklji1OVAuVyrHc/YEY8z71SfCWjalaX1xLqOrXczQkILbrF4xlQeS3JPP5V1+B3qsv42tJfbrfhiVW4jJwsq5Az8mHkfMcHyIsztx0z9Jvbfe36WrLGkbzXEg/Vwxjk/Mnso+Z/M8VstBc7M3Zi3schYxwo9M+f1rnZdckTUvbeiDabjb5yd+A5BbGMcHyz2FXet7jpN2iMUd4mjRwcFWb3QfxIqa101tzN1dLrF1NI85hsEgM9xOrYKW5yVVSOxcDcSOduBWAQz2620lssFrEqqLBSUhtlK5WNwuN77SCRnaMjv3O23VT4T1O/2gCa+lnkwMYhjm24+0cYFSFjboXEbHdLFeTNJx5SOXjP02FRn5Y8q5/J5MuPiuWHlrixmWcmSigtzpEMsiCV06ryZtCyTRBmJwqgkOozwCDxxXX+H9WN6slvM6PPFHHKsiDCzQvnZIB5Z2sCPIqfLFcnp13cy3MayshWZ5YwioQYnRiNvfkEA88dvnU7QYpLfWIpbUPKq2tzK8XUyAktwvSZQe2VR+O3u+XOfP8AD5uXk3OT/XXnwwx1cHX3l0lpayTurusaM5SNdzMAM8DzNZI0dzbI4yEkQMvkQCPyqLe6dZ6mUklBaWLcqSRysrRkjnlSKq7WefR7j2a5cvb9REj5kkYjZjIPPmDlfrXskmnDa5R5Ldo4pt7qEJNwSB2/jD6efy8qrtQsrldQ9pt4UnSVdrKcccY5z34/65q4R0liDo25HGQfLFaEha22R2qoLVFIMWDx6Y+XljypL2NWiWklnaBZ2zLId787sHaBgt59u5qXbTR3MKTRnKOMqa0kR6hbo8c8yoecxsUP0Pn9qi6LYnTrCLrTTlliAcSSlwuPSpRPuLcSLlHMUvA6igZwDnHzHyrBobk9UrcqN2Nn6oHb6+fNQrbV3lmi6lvst5m2QybgSx+lWw5+dLuCMIrguT7QNuzGOkPi9e/5USO5BjLXSkKPfHSA3/nxUg/9CoTalbiRlG9gDtZ0QkA+nz+2aTtWwRXW1Qbtd27LHpD3h6d/zo8N0VkC3aglsqekPcHp35qQMHO3H2r3/rvTYjmO5JkIuQAVAX9V8J8z35osVxuXNypwmG/VfE3r39fKpOOe/NMU2IoiugIt90rbSTJiLG/08+K8EV3sx7YobqZz0R8OPh7/AJ1L2j0pimxpjWZZJGeUOhPuqExt+/nW8V5ivagUpSgUpSgrtcsP0np8tqsvSYlWWTbuAZTkZHmMjkVVS6trNhe6fa31lYztdy9ISW07BuAWLbGXgADPxV01VXiPTBqulT26qOvtLW7k7THIOzAjkH51qX1Uq1qBrPGmzY9V/wB4VS+HrzTJZ1ja5uodSgYxTWtxeu21u3K7irZ7g/OrvWcfo6bPbKf7wpZqm+lRNZaevigLNGRujSdFLts625huIzjPAx5ZGe9WmsH/AAWFFxua6gAHriRSfyB/CqnW4nfxFZlIWYjpe9t4ADsxyfLyrX4i1KaSMHTNr3BLQ2APaS4YFd/8xASSfrWvKJfgsCTwxbN7rRyvO48wytK5H2INQP0Fd6VcmSyku5rdEEdv05But4wf8mUb3ZE9CfeAwM+dX1hawaJpVnYQB+hbRJBH5nCjAz+Fbhex99kn9GpTUriZoZiurLPCRLujv4epE1uG2gJImASQuFQtg87245xXU+HtHt9IsmEJDPMd8jqNq9uFRf2UA4VRwPqSTo1iaFp7W6ZW6cbdCcFe8co2/vAP2qV4bmM+kQhyTJCWhckYyUYrnHzxn70vU6PaTLAys8tmsaXD7S5cHEgHrjzxxn/2pKLe/jlt3JbYwDLkqysOQQRyPqKmeVRrqBpkxFM8MgYMJFAPI8iOxHlj8MHBGdtK7RNMe0CSzNOkiqYzCLppIyM5DkH9o/31JuNVs7aQxu5LDg4UkfP8POpMcvUd0MbxlWxz2b5g+Yri9QtLuC7EPTn3s+S47SDHOBzyefPzrU78penZdMSPHPBK4wpwA/uOD6j+3vXsEpkjUSp0pWBzEzAnjj7itOjxPFZqskZj7EIc8DaPXtzmpM0UchRnQF0OUbGSp9RWb5VEt9JtYLhZkVsocopbKr9qi6/e39u9oumdNv1y+0BlJ2xk9+KnRzPB0obxt8jkgSIhCn0z6HH7j9Ki+w2mWl9sIXrB2bcmNwGBzjv8+/A5qosgyyRh0bKsMhlrh7+0VZJ9/sazwupWV5mE8G3yiAOfeHoy53nOex6+xggs+pFHPlnYvtZhlePKq+90bS7yWW4luWAlb3isi4J9ASP7auPSWJmiWs9nYRpd9P2gjMgjxsB9BwPxxzVdrl1c2VtFNdI8zJcKyC2cqTzj3gO689ufnV/1ogzKZEDKMsNwyB86gXFrZyo7RzLC9wykyxuMuR2xmpPKmnie4dL6afCyoCIUztTjseeSPp+6staupLWzJhzuJxkeQ8+fWvYLezt7+5u45NssigSr1soMee3sDz38633HstzD0ZmikSUcKWHvfSnscvpmp3QvjvllkUYVlkkOADjA/wCfc8fOui1O99jt3ISZn6bMpSMtggedQ7PR9NtHkkSYttJ3b5QQpPr/AM6s5HglQwvIh6qY27hkg+lW2GmnTbz2y3RikqtsUtvQrkkeVTRWu2MXSCQurImF91s4wK21iqUpSgUpSgUpSg4HVJdNtZvEUepDpXD3HXtS8bDf+pQZU4weQwqcnimzNhaxe1WcxMSiXe7s4YY/YVTu/EV157UAA7DFb+0TThtR1y7lWEey3EyTyrFHLeRmxsw7fDuDZkOfTBBOBkE1c2+njSY5NT1KVr6/2iPdGgRVBIASNCcIMkdz9TVxfWdvf2k1peRLNbzIUkjcZDKfWuZjluo7G60i8nMklhIod3fDXFswIQ5AJ3ZwDxklT61d7TTG7F3c3U0zaW7q5BC3CQOVGAMAi5Axxnt5mtPss2P/AKHB/V4f/NVrVLXaP8W6l2//AB3X/Br3Za/5t1L/APnc/wDBrWkTbCza6stUsDAbeR4UYQBERATv2sNsj8krg89lHHnW3wvKyXsqsNsWo26XsQJGd6gRy8eQA6J7nljWfht447u5iVJYEaNWSOaOVWJBbccui5HK8DP2zVBb6jcT2Sy2Tpa3UGo7rdGIYyW0/IyD5ZLDA84qmt9D6GDxXtQNFvzqWmw3TRiNmyGXuAw4OPuKnVyssbabi3juECyhsBgwIJBBHYjFYJO8crLd9KMF9sLBv8pkZ7HsflUk8Vg8ayLtkQMvBw3NWBM2yJ2ClyqkhR3PyqjutbFrPYm8l9lExZGtmhZmkb9nacD69vPyq06j2mfaZHkjkkwjBPgz2BI8s8A4+tQrrSDPJCZitztuGkJuO8anJCpgeXHzxVmkqZYm8dpXukWNH5SPcCVGTgHA9MZ5POcHFbvZ4NpXoxbScldgwTWnT4LuBZ1vLlbgNKWgxHtMceBhScncQQefnVP4q8SLo0E2Y5F2oWabGQAMZwBkk+8PL+6mrb0b1O1/0Yt+7pJuIxuwM4rB4bZUCPFCFzkKVGM1A0DWodWgXHuzBQzIPIHsfvWPiRInigM0IlMbGRVVSWGBgnjkDBIJ8sjPFJO9G+m06lpfTe4MkXvAg+7lm5xjA5P0qebeDCr0Y8Kcr7o90/KuMtEmhu5EuMSHeTI7HHRAwBkqCBnnnJxyfmOytmc2kLTn9Z0wXPbnHNXKaTG7emGL3j0Y8sPf90e99aCCEbCIoxs+D3R7v0qjufFNjHfRQxSJNCwJeRHUjGM5Xn3vnirxHS4i3QSKytkCRCD24/I1nVWXbWFtTJJCFhMhAaRMDOPIkfjWwQxblfpJuUYU7RkD0FUE0F/pVxHdkteHpGNmWNQ0hLDG45GOOx7cc+VXtncJcxdRVZTuKsrDlSDgg+Xf0yKtmhtiijiBEcaoCckKMZNZ0pWVKUpQKUpQKUrCSRYkZ5DtRRkk+QoM6VVfwk0c9r+L8/7ql21/a3VsbmCdHhGcyZwBjv3po2k5HrXNax7HH4iie9ubaKGazaOVZJQrkhwUIHfg5wfWpmn6tNq90p0+3B0tc7ruQkdU+XTHmM+Z4Plmt8tpfRX09zYvbkTqodZt3uleBgj61uTSXtXLqPh9gSuvIcEgkXvn5+de+36B/nxf67/zqRY2ut2cDRK+nuDLJJk7x8TFv7e9b/8AHv8A3d+MlLpNIcGp+H4JhMNXt3cKVBkug2AcZ8/kKpni0mOY+w+JbS3tySQuUZowe4Ru4FdITrg4/wAW5+slM67/AN3f+JVlNIdtqnh230/9HQ6tarFHGFOLkBlB8yc8ZOeajNZXe47NOvXQH3W/Sh94etTDZay95cXDPp4M0CwkKH90Asc/P4u399bNG1KASnR5Ukt7y2QBYpcDqxjA3pjgj6dvOp/REvTrBLb9aGuA7qNySzFwPxqfWOfLzzWVYaeEVEKSWhzCkkyySZYF+UB74z5Z8vnx6VMrwjNBgroy7kYFT5g8VA1XTRqJiBdVRDk+7kmpBszG2bMxwbpDJINmdxPfHPGf7/Ws+lc7pcToFb4B0/hPz55qy6EcImlaYejA8giUt04FyznzwPWodi9xq+mxXc9rJY3J3JJDOpGV5GCPTsRVp0rnMR9oX3f8oOn8f58V50rnbKPaEyxGw9P4Rn681dppR30F80m97LrtE6yb1IAYrzgZOeQMc+tdHnI7fjWkRXPUjJnUoB769P4j8ueKx6N302HtMe8n3W6XAHpjPNS3ZJpzl94VS+1pbyS2hRE9xCr+8qYxwNvGeOK6iGNIVCRqFQZwo+ZzWJjuOqG6y9Pbjbs5z65zWHRu+lgXMfU3ZLdLjHpjNLlaSabpo45kMcqhkI5B8652a0n07VIY9Ocr7Sk7AtGWXfuRgHPpy2D37+VX5juDKx6y7CuFXZyD65zWHSu+nGBcoHB99ul8Q+meKso2wbxCnWIMmBu2jjNba0xxzCVzJKrRn4V2YI++ea3AYGKypSlKBSlKBXmM17SgrtSW7AMsF/BawxoTI0sG8fXO4YFc1Hp2reKUEl9fxrpQcNDbtZkC7GPilXfymcELnB8weBVjfg+INXOnZI0qxIa9IOPaJeCsX80fE3qdo7ZFR9d8YWthPBFZNHNl2WUhSQoETsuMfylUf61dZv0xlZO66Gwt7qBSt3cxT4wE6cHT2j+kalmqnRNettVjjEbfrSgLDHGccirbvjNc7LL2uNlnSm1rxFb6ROkMyKxdNwzPGn5MRVhYXi3tlDdIoCyruADhvzHFbnijdgWRCe3Kg1TeJ7xrSySztn6M1zuXeneKJRl3HoQo4+ZFWSVfCr1fxTeXepyaN4Vghnuohm5vJyehbD545Y/Ieh9K02g1CRG6niHWtQZjlnsrWCOFT6KSmSPnk154e0iMWtnpZTYk8QvtQXdy244jiP8AJAGPmI+c5JNj4ucRWyRIxjU282FWbYCAF/Yx73f5Y+9dOt6jO75aoLy/t7hY4tRmllf4LXVoUjaT5JIgAz8sGpd3BbeJrAGMyWeoWcu6KQgCW0mH7wQcEdmUn1rbo9lBf+GbW2uk3xNFjBPIweCD3BHGD34qtjlntNUsrmRt0i3J029Yn/KoQTDIf5W7aP8A9jVmqudA1F9RtWFxGsV5buYbmIdkcenyIwR8jVrXIajPqOl+Jre8Sxi6F+fY3/wjAZxlo2PHHZl+rLV0LrWP81w/1r/01m4/hta0qHZTX0hb2y0jgAHulJd+T6dhUsHNTTT2lKVApSlApSlApSlApSlApSlApSlApSlAqBrd+dM0u5ugAzouI0zje54UfckVPqi8Qjr6jolkT7st2ZZAR3WNC3+9sq4+UqrvrHUdN0pbe1N8yiFmuJLcW+HkY5dm6nPr8Pz+VcVfPGs82+56ThMxIWJ6xzwvfjyGBg/lX1fVZjFaNiEzBztZArtwc5+BWP5feuNl0m5a2lkSCZysjLGnsuTsETEfGgYnftGT3+dd+PPXlw5uK5zpXeFILqfWJfY5mQhTnMxB8x32nP1rttAmuWvLyG4lkfpYADyb8HJzg4Fb9G0q002ItbRMjzYZi4Abt2IHbHpSzQRa9eqkLKjQxtux7rHJzz61jPOZWtcXHcMdLT0rmZYP0xrWuKDxbWnsMZI7SSJvc/gY/wA66Y1QeDv11je3h5N1qd2+f5KytGv+zGtYjrUbQLuOa+s70EFNS0yKNCOyvCzlk+v6w/0DXQ3dpDeW7w3MYdHUqw7cHvzXEaLZNYeHLCVYZp9NuIEnkW2BM1pPgFpUHmCeSBznJwcmryx1bUJI8wNp2p2+MLPFddKQn0aMqQD6nd/qitWfiReWlvDZ2sdvAuyKMbVGc4H1NcrcsLy5hWIH/GGsRyRkfxLcBy/0PSx9WHrW7UtSuJD0NTmt7SJyQtpYSNcXNyPQe6No9cA/zhWuxtLlfE2m3d7Etu7WlxHBaI2RbxAxEKccFj3JH0BOMlJot2nePbfr+ENUZU3yW8XtUannc0REgH324+9SYNB0SaGOWPTrYo6hgdvcHkVYX8KzWNzEwGJImU/QgioHhFzL4V0Z27mxhz/QFZ3fqvtn/BzRf82239CrC3gitoUhgRY4kGFVewFbKVnalKUoFKUoFKUoFKUoFKUoFKUoFKUoFKUoFUOu218urabqOn263Xs6zRyW5kCEhwuGDHjjb2/lfKr6lWXQo/0nrn+jjf16On6T1z/Rxv67HV5XlX7fwmlJ+k9c/wBHD/XY6fpTXP8AR1v67HV3Sm5+Gv5UEtx4jvEMUNhb6cG4M8twJWUfyUAwT9TirPS7GHS7C3sbbd0oECgscs2O5J8yTkk+pqbXlS5GkLRLI6bpFnYs4ka3hWIuBjdgYzil3pGnXcplubG2lkPd2iBY/ep1KbVGs7CzsgfZLWGDIwenGFJ+uO9aLmykl1eyvAy7IIpkYeZ37MY/omp9e1JRjIu+Nl55BHFR9Ns4tP0+1soCTFbxLEhY5JCjA/dUqlApSlApSlApSlApSlApSlApSlApSlApSlB//9k=",
+      "views": 51700,
       "userId": "1",
-      "createdAt": "01.02.2023",
-      "type": ["IT"],
+      "createdAt": "08.04.2024",
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "Что такое TypeScript?",
+          "title": "Как работает ML?",
           "paragraphs": [
-            "TypeScript — это надмножество JavaScript, которое добавляет статическую типизацию. Он помогает разработчикам ловить ошибки до выполнения кода, ещё на этапе компиляции.",
-            "TS используется во многих крупных проектах, включая Angular, VS Code и даже части ядра Node.js. Его популярность растёт."
+            "Машинное обучение (ML) — это раздел ИИ, где алгоритмы учатся на данных без явного программирования.",
+            "Модели строятся на основе тренировочного набора данных и могут предсказывать поведение, выявлять аномалии или классифицировать объекты."
           ]
         },
         {
           "id": "2",
           "type": "CODE",
-          "code": "type User = {\n  id: number;\n  name: string;\n};\n\nfunction greet(user: User) {\n  return `Hello, ${user.name}`;\n}"
+          "code": "# Пример модели классификации на Python\nfrom sklearn.tree import DecisionTreeClassifier\nmodel = DecisionTreeClassifier()\nmodel.fit(X_train, y_train)"
         },
         {
           "id": "3",
           "type": "IMAGE",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
-          "title": "Логотип TypeScript"
-        },
-        {
-          "id": "4",
-          "type": "TEXT",
-          "title": "Зачем использовать TypeScript?",
-          "paragraphs": [
-            "С ростом проекта становится сложнее отлаживать динамический код. TypeScript позволяет работать безопаснее, предоставляет автодополнение и упрощает навигацию.",
-            "Интеграция с редакторами, такими как VS Code, делает разработку значительно удобнее."
-          ]
-        },
-        {
-          "id": "5",
-          "type": "CODE",
-          "code": "interface Product {\n  title: string;\n  price: number;\n  inStock?: boolean;\n}\n\nconst book: Product = {\n  title: 'TypeScript Handbook',\n  price: 25.5,\n  inStock: true,\n};"
-        },
-        {
-          "id": "6",
-          "type": "IMAGE",
-          "src": "https://miro.medium.com/v2/resize:fit:501/1*6wp3OwIx8anJeKzwVpZ9OQ.png",
-          "title": "Пример кода с аннотациями типов"
+          "src": "https://upload.wikimedia.org/wikipedia/commons/5/51/Machine_learning_diagram.svg",
+          "title": "data:image/png;base64,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"
         }
       ]
     },
     {
       "id": "15",
-      "title": "Node.js",
-      "subtitle": "Как JavaScript покорил backend",
-      "img": "https://images.seeklogo.com/logo-png/26/1/node-js-logo-png_seeklogo-269242.png",
-      "views": 7564,
+      "title": "Инфляция и покупательная способность",
+      "subtitle": "Почему товары дорожают",
+      "img": "https://cdn-icons-png.flaticon.com/512/9240/9240357.png",
+      "views": 33250,
       "userId": "1",
-      "createdAt": "08.09.2025",
-      "type": ["IT"],
+      "createdAt": "09.04.2024",
+      "type": [
+        "ECONOMICS"
+      ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "Что такое Node.js?",
+          "title": "Что такое инфляция?",
           "paragraphs": [
-            "Node.js — это среда выполнения JavaScript вне браузера. Она построена на движке V8 от Google и позволяет писать серверный код на JS.",
-            "С момента своего появления Node.js стал невероятно популярным благодаря своей простоте, масштабируемости и большому количеству пакетов в npm."
+            "Инфляция — это общее повышение цен в экономике, при котором на одну и ту же сумму можно купить меньше товаров и услуг.",
+            "Причины включают рост затрат, дефицит предложения и чрезмерную денежную эмиссию."
           ]
         },
         {
           "id": "2",
           "type": "CODE",
-          "code": "const http = require('http');\n\nconst server = http.createServer((req, res) => {\n  res.writeHead(200, {'Content-Type': 'text/plain'});\n  res.end('Hello from Node.js!');\n});\n\nserver.listen(3000);"
+          "code": "// Пример расчёта инфляции\nconst oldPrice = 100;\nconst newPrice = 120;\nconst inflation = ((newPrice - oldPrice) / oldPrice) * 100;\nconsole.log(`Инфляция: ${inflation}%`);"
         },
         {
           "id": "3",
           "type": "IMAGE",
-          "src": "data:image/jpeg;base64,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",
-          "title": "Логотип Node.js"
-        },
-        {
-          "id": "4",
-          "type": "TEXT",
-          "title": "Преимущества Node.js",
-          "paragraphs": [
-            "Node.js обрабатывает тысячи соединений одновременно благодаря своей неблокирующей модели ввода‑вывода (non-blocking I/O). Это делает его идеальным для создания REST API, WebSocket‑приложений и микросервисов.",
-            "Он популярен также благодаря большому выбору библиотек в npm и активному сообществу."
-          ]
-        },
-        {
-          "id": "5",
-          "type": "CODE",
-          "code": "const fs = require('fs');\n\nfs.readFile('data.txt', 'utf-8', (err, data) => {\n  if (err) throw err;\n  console.log(data);\n});"
+          "src": "https://cdn-icons-png.flaticon.com/512/3348/3348955.png",
+          "title": "Деньги обесцениваются со временем"
         }
       ]
     },
     {
       "id": "16",
-      "title": "Javascript new news",
-      "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 7645,
+      "title": "Научный метод",
+      "subtitle": "Почему наука работает",
+      "img": "https://cdn-icons-png.flaticon.com/512/3209/3209265.png",
+      "views": 29987,
       "userId": "1",
-      "createdAt": "26.11.2024",
-      "type": ["IT"],
+      "createdAt": "10.04.2024",
+      "type": [
+        "SCIENCE"
+      ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "Заголовок этого блока",
+          "title": "Основные этапы",
           "paragraphs": [
-            "Программа, которую по традиции называют «Hello, world!», очень проста. Она выводит куда-либо фразу «Hello, world!», или другую подобную, средствами некоего языка.",
-            "JavaScript — это язык, программы на котором можно выполнять в разных средах. В нашем случае речь идёт о браузерах и о серверной платформе Node.js. Если до сих пор вы не написали ни строчки кода на JS и читаете этот текст в браузере, на настольном компьютере, это значит, что вы буквально в считанных секундах от своей первой JavaScript-программы.",
-            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном использовании программ на JavaScript, они загружаются в браузер для обеспечения работы веб-страниц. Как правило, код оформляют в виде отдельных файлов с расширением .js, которые подключают к веб-страницам, но программный код можно включать и непосредственно в код страницы. Всё это делается с помощью тега <script>. Когда браузер обнаруживает такой код, он выполняет его. Подробности о теге script можно посмотреть на сайте w3school.com. В частности, рассмотрим пример, демонстрирующий работу с веб-страницей средствами JavaScript, приведённый на этом ресурсе. Этот пример можно запустить и средствами данного ресурса (ищите кнопку Try it Yourself), но мы поступим немного иначе. А именно, создадим в каком-нибудь текстовом редакторе (например — в VS Code или в Notepad++) новый файл, который назовём hello.html, и добавим в него следующий код:"
-          ]
-        },
-        {
-          "id": "4",
-          "type": "CODE",
-          "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
-        },
-        {
-          "id": "5",
-          "type": "TEXT",
-          "title": "Заголовок этого блока",
-          "paragraphs": [
-            "Программа, которую по традиции называют «Hello, world!», очень проста. Она выводит куда-либо фразу «Hello, world!», или другую подобную, средствами некоего языка.",
-            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном использовании программ на JavaScript, они загружаются в браузер для обеспечения работы веб-страниц. Как правило, код оформляют в виде отдельных файлов с расширением .js, которые подключают к веб-страницам, но программный код можно включать и непосредственно в код страницы. Всё это делается с помощью тега <script>. Когда браузер обнаруживает такой код, он выполняет его. Подробности о теге script можно посмотреть на сайте w3school.com. В частности, рассмотрим пример, демонстрирующий работу с веб-страницей средствами JavaScript, приведённый на этом ресурсе. Этот пример можно запустить и средствами данного ресурса (ищите кнопку Try it Yourself), но мы поступим немного иначе. А именно, создадим в каком-нибудь текстовом редакторе (например — в VS Code или в Notepad++) новый файл, который назовём hello.html, и добавим в него следующий код:"
+            "Научный метод включает формулировку гипотезы, проведение экспериментов, анализ данных и повторение.",
+            "Это позволяет создавать проверяемые и воспроизводимые теории, которые описывают законы природы."
           ]
         },
         {
           "id": "2",
           "type": "IMAGE",
-          "src": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png",
-          "title": "Рисунок 1 - скриншот сайта"
+          "src": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+          "title": "Наука основана на наблюдении и эксперименте"
         },
         {
           "id": "3",
-          "type": "CODE",
-          "code": "const path = require('path');\n\nconst server = jsonServer.create();\n\nconst router = jsonServer.router(path.resolve(__dirname, 'db.json'));\n\nserver.use(jsonServer.defaults({}));\nserver.use(jsonServer.bodyParser);"
-        },
-        {
-          "id": "7",
           "type": "TEXT",
-          "title": "Заголовок этого блока",
+          "title": "Почему это важно?",
           "paragraphs": [
-            "JavaScript — это язык, программы на котором можно выполнять в разных средах. В нашем случае речь идёт о браузерах и о серверной платформе Node.js. Если до сих пор вы не написали ни строчки кода на JS и читаете этот текст в браузере, на настольном компьютере, это значит, что вы буквально в считанных секундах от своей первой JavaScript-программы.",
-            "Существуют и другие способы запуска JS-кода в браузере. Так, если говорить об обычном использовании программ на JavaScript, они загружаются в браузер для обеспечения работы веб-страниц. Как правило, код оформляют в виде отдельных файлов с расширением .js, которые подключают к веб-страницам, но программный код можно включать и непосредственно в код страницы. Всё это делается с помощью тега <script>. Когда браузер обнаруживает такой код, он выполняет его. Подробности о теге script можно посмотреть на сайте w3school.com. В частности, рассмотрим пример, демонстрирующий работу с веб-страницей средствами JavaScript, приведённый на этом ресурсе. Этот пример можно запустить и средствами данного ресурса (ищите кнопку Try it Yourself), но мы поступим немного иначе. А именно, создадим в каком-нибудь текстовом редакторе (например — в VS Code или в Notepad++) новый файл, который назовём hello.html, и добавим в него следующий код:"
-          ]
-        },
-        {
-          "id": "8",
-          "type": "IMAGE",
-          "src": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png",
-          "title": "Рисунок 1 - скриншот сайта"
-        },
-        {
-          "id": "9",
-          "type": "TEXT",
-          "title": "Заголовок этого блока",
-          "paragraphs": [
-            "JavaScript — это язык, программы на котором можно выполнять в разных средах. В нашем случае речь идёт о браузерах и о серверной платформе Node.js. Если до сих пор вы не написали ни строчки кода на JS и читаете этот текст в браузере, на настольном компьютере, это значит, что вы буквально в считанных секундах от своей первой JavaScript-программы."
+            "Метод защищает от предвзятости и догм, позволяя строить объективное знание.",
+            "Он используется в физике, биологии, экономике и даже психологии."
           ]
         }
       ]
     },
     {
       "id": "17",
-      "title": "TS",
-      "subtitle": "Почему всё больше проектов переходят на TypeScript",
-      "img": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
-      "views": 56798,
+      "title": "Будущее еды",
+      "subtitle": "Как искусственное мясо меняет науку и экономику",
+      "img": "https://cdn-icons-png.flaticon.com/512/2706/2706953.png",
+      "views": 82342,
       "userId": "1",
-      "createdAt": "05.03.2024",
-      "type": ["IT"],
+      "createdAt": "11.04.2024",
+      "type": [
+        "SCIENCE",
+        "ECONOMICS"
+      ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "Что такое TypeScript?",
+          "title": "Что такое искусственное мясо?",
           "paragraphs": [
-            "TypeScript — это надмножество JavaScript, которое добавляет статическую типизацию. Он помогает разработчикам ловить ошибки до выполнения кода, ещё на этапе компиляции.",
-            "TS используется во многих крупных проектах, включая Angular, VS Code и даже части ядра Node.js. Его популярность растёт."
+            "Искусственное мясо, или культивированное мясо — это мясо, выращенное в лаборатории из животных клеток без необходимости убивать животных.",
+            "Технология основана на использовании стволовых клеток, которые помещаются в питательную среду и формируют мышечную ткань, идентичную настоящей."
           ]
         },
         {
           "id": "2",
-          "type": "CODE",
-          "code": "type User = {\n  id: number;\n  name: string;\n};\n\nfunction greet(user: User) {\n  return `Hello, ${user.name}`;\n}"
+          "type": "IMAGE",
+          "src": "data:image/jpeg;base64,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",
+          "title": "Процесс выращивания искусственного мяса"
         },
         {
           "id": "3",
-          "type": "IMAGE",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
-          "title": "Логотип TypeScript"
-        },
-        {
-          "id": "4",
           "type": "TEXT",
-          "title": "Зачем использовать TypeScript?",
+          "title": "Экономические последствия",
           "paragraphs": [
-            "С ростом проекта становится сложнее отлаживать динамический код. TypeScript позволяет работать безопаснее, предоставляет автодополнение и упрощает навигацию.",
-            "Интеграция с редакторами, такими как VS Code, делает разработку значительно удобнее."
+            "Рынок альтернативного мяса стремительно растёт: по прогнозам, к 2030 году он достигнет $25 млрд.",
+            "Это вызовет сдвиги в традиционном животноводстве, перераспределение рабочих мест и сокращение затрат на ресурсы (воду, землю, корма).",
+            "Многие крупные компании — такие как Nestlé, Tyson Foods и даже KFC — инвестируют в эту сферу."
           ]
         },
         {
-          "id": "5",
+          "id": "4",
           "type": "CODE",
-          "code": "interface Product {\n  title: string;\n  price: number;\n  inStock?: boolean;\n}\n\nconst book: Product = {\n  title: 'TypeScript Handbook',\n  price: 25.5,\n  inStock: true,\n};"
+          "code": "// Упрощённая модель роста инвестиций\nlet year = 2024;\nlet marketSize = 1.5; // в млрд\nwhile (year <= 2030) {\n  marketSize *= 1.4;\n  console.log(`Год: ${year++}, Объём рынка: $${marketSize.toFixed(1)} млрд`);\n}"
+        },
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "Этическая и экологическая выгода",
+          "paragraphs": [
+            "Около 14.5% всех выбросов парниковых газов приходится на животноводство. Искусственное мясо может сократить эти выбросы до 90%.",
+            "Кроме того, миллионы животных не будут выращиваться в условиях массового производства.",
+            "Это шаг к устойчивому будущему без насилия и с заботой об окружающей среде."
+          ]
         },
         {
           "id": "6",
           "type": "IMAGE",
-          "src": "https://miro.medium.com/v2/resize:fit:501/1*6wp3OwIx8anJeKzwVpZ9OQ.png",
-          "title": "Пример кода с аннотациями типов"
+          "src": "https://cdn-icons-png.flaticon.com/512/7650/7650827.png",
+          "title": "Искусственное мясо — экологичная альтернатива"
+        },
+        {
+          "id": "7",
+          "type": "TEXT",
+          "title": "Научные вызовы",
+          "paragraphs": [
+            "Пока технология дорога: в 2020 году стоимость одного котлета достигала $300. Сегодня — уже менее $10.",
+            "Учёные работают над улучшением текстуры, вкуса и масштабируемости процесса.",
+            "Также важна безопасность: мясо должно быть стерильным, с контролем за мутациями и качеством среды."
+          ]
+        },
+        {
+          "id": "8",
+          "type": "CODE",
+          "code": "# Псевдокод контроля среды культивации\nclass Bioreactor:\n    def __init__(self):\n        self.pH = 7.0\n        self.temperature = 37\n    def adjust(self):\n        if self.pH < 6.8:\n            self.pH += 0.2\n        if self.temperature > 38:\n            self.temperature -= 1"
+        },
+        {
+          "id": "9",
+          "type": "TEXT",
+          "title": "Что дальше?",
+          "paragraphs": [
+            "С каждым годом искусственное мясо становится доступнее. Возможно, через 10 лет оно будет на полках супермаркетов рядом с обычным.",
+            "На стыке науки, бизнеса и этики рождается новая пищевая реальность. И ты — её часть."
+          ]
         }
       ]
     },
@@ -982,7 +675,9 @@
       "views": 42115,
       "userId": "1",
       "createdAt": "10.03.2024",
-      "type": ["ECONOMICS"],
+      "type": [
+        "ECONOMICS"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -1020,7 +715,9 @@
       "views": 35672,
       "userId": "1",
       "createdAt": "12.03.2024",
-      "type": ["SCIENCE"],
+      "type": [
+        "SCIENCE"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -1115,6 +812,42 @@
       "text": "qweqwe",
       "articleId": "2",
       "id": "yDPUb0N"
+    },
+    {
+      "userId": "2",
+      "text": "123123",
+      "articleId": "11",
+      "id": "bj8yGB-"
+    },
+    {
+      "userId": "2",
+      "text": "asdasd",
+      "articleId": "11",
+      "id": "akjXWw4"
+    },
+    {
+      "userId": "2",
+      "text": "test",
+      "articleId": "12",
+      "id": "tJdDgIC"
+    },
+    {
+      "userId": "2",
+      "text": "123123",
+      "articleId": "12",
+      "id": "xs_rs1g"
+    },
+    {
+      "userId": "2",
+      "text": "123123",
+      "articleId": "12",
+      "id": "RH4N-CA"
+    },
+    {
+      "userId": "2",
+      "text": "test",
+      "articleId": "2",
+      "id": "Q7ZLt2K"
     }
   ],
   "users": [

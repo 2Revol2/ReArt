@@ -18,3 +18,17 @@ body {
   display: flex;
   gap: 15px;
 }
+
+*::-webkit-scrollbar {
+  width: 8px; /* ширина scrollbar */
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--secondary-bg-color); /* цвет дорожки */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-color); /* цвет плашки */
+  border-radius: 10px; /* закругления плашки */
+}

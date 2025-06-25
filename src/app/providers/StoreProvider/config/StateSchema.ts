@@ -5,7 +5,11 @@ import { UserSchema } from "@/entities/User";
 import { LoginSchema } from "@/features/AuthByUsername";
 import { ProfileSchema } from "@/entities/Profile";
 import { ArticleDetailsSchema } from "@/entities/Article";
-import { ArticleDetailsCommentsSchema } from "@/pages/ArticleDetailsPage";
+import {
+  ArticleDetailsCommentsSchema,
+  ArticleDetailsRecommendationsSchema,
+  ArticleDetailsPageSchema,
+} from "@/pages/ArticleDetailsPage";
 import { AddNewCommentSchema } from "@/features/AddNewComment";
 import { ArticlesPageSchema } from "@/pages/ArticlesPage";
 import { ScrollRecoverySchema } from "@/features/ScrollRecovery";
@@ -19,9 +23,9 @@ export interface StateSchema {
   loginForm?: LoginSchema;
   profile?: ProfileSchema;
   articleDetails?: ArticleDetailsSchema;
-  articleDetailsComments?: ArticleDetailsCommentsSchema;
   addNewComment?: AddNewCommentSchema;
   articlesPage?: ArticlesPageSchema;
+  articleDetailsPage?: ArticleDetailsPageSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;

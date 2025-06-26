@@ -7,6 +7,9 @@ import { Button, ButtonTheme } from "@/shared/ui/Button/Button";
 import { LoginModal } from "@/features/AuthByUsername";
 import { getUserAuthData } from "@/entities/User";
 import { userActions } from "@/entities/User/model/slice/userSlice";
+import { Text } from "@/shared/ui/Text/Text";
+import { AppLink } from "@/shared/ui/AppLink/AppLink";
+import { RoutePaths } from "@/shared/config/routeConfig/routeConfig";
 
 interface NavbarProps {
   className?: string;
@@ -32,7 +35,11 @@ export const Navbar = memo(({ className }: NavbarProps) => {
 
   if (authData) {
     return (
-      <div className={classNames(s.navbar, {}, [className])}>
+      <div className={classNames(s.authNavbar, {}, [className])}>
+        <div className={s.wrapper}>
+          <Text title="ReArt" className={s.logo} />
+          <AppLink to={RoutePaths.acticles_create}>{t("Create an article")}</AppLink>
+        </div>
         <Button theme={ButtonTheme.CLEAR} onClick={onLogout} type="button">
           {t("actions.Logout")}
         </Button>

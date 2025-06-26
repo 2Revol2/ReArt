@@ -1,9 +1,26 @@
-.navbar {
+.navbar,
+.authNavbar {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
   height: var(--navbar-height);
   padding: 0 20px;
   background-color: var(--secondary-bg-color);
   border-bottom: 1px solid var(--border-color);
+}
+
+.navbar {
+  justify-content: flex-end;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.authNavbar {
+  justify-content: space-between;
+}
+
+.logo {
+  width: var(--sidebar-width);
 }

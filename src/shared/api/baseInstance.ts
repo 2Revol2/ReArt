@@ -3,7 +3,9 @@ import { USER_LOCALSTORAGE_KEY } from "../constants/localStorage";
 
 export const baseInstance = axios.create({
   baseURL: __API__,
-  headers: {
-    authorization: localStorage.getItem(USER_LOCALSTORAGE_KEY) || "",
-  },
+});
+
+baseInstance.interceptors.request.use((config) => {
+  config.headers.Authorization = localStorage.getItem(USER_LOCALSTORAGE_KEY) || "";
+  return config;
 });

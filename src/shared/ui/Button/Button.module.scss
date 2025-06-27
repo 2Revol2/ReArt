@@ -54,6 +54,21 @@
   }
 }
 
+.secondary,
+.primary {
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.secondary {
+  background-color: var(--secondary-color);
+}
+
+.primary {
+  background-color: var(--hover-color);
+}
+
 .background {
   background-color: var(--secondary-bg-color);
   border: none;

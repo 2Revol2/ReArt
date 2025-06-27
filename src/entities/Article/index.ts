@@ -1,3 +1,10 @@
+export {
+  ArticleBlockType,
+  ArticleImageBlock,
+  ArticleCodeBlock,
+  ArticleTextBlock,
+  ArticleBlock,
+} from "./model/types/article";
 export { getArticleDetailsData } from "./model/selectors/articleDetails";
 export { ArticleTypeTabs } from "./ui/ArticleTypeTabs/ArticleTypeTabs";
 export { ArticleSortField } from "./model/types/article";

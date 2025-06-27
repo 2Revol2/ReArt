@@ -1,0 +1,17 @@
+.textareaWrapper {
+  display: flex;
+  gap: 5px;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 80px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--primary-color);
+}
+
+.readonly {
+  opacity: 0.7;
+}

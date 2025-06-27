@@ -12,7 +12,7 @@ const meta: Meta<typeof Button> = {
 export default meta;
 type Story = StoryObj<typeof Button>;
 
-export const Primary: Story = {
+export const Default: Story = {
   args: {
     children: "Text",
   },
@@ -22,6 +22,20 @@ export const Outline: Story = {
   args: {
     children: "Text",
     theme: ButtonTheme.OUTLINE,
+  },
+};
+
+export const Primary: Story = {
+  args: {
+    children: "Text",
+    theme: ButtonTheme.PRIMARY,
+  },
+};
+
+export const Secondary: Story = {
+  args: {
+    children: "Text",
+    theme: ButtonTheme.SECONDARY,
   },
 };
 

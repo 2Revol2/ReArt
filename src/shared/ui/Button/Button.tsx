@@ -6,6 +6,8 @@ export enum ButtonTheme {
   CLEAR = "clear",
   THEME_BUTTON = "themeButton",
   OUTLINE = "ontline",
+  SECONDARY = "secondary",
+  PRIMARY = "primary",
   OUTLINE_RED = "ontlineRed",
   BACKGROUND = "background",
 }

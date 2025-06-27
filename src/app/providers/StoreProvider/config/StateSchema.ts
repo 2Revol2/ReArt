@@ -5,14 +5,11 @@ import { UserSchema } from "@/entities/User";
 import { LoginSchema } from "@/features/AuthByUsername";
 import { ProfileSchema } from "@/entities/Profile";
 import { ArticleDetailsSchema } from "@/entities/Article";
-import {
-  ArticleDetailsCommentsSchema,
-  ArticleDetailsRecommendationsSchema,
-  ArticleDetailsPageSchema,
-} from "@/pages/ArticleDetailsPage";
+import { ArticleDetailsPageSchema } from "@/pages/ArticleDetailsPage";
 import { AddNewCommentSchema } from "@/features/AddNewComment";
 import { ArticlesPageSchema } from "@/pages/ArticlesPage";
 import { ScrollRecoverySchema } from "@/features/ScrollRecovery";
+import { CreateAndEditArticlePageSchema } from "@/pages/CreateAndEditArticlePage";
 
 export interface StateSchema {
   counter: CounterSchema;
@@ -26,6 +23,7 @@ export interface StateSchema {
   addNewComment?: AddNewCommentSchema;
   articlesPage?: ArticlesPageSchema;
   articleDetailsPage?: ArticleDetailsPageSchema;
+  createAndEditArticlePage?: CreateAndEditArticlePageSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;

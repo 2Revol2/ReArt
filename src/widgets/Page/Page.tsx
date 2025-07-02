@@ -9,6 +9,7 @@ import { getScrollByPath, scrollRecoveryActions } from "@/features/ScrollRecover
 import { useInitialEffect } from "@/shared/hooks/useInitialEffect/useInitialEffect";
 import { StateSchema } from "@/app/providers/StoreProvider";
 import { useThrottle } from "@/shared/hooks/useThrottle/useThrottle";
+import { PAGE_ID } from "@/shared/constants/common";
 
 interface PageProps {
   className?: string;
@@ -39,7 +40,7 @@ export const Page = (props: PageProps) => {
   }, 500);
 
   return (
-    <section onScroll={onScroll} ref={wrapperRef} className={classNames(s.page, {}, [className])}>
+    <section id={PAGE_ID} onScroll={onScroll} ref={wrapperRef} className={classNames(s.page, {}, [className])}>
       {children}
       {onScrollEnd ? <div ref={triggerRef} className={s.trigger} /> : null}
     </section>

@@ -19,7 +19,7 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["react", "@typescript-eslint", "i18next", "react-hooks"],
+  plugins: ["react", "@typescript-eslint", "i18next", "react-hooks", "revol"],
   rules: {
     "max-len": ["error", { code: 120, ignoreComments: true }],
     "react/jsx-filename-extension": [2, { extensions: [".js", ".jsx", ".tsx"] }],
@@ -56,6 +56,7 @@ module.exports = {
     "no-param-reassign": "off",
     "react/no-array-index-key": "off",
     "no-plusplus": "off",
+    "revol/path-checker": "error",
   },
   globals: {
     __IS_DEV__: true,

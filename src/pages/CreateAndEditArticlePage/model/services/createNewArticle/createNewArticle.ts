@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { getUserAuthData } from "@/entities/User";
 import { ThunkConfig } from "@/app/providers/StoreProvider";
-import { getCreateAndEgitArticleData } from "../../selectors/createAndEditArticlePage";
+import { getCreateAndEditArticleData } from "../../selectors/createAndEditArticlePage";
 import { Article } from "@/entities/Article";
 
 export const createNewArticle = createAsyncThunk<Article, void, ThunkConfig<string>>(
@@ -9,7 +9,7 @@ export const createNewArticle = createAsyncThunk<Article, void, ThunkConfig<stri
 
   async (_, thunkAPI) => {
     const userData = getUserAuthData(thunkAPI.getState());
-    const article = getCreateAndEgitArticleData(thunkAPI.getState());
+    const article = getCreateAndEditArticleData(thunkAPI.getState());
 
     if (!userData || !article) {
       return thunkAPI.rejectWithValue("no data");

@@ -9,8 +9,8 @@ import {
 } from "../../model/slices/createAndEditArticlePageSlice";
 import { ArticleForm } from "@/widgets/ArticleForm";
 import {
-  getCreateAndEgitArticleData,
-  getCreateAndEgitArticleIsLoading,
+  getCreateAndEditArticleData,
+  getCreateAndEditArticleIsLoading,
 } from "../../model/selectors/createAndEditArticlePage";
 import { useAppDispatch } from "@/shared/hooks/useAppDispatch/useAppDispatch";
 import {
@@ -41,8 +41,8 @@ const CreateAndEditArticlePage = memo((props: CreateAndEditArticlePageProps) => 
   const dispatch = useAppDispatch();
   const { id } = useParams();
   const isEdit = Boolean(id);
-  const isLoading = useSelector(getCreateAndEgitArticleIsLoading);
-  const data = useSelector(getCreateAndEgitArticleData);
+  const isLoading = useSelector(getCreateAndEditArticleIsLoading);
+  const data = useSelector(getCreateAndEditArticleData);
   const navigate = useNavigate();
   useInitialEffect(() => {
     if (id) {

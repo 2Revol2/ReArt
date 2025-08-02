@@ -27,26 +27,6 @@ export const ArticleList = memo((props: ArticleListProps) => {
   const { className, articles, isLoading, view = ArticleView.SMALL, target } = props;
   const { t } = useTranslation();
   const isBig = view === ArticleView.BIG;
-  const itemsPerRow = isBig ? 1 : 3;
-  const rowCount = isBig ? articles.length : Math.ceil(articles.length / itemsPerRow);
-
-  const rowRenderer = ({ index, key, style }: ListRowProps) => {
-    const items = [];
-    const fromIndex = index * itemsPerRow;
-    const toIndex = Math.min(fromIndex + itemsPerRow, articles.length);
-
-    for (let i = fromIndex; i < toIndex; i++) {
-      items.push(
-        <ArticleListItem className={s.card} article={articles[i]} key={articles[i].id} view={view} target={target} />,
-      );
-    }
-
-    return (
-      <div key={key} className={s.row} style={style}>
-        {items}
-      </div>
-    );
-  };
 
   if (!isLoading && !articles.length) {
     return <Text size={TextSize.L} title={t("No articles found")} />;
@@ -55,6 +35,34 @@ export const ArticleList = memo((props: ArticleListProps) => {
   return (
     <WindowScroller scrollElement={document.getElementById(PAGE_ID) as Element}>
       {({ width, height, registerChild, scrollTop, onChildScroll }) => {
+        const validWidth = typeof width === "number" && width > 0 ? width : 1200;
+
+        const itemsPerRow = isBig ? 1 : Math.max(1, Math.floor(validWidth / 300));
+        const rowCount = isBig ? articles.length : Math.ceil(articles.length / itemsPerRow);
+
+        const rowRenderer = ({ index, key, style }: ListRowProps) => {
+          const items = [];
+          const fromIndex = index * itemsPerRow;
+          const toIndex = Math.min(fromIndex + itemsPerRow, articles.length);
+
+          for (let i = fromIndex; i < toIndex; i++) {
+            items.push(
+              <ArticleListItem
+                className={s.card}
+                article={articles[i]}
+                key={articles[i].id}
+                view={view}
+                target={target}
+              />,
+            );
+          }
+
+          return (
+            <div key={key} className={s.row} style={style}>
+              {items}
+            </div>
+          );
+        };
         return (
           <div ref={registerChild} className={classNames(s.articleList, {}, [className, s[view]])}>
             <List

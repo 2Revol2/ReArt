@@ -18,6 +18,7 @@ import {
 import { CreateArticleImageBlock } from "../CreateArticleImageBlock/CreateArticleImageBlock";
 import { CreateArticleCodeBlock } from "../CreateArticleCodeBlock/CreateArticleCodeBlock";
 import { CreateArticleTextBlock } from "../CreateArticleTextBlock/CreateArticleTextBlock";
+import { VStack } from "@/shared/ui/Stack";
 
 interface ArticleFormProps {
   className?: string;
@@ -130,13 +131,13 @@ export const ArticleForm = memo((props: ArticleFormProps) => {
     ));
   }, [onAddBlockHandler]);
   return (
-    <div className={classNames(s.ArticleForm, {}, [className])}>
-      <div className={s.header}>
+    <VStack max gap="16" className={classNames(s.ArticleForm, {}, [className])}>
+      <VStack gap="16" className={s.header}>
         <Input value={data?.title} onChange={onChangeTitle} placeholder={t("Enter title")} />
         <Input value={data?.img} onChange={onChangeImage} placeholder={t("Enter image")} />
         {data?.img && <img src={data?.img} alt={data?.title} width={200} />}
         <Input value={data?.subtitle} onChange={onChangeSubtitle} placeholder={t("Enter subtitle")} />
-      </div>
+      </VStack>
       <div>
         <Text title={t("Choose a type of article")} />
         <div className={s.articleTypes}>{articleTypesList}</div>
@@ -148,6 +149,6 @@ export const ArticleForm = memo((props: ArticleFormProps) => {
       ) : (
         <Button onClick={onCreateArticle}>{t("Create")}</Button>
       )}
-    </div>
+    </VStack>
   );
 });

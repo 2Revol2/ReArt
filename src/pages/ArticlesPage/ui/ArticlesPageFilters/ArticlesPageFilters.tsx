@@ -20,6 +20,7 @@ import { ArticleSortSelector } from "@/entities/Article/ui/ArticleSortSelector/A
 import { SortOrder } from "@/shared/types";
 import { fetchArticlesList } from "../../model/services/fetchArticlesList/fetchArticlesList";
 import { useDebounce } from "@/shared/hooks/useDebounce/useDebounce";
+import { HStack } from "@/shared/ui/Stack";
 
 interface ArticlesPageFiltersProps {
   className?: string;
@@ -86,10 +87,10 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
 
   return (
     <div className={classNames(s.articlesPageFilters, {}, [className])}>
-      <div className={s.header}>
+      <HStack max justify="between" align="center">
         <ArticleSortSelector order={order} sort={sort} onChangeOrder={onChangeOrder} onChangeSort={onChangeSort} />
         <ArticleViewSelector view={view} onViewClick={onChangeView} />
-      </div>
+      </HStack>
       <Card>
         <Input placeholder={t("Search")} onChange={onChangeSearch} value={search} />
       </Card>

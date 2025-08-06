@@ -7,6 +7,7 @@ import { LanguageSwitcher } from "@/features/LanguageSwitcher";
 import { Button, ButtonSize, ButtonTheme } from "@/shared/ui/Button/Button";
 import { SidebarItem } from "../SidebarItem/SidebarItem";
 import { getSidebarItem } from "../../model/selectors/getSidebarItem";
+import { VStack } from "@/shared/ui/Stack";
 
 export const Sidebar = memo(() => {
   const [collapsed, setCollapsed] = useState(false);
@@ -32,7 +33,9 @@ export const Sidebar = memo(() => {
         {collapsed ? ">" : "<"}
       </Button>
 
-      <div className={s.links}>{itemList}</div>
+      <VStack align="center" className={s.links} gap="16">
+        {itemList}
+      </VStack>
 
       <div className={s.switchers}>
         <div className={s.themeButton}>

@@ -9,6 +9,7 @@ import { DynamicModuleLoader, ReducersList } from "@/shared/lib/components/Dynam
 import { addNewCommentActions, addNewCommentReducer } from "../../model/slices/addNewCommentSlice";
 import { getAddNewCommentError, getAddNewCommentText } from "../../model/selectors/getAddNewComment";
 import { useAppDispatch } from "@/shared/hooks/useAppDispatch/useAppDispatch";
+import { HStack } from "@/shared/ui/Stack";
 
 interface AddNewCommentProps {
   className?: string;
@@ -39,12 +40,12 @@ const AddNewComment = memo((props: AddNewCommentProps) => {
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmout>
-      <div className={classNames(s.addNewComment, {}, [className])}>
+      <HStack justify="between" align="center" max className={classNames(s.addNewComment, {}, [className])}>
         <Input className={s.input} value={text} placeholder={t("Enter comment text")} onChange={onCommentTextChange} />
         <Button onClick={onSendHandler} theme={ButtonTheme.OUTLINE}>
           {t("Send")}
         </Button>
-      </div>
+      </HStack>
     </DynamicModuleLoader>
   );
 });

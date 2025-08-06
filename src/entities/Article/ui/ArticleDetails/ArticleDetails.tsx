@@ -21,6 +21,7 @@ import { ArticleBlock, ArticleBlockType } from "../../model/types/article";
 import { ArticleCodeBlockComponent } from "../ArticleCodeBlockComponent/ArticleCodeBlockComponent";
 import { ArticleImageBlockComponent } from "../ArticleImageBlockComponent/ArticleImageBlockComponent";
 import { ArticleTextBlockComponent } from "../ArticleTextBlockComponent/ArticleTextBlockComponent";
+import { HStack, VStack } from "@/shared/ui/Stack";
 
 interface ArticleDetailsProps {
   id: string;
@@ -61,9 +62,9 @@ export const ArticleDetails = memo(({ id }: ArticleDetailsProps) => {
   if (isLoading) {
     content = (
       <>
-        <div className={s.avatarWrapper}>
+        <HStack max justify="center">
           <Skeleton borderRadius="50%" height={200} width={200} />
-        </div>
+        </HStack>
 
         <Skeleton className={s.title} height={32} width={600} />
         <Skeleton className={s.skeleton} height={24} width={400} />
@@ -77,27 +78,27 @@ export const ArticleDetails = memo(({ id }: ArticleDetailsProps) => {
     );
   } else {
     content = (
-      <>
-        <div className={s.avatarWrapper}>
+      <VStack max>
+        <HStack max justify="center">
           <Avatar src={article?.img} alt={article?.title} size={200} className={s.avatar} />
-        </div>
+        </HStack>
         <Text title={article?.title} text={article?.subtitle} size={TextSize.L} />
-        <div className={s.articleInfo}>
+        <HStack gap="8" align="center">
           <Icon Svg={EyeIcon} />
           <Text text={String(article?.views)} />
-        </div>
-        <div className={s.articleInfo}>
+        </HStack>
+        <HStack gap="8" align="center">
           <Icon Svg={CalendarIcon} />
           <Text text={String(article?.createdAt)} />
-        </div>
+        </HStack>
         {article?.blocks.map(renderBlock)}
-      </>
+      </VStack>
     );
   }
 
   return (
     <DynamicModuleLoader removeAfterUnmout reducers={reducers}>
-      <div className={s.articleDetails}>{content}</div>
+      {content}
     </DynamicModuleLoader>
   );
 });

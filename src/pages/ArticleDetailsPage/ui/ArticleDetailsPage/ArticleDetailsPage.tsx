@@ -22,6 +22,7 @@ import { ArticleList } from "@/entities/Article/ui/ArticleList/ArticleList";
 import { fetchArticleRecommendations } from "../../model/services/fetchArticleRecommendations/fetchArticleRecommendations";
 import { articleDetailsPageReducer } from "../../model/slice";
 import { ArticleDetailsPageHeader } from "../ArticleDetailsPageHeader/ArticleDetailsPageHeader";
+import { VStack } from "@/shared/ui/Stack";
 
 const reducers: ReducersList = {
   articleDetailsPage: articleDetailsPageReducer,
@@ -56,22 +57,24 @@ const ArticleDetailsPage = () => {
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmout>
       <Page className={s.articleDetailsPage}>
-        <ArticleDetailsPageHeader />
-        <ArticleDetails id={id} />
-        <div className={s.recommendationsWrapper}>
-          <Text title={t("Recommend")} />
-          <ArticleList
-            target="_blank"
-            articles={recommendations}
-            isLoading={recommendationsIsLoading}
-            className={s.recommendations}
-          />
-        </div>
-        <div className={s.commentsWrapper}>
-          <Text title={t("Comments")} />
-          <AddNewComment onSendComment={onSendComment} />
-          <CommentList isLoading={commentsIsLoading} comments={comments} />
-        </div>
+        <VStack max gap="16">
+          <ArticleDetailsPageHeader />
+          <ArticleDetails id={id} />
+          <div className={s.recommendationsWrapper}>
+            <Text title={t("Recommend")} />
+            <ArticleList
+              target="_blank"
+              articles={recommendations}
+              isLoading={recommendationsIsLoading}
+              className={s.recommendations}
+            />
+          </div>
+          <VStack gap="8" max>
+            <Text title={t("Comments")} />
+            <AddNewComment onSendComment={onSendComment} />
+            <CommentList isLoading={commentsIsLoading} comments={comments} />
+          </VStack>
+        </VStack>
       </Page>
     </DynamicModuleLoader>
   );

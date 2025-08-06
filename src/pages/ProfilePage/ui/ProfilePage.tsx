@@ -23,6 +23,7 @@ import { Text, TextTheme } from "@/shared/ui/Text/Text";
 
 import { useInitialEffect } from "@/shared/hooks/useInitialEffect/useInitialEffect";
 import { Page } from "@/widgets/Page/Page";
+import { VStack } from "@/shared/ui/Stack";
 
 const reducers: ReducersList = { profile: profileReducer };
 
@@ -111,25 +112,27 @@ const ProfilePage = () => {
   return (
     <DynamicModuleLoader removeAfterUnmout reducers={reducers}>
       <Page>
-        <ProfilePageHeader />
-        {validateErrors?.length &&
-          validateErrors.map((error) => (
-            <Text key={error} theme={TextTheme.ERROR} text={validateErrorTranslates[error]} />
-          ))}
-        <ProfileCard
-          data={formData}
-          isLoading={isLoading}
-          error={error}
-          readonly={readonly}
-          onChangeFirstname={onChangeFirstname}
-          onChangeLastname={onChangeLastname}
-          onChangeAge={onChangeAge}
-          onChangeCity={onChangeCity}
-          onChangeUsername={onChangeUsername}
-          onChangeAvatar={onChangeAvatar}
-          onChangeCurrency={onChangeCurrency}
-          onChangeCountry={onChangeCountry}
-        />
+        <VStack max gap="16">
+          <ProfilePageHeader />
+          {validateErrors?.length &&
+            validateErrors.map((error) => (
+              <Text key={error} theme={TextTheme.ERROR} text={validateErrorTranslates[error]} />
+            ))}
+          <ProfileCard
+            data={formData}
+            isLoading={isLoading}
+            error={error}
+            readonly={readonly}
+            onChangeFirstname={onChangeFirstname}
+            onChangeLastname={onChangeLastname}
+            onChangeAge={onChangeAge}
+            onChangeCity={onChangeCity}
+            onChangeUsername={onChangeUsername}
+            onChangeAvatar={onChangeAvatar}
+            onChangeCurrency={onChangeCurrency}
+            onChangeCountry={onChangeCountry}
+          />
+        </VStack>
       </Page>
     </DynamicModuleLoader>
   );

@@ -7,6 +7,7 @@ import { Text } from "@/shared/ui/Text/Text";
 import { getProfileData, getProfileReadonly, profileActions, updateProfileData } from "@/entities/Profile";
 import { useAppDispatch } from "@/shared/hooks/useAppDispatch/useAppDispatch";
 import { getUserAuthData } from "@/entities/User";
+import { HStack } from "@/shared/ui/Stack";
 
 export const ProfilePageHeader = () => {
   const { t } = useTranslation("profile");
@@ -29,7 +30,7 @@ export const ProfilePageHeader = () => {
   }, [dispatch]);
 
   return (
-    <div className={s.header}>
+    <HStack max justify="between">
       <Text title={t("Profile")} />
       {canEdit &&
         (readonly ? (
@@ -46,6 +47,6 @@ export const ProfilePageHeader = () => {
             </Button>
           </div>
         ))}
-    </div>
+    </HStack>
   );
 };

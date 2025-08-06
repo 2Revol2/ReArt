@@ -1,16 +1,10 @@
 .ArticleForm {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
   padding: 24px;
   background-color: var(--secondary-bg-color);
   border-radius: 12px;
 }
 
 .header {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
   background-color: var(--card-bg-color);
   padding: 16px;
   border-radius: 8px;

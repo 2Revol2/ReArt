@@ -46,15 +46,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
           const toIndex = Math.min(fromIndex + itemsPerRow, articles.length);
 
           for (let i = fromIndex; i < toIndex; i++) {
-            items.push(
-              <ArticleListItem
-                className={s.card}
-                article={articles[i]}
-                key={articles[i].id}
-                view={view}
-                target={target}
-              />,
-            );
+            items.push(<ArticleListItem article={articles[i]} key={articles[i].id} view={view} target={target} />);
           }
 
           return (
@@ -64,7 +56,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
           );
         };
         return (
-          <div ref={registerChild} className={classNames(s.articleList, {}, [className, s[view]])}>
+          <div ref={registerChild} className={classNames("", {}, [className, s[view]])}>
             <List
               height={height || 700}
               autoHeight

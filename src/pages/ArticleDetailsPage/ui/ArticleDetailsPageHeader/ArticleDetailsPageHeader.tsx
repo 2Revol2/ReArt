@@ -2,12 +2,12 @@ import { memo, useCallback } from "react";
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-import s from "./ArticleDetailsPageHeader.module.scss";
 import { Button } from "@/shared/ui/Button/Button";
 import { RoutePaths } from "@/shared/config/routeConfig/routeConfig";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import { getCanEditArticle } from "../../model/selectors/article/article";
 import { getArticleDetailsData } from "@/entities/Article";
+import { HStack } from "@/shared/ui/Stack";
 
 interface ArticleDetailsPageHeaderProps {
   className?: string;
@@ -27,10 +27,11 @@ export const ArticleDetailsPageHeader = memo((props: ArticleDetailsPageHeaderPro
   const onEditArticle = useCallback(() => {
     navigate(`${RoutePaths.acticles_details}${article?.id}/edit`);
   }, [article?.id, navigate]);
+
   return (
-    <div className={classNames(s.header, {}, [className])}>
+    <HStack justify="between" max className={classNames("", {}, [className])}>
       <Button onClick={onBackToList}>{t("Back to list")}</Button>
       {canEdit && <Button onClick={onEditArticle}>{t("Edit")}</Button>}
-    </div>
+    </HStack>
   );
 });

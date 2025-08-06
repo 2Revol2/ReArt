@@ -83,6 +83,14 @@ export const Error: Story = {
   },
 };
 
+export const LightSizeS: Story = {
+  args: {
+    title: "Title",
+    text: "Text",
+    size: TextSize.S,
+  },
+};
+
 export const LightSizeM: Story = {
   args: {
     title: "Title",

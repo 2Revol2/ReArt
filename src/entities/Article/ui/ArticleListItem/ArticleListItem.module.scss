@@ -97,7 +97,9 @@
     gap: 3px;
   }
 
-  .title p {
+  .title h4,
+  h3,
+  h2 {
     overflow: hidden;
     width: 220px;
     white-space: nowrap;

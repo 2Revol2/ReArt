@@ -35,7 +35,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
 
   if (authData) {
     return (
-      <div className={classNames(s.authNavbar, {}, [className])}>
+      <header className={classNames(s.authNavbar, {}, [className])}>
         <div className={s.wrapper}>
           <Text title="ReArt" className={s.logo} />
           <AppLink to={RoutePaths.acticles_create}>{t("Create an article")}</AppLink>
@@ -43,7 +43,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
         <Button theme={ButtonTheme.CLEAR} onClick={onLogout} type="button">
           {t("actions.Logout")}
         </Button>
-      </div>
+      </header>
     );
   }
 

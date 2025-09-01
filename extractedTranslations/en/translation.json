@@ -6,6 +6,7 @@
   "ALL": "ALL",
   "About us": "About us",
   "AboutUs": "AboutUs",
+  "Add at least one block": "Add at least one block",
   "Add paragraph": "Add paragraph",
   "An ": "An ",
   "An error ": "An error ",
@@ -52,17 +53,43 @@
   "Enter src": "Enter src",
   "Enter subtitle": "Enter subtitle",
   "Enter title": "Enter title",
+  "Fill code block": "Fill code block",
+  "Fill image block": "Fill image block",
+  "Fill text block": "Fill text block",
   "First and last name are required": "First and last name are required",
   "IT": "IT",
   "Image block": "Image block",
   "Incorrect age": "Incorrect age",
   "Incorrect city": "Incorrect city",
   "Incorrect country": "Incorrect country",
+  "Incorrect data": "Incorrect data",
   "Incorrect username or password": "Incorrect username or password",
   "Language": "Language",
   "Logout": "Logout",
   "MainPage": "MainPage",
+  "No article data found": {
+    " Please check your input": {
+      "": ""
+    }
+  },
   "No articles found": "No articles found",
+  "Oops! Something went wrong while saving": {
+    " Try again later": {
+      "": ""
+    }
+  },
+  "Please fill in the code block content": {
+    "": ""
+  },
+  "Please fill in the text block content": {
+    "": ""
+  },
+  "Please select the article type from the list": {
+    "": ""
+  },
+  "Please upload an image for the image block": {
+    "": ""
+  },
   "Profile": "Profile",
   "Profile Page": "Profile Page",
   "ProfilePage": "ProfilePage",
@@ -74,6 +101,7 @@
   "SCIENCE": "SCIENCE",
   "Save": "Save",
   "Search": "Search",
+  "Select article type": "Select article type",
   "Select county": "Select county",
   "Select currency": "Select currency",
   "Send": "Send",
@@ -82,6 +110,13 @@
   "Something went wrong": "Something went wrong",
   "Sort By": "Sort By",
   "Specify currency": "Specify currency",
+  "Subtil is a required field": "Subtil is a required field",
+  "Subtitle is a required field": "Subtitle is a required field",
+  "Subtitle is required": {
+    " Please enter a subtitle": {
+      "": ""
+    }
+  },
   "Text block": "Text block",
   "There are no comments yet": {
     "": ""
@@ -91,10 +126,25 @@
   },
   "Title": "Title",
   "Title block": "Title block",
+  "Title is a required ": "Title is a required ",
+  "Title is a required field": "Title is a required field",
+  "Title is required": {
+    " Please enter a title": {
+      "": ""
+    }
+  },
   "Try refresh the page": "Try refresh the page",
   "Views": "Views",
   "Yo": "Yo",
+  "You need to add blocks": "You need to add blocks",
+  "You need to feel code block": "You need to feel code block",
+  "You need to feel image block": "You need to feel image block",
+  "You need to feel text block": "You need to feel text block",
+  "You need to select the article type": "You need to select the article type",
   "Your age": "Your age",
+  "Your article needs at least one block": {
+    "": ""
+  },
   "Your avatar": "Your avatar",
   "Your name": "Your name",
   "Your surname": "Your surname",
@@ -138,5 +188,6 @@
   "pageNotFound": "pageNotFound",
   "pageNotFount": "pageNotFount",
   "reloadPage": "reloadPage",
+  "s is a required field": "s is a required field",
   "Профиль": "Профиль"
 }

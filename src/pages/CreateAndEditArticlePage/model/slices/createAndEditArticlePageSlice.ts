@@ -11,6 +11,8 @@ import {
   ArticleBlock,
 } from "@/entities/Article";
 import { fetchArticleData } from "../services/fetchArticleData/fetchArticleData";
+import { createNewArticle } from "../services/createNewArticle/createNewArticle";
+import { updateArticleData } from "../services/updateArticleData/updateArticleData";
 
 const initialState: CreateAndEditArticlePageSchema = {
   data: {
@@ -121,6 +123,28 @@ export const createAndEditArticlePageSlice = createSlice({
       .addCase(fetchArticleData.rejected, (state, actions) => {
         state.isLoading = false;
         state.error = actions.payload;
+      })
+      .addCase(createNewArticle.rejected, (state, actions) => {
+        state.isLoading = false;
+        state.validateErrors = actions.payload;
+      })
+      .addCase(createNewArticle.fulfilled, (state) => {
+        state.isLoading = false;
+        state.validateErrors = undefined;
+      })
+      .addCase(createNewArticle.pending, (state, actions) => {
+        state.validateErrors = actions.payload;
+      })
+      .addCase(updateArticleData.rejected, (state, actions) => {
+        state.isLoading = false;
+        state.validateErrors = actions.payload;
+      })
+      .addCase(updateArticleData.fulfilled, (state) => {
+        state.isLoading = false;
+        state.validateErrors = undefined;
+      })
+      .addCase(updateArticleData.pending, (state, actions) => {
+        state.validateErrors = actions.payload;
       });
   },
 });

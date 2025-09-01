@@ -3,16 +3,23 @@ import { getUserAuthData } from "@/entities/User";
 import { ThunkConfig } from "@/app/providers/StoreProvider";
 import { getCreateAndEditArticleData } from "../../selectors/createAndEditArticlePage";
 import { Article } from "@/entities/Article";
+import { ValidateArticleError } from "../../types/createAndEditArticlePage";
+import { validateArticleData } from "../validateArticleData/validateArticleData";
 
-export const createNewArticle = createAsyncThunk<Article, void, ThunkConfig<string>>(
+export const createNewArticle = createAsyncThunk<Article, void, ThunkConfig<ValidateArticleError[]>>(
   "createAndEditArticlePage/createNewArticle",
 
   async (_, thunkAPI) => {
     const userData = getUserAuthData(thunkAPI.getState());
     const article = getCreateAndEditArticleData(thunkAPI.getState());
+    const errors = validateArticleData(article);
+
+    if (errors.length) {
+      return thunkAPI.rejectWithValue(errors);
+    }
 
     if (!userData || !article) {
-      return thunkAPI.rejectWithValue("no data");
+      return thunkAPI.rejectWithValue([ValidateArticleError.NO_DATA]);
     }
 
     try {
@@ -27,7 +34,7 @@ export const createNewArticle = createAsyncThunk<Article, void, ThunkConfig<stri
 
       return response.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue("error");
+      return thunkAPI.rejectWithValue([ValidateArticleError.INCORRECT_TITLE]);
     }
   },
 );

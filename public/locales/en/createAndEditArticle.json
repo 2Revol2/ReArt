@@ -7,5 +7,14 @@
   "Create": "Create",
   "Edit": "Edit",
   "Add paragraph": "Add paragraph",
-  "Enter paragraph": "Enter paragraph"
+  "Enter paragraph": "Enter paragraph",
+  "No article data found": "No article data found. Please check your input.",
+  "Server error while saving": "Oops! Something went wrong while saving. Try again later.",
+  "Title is required": "Title is required. Please enter a title.",
+  "Subtitle is required": "Subtitle is required. Please enter a subtitle.",
+  "Select article type": "Please select the article type from the list.",
+  "Add at least one block": "Your article needs at least one block.",
+  "Fill text block": "Please fill in the text block content.",
+  "Fill code block": "Please fill in the code block content.",
+  "Fill image block": "Please upload an image for the image block."
 }

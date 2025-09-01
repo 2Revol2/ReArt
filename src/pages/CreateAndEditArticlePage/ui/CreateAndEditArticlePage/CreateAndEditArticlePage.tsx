@@ -1,5 +1,6 @@
 import { memo, useCallback } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { Page } from "@/widgets/Page/Page";
 import { DynamicModuleLoader, ReducersList } from "@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
@@ -11,6 +12,7 @@ import { ArticleForm } from "@/widgets/ArticleForm";
 import {
   getCreateAndEditArticleData,
   getCreateAndEditArticleIsLoading,
+  getCreateAndEditArticleValidateErrors,
 } from "../../model/selectors/createAndEditArticlePage";
 import { useAppDispatch } from "@/shared/hooks/useAppDispatch/useAppDispatch";
 import {
@@ -27,6 +29,8 @@ import { PageLoader } from "@/widgets/PageLoader";
 import { updateArticleData } from "../../model/services/updateArticleData/updateArticleData";
 import { RoutePaths } from "@/shared/config/routeConfig/routeConfig";
 import { classNames } from "@/shared/lib/classNames/classNames";
+import { ValidateArticleError } from "../../model/types/createAndEditArticlePage";
+import { Text, TextTheme } from "@/shared/ui/Text/Text";
 
 interface CreateAndEditArticlePageProps {
   className?: string;
@@ -43,6 +47,21 @@ const CreateAndEditArticlePage = memo((props: CreateAndEditArticlePageProps) => 
   const isEdit = Boolean(id);
   const isLoading = useSelector(getCreateAndEditArticleIsLoading);
   const data = useSelector(getCreateAndEditArticleData);
+  const validateErrors = useSelector(getCreateAndEditArticleValidateErrors);
+  const { t } = useTranslation("createAndEditArticle");
+
+  const validateErrorTranslates = {
+    [ValidateArticleError.NO_DATA]: t("No article data found"),
+    [ValidateArticleError.SERVER_ERROR]: t("Server error while saving"),
+    [ValidateArticleError.INCORRECT_TITLE]: t("Title is required"),
+    [ValidateArticleError.INCORRECT_SUBTITLE]: t("Subtitle is required"),
+    [ValidateArticleError.INCORRECT_TYPE]: t("Select article type"),
+    [ValidateArticleError.NO_BLOCK]: t("Add at least one block"),
+    [ValidateArticleError.INCORRECT_TEXT_BLOCK]: t("Fill text block"),
+    [ValidateArticleError.INCORRECT_CODE_BLOCK]: t("Fill code block"),
+    [ValidateArticleError.INCORRECT_IMAGE_BLOCK]: t("Fill image block"),
+  };
+
   const navigate = useNavigate();
   useInitialEffect(() => {
     if (id) {
@@ -113,14 +132,20 @@ const CreateAndEditArticlePage = memo((props: CreateAndEditArticlePageProps) => 
     [dispatch],
   );
 
-  const onCreateArticle = useCallback(() => {
-    dispatch(createNewArticle());
-    navigate(RoutePaths.acticles);
+  const onCreateArticle = useCallback(async () => {
+    const resultAction = await dispatch(createNewArticle());
+
+    if (!Array.isArray(resultAction.payload)) {
+      navigate(RoutePaths.acticles);
+    }
   }, [dispatch, navigate]);
 
-  const onUpdateArticle = useCallback(() => {
-    dispatch(updateArticleData());
-    navigate(RoutePaths.acticles);
+  const onUpdateArticle = useCallback(async () => {
+    const resultAction = await dispatch(updateArticleData());
+
+    if (!Array.isArray(resultAction.payload)) {
+      navigate(RoutePaths.acticles);
+    }
   }, [dispatch, navigate]);
 
   if (isLoading) {
@@ -130,6 +155,10 @@ const CreateAndEditArticlePage = memo((props: CreateAndEditArticlePageProps) => 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmout>
       <Page className={classNames("", {}, [className])}>
+        {validateErrors?.length &&
+          validateErrors.map((error) => (
+            <Text key={error} theme={TextTheme.ERROR} text={validateErrorTranslates[error]} />
+          ))}
         <ArticleForm
           data={data}
           isEdit={isEdit}

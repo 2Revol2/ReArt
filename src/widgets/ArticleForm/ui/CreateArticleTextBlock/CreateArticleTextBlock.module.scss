@@ -1,7 +1,4 @@
 .textBlock {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
   padding: 16px;
   background-color: var(--card-bg-color);
   border-radius: 8px;
@@ -16,7 +13,6 @@
   border-radius: 6px;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
+.textarea {
+  width: 100%;
 }

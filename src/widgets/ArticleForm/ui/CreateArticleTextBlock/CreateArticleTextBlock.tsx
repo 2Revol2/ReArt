@@ -6,6 +6,7 @@ import { Input } from "@/shared/ui/Input/Input";
 import { Text } from "@/shared/ui/Text/Text";
 import { Button, ButtonTheme } from "@/shared/ui/Button/Button";
 import { Textarea } from "@/shared/ui/Textarea/Textarea";
+import { HStack, VStack } from "@/shared/ui/Stack";
 
 interface CreateArticleTextBlockProps {
   onChange: (id: string, changes: Partial<ArticleTextBlock>) => void;
@@ -44,24 +45,28 @@ export const CreateArticleTextBlock = memo((props: CreateArticleTextBlockProps) 
   };
 
   return (
-    <div className={s.textBlock}>
-      <div className={s.header}>
+    <VStack max justify="between" gap="8" className={s.textBlock}>
+      <HStack max justify="between">
         <Text title={t("Text block")} />
         <Button onClick={removeHandler} theme={ButtonTheme.CLEAR}>
           X
         </Button>
-      </div>
+      </HStack>
       <Input value={block.title} onChange={onChangeTitle} placeholder={t("Enter title")} />
-      {block.paragraphs.map((item, index) => (
-        <Textarea
-          value={item}
-          placeholder={t("Enter paragraph")}
-          onChange={(value) => onChangeParagraph(index, value)}
-        />
-      ))}
+      <VStack max gap="16">
+        {block.paragraphs.map((item, index) => (
+          <Textarea
+            value={item}
+            placeholder={t("Enter paragraph")}
+            onChange={(value) => onChangeParagraph(index, value)}
+            className={s.textarea}
+          />
+        ))}
+      </VStack>
+
       <Button className={s.addBtn} onClick={onAddParagraph}>
         {t("Add paragraph")}
       </Button>
-    </div>
+    </VStack>
   );
 });

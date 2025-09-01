@@ -5,6 +5,7 @@ import { ArticleImageBlock } from "@/entities/Article/model/types/article";
 import { Input } from "@/shared/ui/Input/Input";
 import { Text } from "@/shared/ui/Text/Text";
 import { Button, ButtonTheme } from "@/shared/ui/Button/Button";
+import { HStack, VStack } from "@/shared/ui/Stack";
 
 interface CreateArticleImageBlockProps {
   block: ArticleImageBlock;
@@ -34,17 +35,17 @@ export const CreateArticleImageBlock = memo((props: CreateArticleImageBlockProps
   };
 
   return (
-    <div className={s.imageBlock}>
-      <div className={s.header}>
+    <VStack max justify="between" gap="8" className={s.imageBlock}>
+      <HStack max justify="between">
         <Text title={t("Image block")} />
         <Button onClick={removeHandler} theme={ButtonTheme.CLEAR}>
           X
         </Button>
-      </div>
+      </HStack>
 
       <Input value={block?.src} placeholder={t("Enter src")} onChange={onChageSrc} />
       <img src={block.src} alt="" width={150} />
       <Input value={block?.title} placeholder={t("Enter title")} onChange={onChageTitle} />
-    </div>
+    </VStack>
   );
 });

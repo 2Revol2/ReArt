@@ -1,7 +1,4 @@
 .codeBlock {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
   padding: 16px;
   background-color: var(--code-bg);
   border-radius: 8px;
@@ -9,7 +6,6 @@
   overflow-y: auto;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
+.textarea {
+  width: 100%;
 }

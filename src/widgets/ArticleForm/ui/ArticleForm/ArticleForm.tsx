@@ -18,7 +18,7 @@ import {
 import { CreateArticleImageBlock } from "../CreateArticleImageBlock/CreateArticleImageBlock";
 import { CreateArticleCodeBlock } from "../CreateArticleCodeBlock/CreateArticleCodeBlock";
 import { CreateArticleTextBlock } from "../CreateArticleTextBlock/CreateArticleTextBlock";
-import { VStack } from "@/shared/ui/Stack";
+import { HStack, VStack } from "@/shared/ui/Stack";
 
 interface ArticleFormProps {
   className?: string;
@@ -132,7 +132,7 @@ export const ArticleForm = memo((props: ArticleFormProps) => {
   }, [onAddBlockHandler]);
   return (
     <VStack max gap="16" className={classNames(s.ArticleForm, {}, [className])}>
-      <VStack gap="16" className={s.header}>
+      <VStack max gap="16" className={s.header}>
         <Input value={data?.title} onChange={onChangeTitle} placeholder={t("Enter title")} />
         <Input value={data?.img} onChange={onChangeImage} placeholder={t("Enter image")} />
         {data?.img && <img src={data?.img} alt={data?.title} width={200} />}
@@ -140,10 +140,10 @@ export const ArticleForm = memo((props: ArticleFormProps) => {
       </VStack>
       <div>
         <Text title={t("Choose a type of article")} />
-        <div className={s.articleTypes}>{articleTypesList}</div>
+        <HStack gap="8">{articleTypesList}</HStack>
       </div>
       {data?.blocks?.map(renderCreateBlock)}
-      <div>{articleBlockTypesList}</div>
+      <HStack gap="4">{articleBlockTypesList}</HStack>
       {isEdit ? (
         <Button onClick={onUpdateArticle}>{t("Edit")}</Button>
       ) : (

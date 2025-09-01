@@ -1,15 +1,7 @@
 .imageBlock {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
   padding: 16px;
   background-color: var(--card-bg-color);
   border-radius: 8px;
   border: 1px solid var(--border-color);
   overflow-y: auto;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
 }

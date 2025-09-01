@@ -1,11 +1,26 @@
+import { ArticleBlockType, ArticleType } from "@/entities/Article";
 import { createNewArticle } from "./createNewArticle";
 import { TestAsyncThunk } from "@/shared/config/tests/TestAsyncThunk/TestAsyncThunk";
+import { createAndEditArticlePage } from "../../types/createAndEditArticlePage";
 
-const articleResponse = {
+export const articleResponse: createAndEditArticlePage = {
   id: "1",
-  user: { id: "1", username: "user" },
-  title: "hello",
+  title: "Hello World",
+  subtitle: "My first article",
+  img: "test",
+  views: 100,
+  createdAt: "test",
+  type: [ArticleType.IT],
+  blocks: [
+    {
+      id: "1",
+      type: ArticleBlockType.TEXT,
+      title: "Introduction",
+      paragraphs: ["This is the first paragraph.", "This is the second paragraph."],
+    },
+  ],
 };
+
 const user = { id: "1", username: "user" };
 
 describe("createNewArticle.test", () => {

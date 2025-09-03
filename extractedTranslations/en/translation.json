@@ -182,11 +182,15 @@
     "Unexpected": "Unexpected"
   },
   "language": "language",
+  "links": {
+    "Profile": "Profile"
+  },
   "login": "login",
   "logout": "logout",
   "main": "main",
   "pageNotFound": "pageNotFound",
   "pageNotFount": "pageNotFount",
+  "profile": "profile",
   "reloadPage": "reloadPage",
   "s is a required field": "s is a required field",
   "Профиль": "Профиль"

@@ -10,6 +10,9 @@ import { userActions } from "@/entities/User/model/slice/userSlice";
 import { Text } from "@/shared/ui/Text/Text";
 import { AppLink } from "@/shared/ui/AppLink/AppLink";
 import { RoutePaths } from "@/shared/config/routeConfig/routeConfig";
+import { Dropdown } from "@/shared/ui/Dropdown/Dropdown";
+import { Avatar } from "@/shared/ui/Avatar/Avatar";
+import { HStack } from "@/shared/ui/Stack";
 
 interface NavbarProps {
   className?: string;
@@ -36,13 +39,18 @@ export const Navbar = memo(({ className }: NavbarProps) => {
   if (authData) {
     return (
       <header className={classNames(s.authNavbar, {}, [className])}>
-        <div className={s.wrapper}>
+        <HStack align="center">
           <Text title="ReArt" className={s.logo} />
           <AppLink to={RoutePaths.acticles_create}>{t("Create an article")}</AppLink>
-        </div>
-        <Button theme={ButtonTheme.CLEAR} onClick={onLogout} type="button">
-          {t("actions.Logout")}
-        </Button>
+        </HStack>
+        <Dropdown
+          trigger={<Avatar size={40} src={authData.avatar} />}
+          items={[
+            { content: t("links.Profile"), href: `${RoutePaths.profile + authData.id}` },
+            { content: t("actions.Logout"), onClick: onLogout },
+          ]}
+          direction="bottom left"
+        />
       </header>
     );
   }

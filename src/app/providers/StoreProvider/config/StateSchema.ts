@@ -3,18 +3,20 @@ import { AxiosInstance } from "axios";
 import { CounterSchema } from "@/entities/Counter";
 import { UserSchema } from "@/entities/User";
 import { LoginSchema } from "@/features/AuthByUsername";
-import { ProfileSchema } from "@/entities/Profile";
+import { ProfileSchema } from "@/features/EditableProfileCard";
 import { ArticleDetailsSchema } from "@/entities/Article";
 import { ArticleDetailsPageSchema } from "@/pages/ArticleDetailsPage";
 import { AddNewCommentSchema } from "@/features/AddNewComment";
 import { ArticlesPageSchema } from "@/pages/ArticlesPage";
 import { ScrollRecoverySchema } from "@/features/ScrollRecovery";
 import { CreateAndEditArticlePageSchema } from "@/pages/CreateAndEditArticlePage";
+import { rtkApi } from "@/shared/api/rtkApi";
 
 export interface StateSchema {
   counter: CounterSchema;
   user: UserSchema;
   scrollRecovery: ScrollRecoverySchema;
+  [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>;
 
   // Async reducers
   loginForm?: LoginSchema;

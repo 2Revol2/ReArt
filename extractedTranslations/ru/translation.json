@@ -177,6 +177,7 @@
   "enterPassword": "enterPassword",
   "enterUsername": "enterUsername",
   "errors": {
+    "": "",
     "NotFoundPage": "NotFoundPage",
     "PageNotFound": "PageNotFound",
     "Unexpected": "Unexpected"

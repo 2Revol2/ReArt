@@ -34,7 +34,7 @@ export default {
   globals: {
     __IS_DEV__: true,
     __API__: "",
-    __PROJECT_: "jest",
+    __PROJECT__: "jest",
   },
 
   reporters: [

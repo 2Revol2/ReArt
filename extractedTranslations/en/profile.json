@@ -1,4 +1,22 @@
 {
+  "Cancel": "",
+  "City": "",
+  "Data not found": "",
+  "Edit": "",
+  "First and last name are required": "",
+  "Incorrect age": "",
+  "Incorrect city": "",
+  "Incorrect country": "",
+  "Profile": "",
+  "Save": "",
   "Select county": "",
-  "Select currency": ""
+  "Select currency": "",
+  "Server error while saving": "",
+  "There was an error loading your profile": "",
+  "Try refresh the page": "",
+  "Your age": "",
+  "Your avatar": "",
+  "Your name": "",
+  "Your surname": "",
+  "Your username": ""
 }

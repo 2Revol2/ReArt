@@ -22,7 +22,7 @@ import { VStack } from "@/shared/ui/Stack";
 
 interface EditableProfileCardProps {
   className?: string;
-  id?: string;
+  id: string;
 }
 
 const reducers: ReducersList = { profile: profileReducer };
@@ -47,9 +47,7 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
   };
 
   useInitialEffect(() => {
-    if (id) {
-      dispatch(fetchProfileData(id));
-    }
+    dispatch(fetchProfileData(id));
   });
 
   const onChangeFirstname = useCallback(
@@ -114,7 +112,12 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
         <EditableProfileCardHeader />
         {validateErrors?.length &&
           validateErrors.map((error) => (
-            <Text key={error} theme={TextTheme.ERROR} text={validateErrorTranslates[error]} />
+            <Text
+              data-testid="EditableProfileCard.Error"
+              key={error}
+              theme={TextTheme.ERROR}
+              text={validateErrorTranslates[error]}
+            />
           ))}
         <ProfileCard
           data={formData}

@@ -16,14 +16,14 @@ export const ArticleRecommendationList = memo((props: ArticleRecommendationListP
 
   const { data, isLoading, error } = useGetArticleRecommendationsList(3);
 
-  if (isLoading || error) {
+  if (isLoading || error || !data) {
     return null;
   }
 
   return (
     <div className={classNames(s.ArticleRecommendationList, {}, [className])}>
       <Text title={t("Recommend")} />
-      <ArticleList target="_blank" articles={data ?? []} className={s.recommendations} />
+      <ArticleList target="_blank" articles={data} virtualized={false} className={s.recommendations} />
     </div>
   );
 });

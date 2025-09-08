@@ -6,11 +6,6 @@ import { Text } from "@/shared/ui/Text/Text";
 
 const ProfilePage = () => {
   const { id } = useParams();
-  const { t } = useTranslation("profile");
-
-  if (!id) {
-    return <Text text={t("Data not found")} />;
-  }
 
   return (
     <Page>

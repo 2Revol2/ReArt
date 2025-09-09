@@ -7,7 +7,8 @@
     "Main": "Главная",
     "AboutUs": "О нас",
     "Profile": "Профиль",
-    "Articles": "Статьи"
+    "Articles": "Статьи",
+    "Admin": "Админка"
   },
   "authByUsername": {
     "EnterUsername": "Введите логин",
@@ -43,5 +44,6 @@
   "SCIENCE": "НАУКА",
   "No articles found": "Статьи не найдены",
   "Recommend": "Рекоммендуем",
-  "Create an article": "Создать статью"
+  "Create an article": "Создать статью",
+  "You do not have permissions for this page": "У вас нету прав для этой страницы"
 }

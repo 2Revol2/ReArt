@@ -136,6 +136,9 @@
   "Try refresh the page": "Try refresh the page",
   "Views": "Views",
   "Yo": "Yo",
+  "You do not have permissions for this page": {
+    "": ""
+  },
   "You need to add blocks": "You need to add blocks",
   "You need to feel code block": "You need to feel code block",
   "You need to feel image block": "You need to feel image block",
@@ -184,6 +187,7 @@
   },
   "language": "language",
   "links": {
+    "Admin": "Admin",
     "Profile": "Profile"
   },
   "login": "login",

@@ -7,7 +7,8 @@
     "Main": "Main",
     "AboutUs": "About us",
     "Profile": "Profile",
-    "Articles": "Articles"
+    "Articles": "Articles",
+    "Admin": "Admin"
   },
   "authByUsername": {
     "EnterUsername": "Enter username",
@@ -43,5 +44,6 @@
   "SCIENCE": "SCIENCE",
   "No articles found": "No articles found",
   "Recommend": "Recommend",
-  "Create an article": "Create an article"
+  "Create an article": "Create an article",
+  "You do not have permissions for this page": "You do not have permissions for this page"
 }

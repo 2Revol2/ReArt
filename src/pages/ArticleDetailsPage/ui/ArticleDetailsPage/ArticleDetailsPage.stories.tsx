@@ -5,18 +5,6 @@ import { Theme } from "@/app/providers/ThemeProvider";
 import { ArticleBlockType, ArticleType } from "@/entities/Article/model/types/article";
 import { StoreDecorator } from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
 
-const meta: Meta<typeof ArticleDetailsPage> = {
-  title: "pages/ArticleDetailsPage",
-  component: ArticleDetailsPage,
-  parameters: {},
-  args: {
-    to: "/",
-  },
-};
-
-export default meta;
-type Story = StoryObj<typeof ArticleDetailsPage>;
-
 const article = {
   id: "1",
   title: "Javascript news",
@@ -69,6 +57,30 @@ const article = {
     },
   ],
 };
+
+const meta: Meta<typeof ArticleDetailsPage> = {
+  title: "pages/ArticleDetailsPage",
+  component: ArticleDetailsPage,
+  parameters: {
+    mockData: [
+      {
+        url: `${__API__}/articles?_limit=3`,
+        method: "GET",
+        status: 200,
+        response: [
+          { ...article, id: "1" },
+          { ...article, id: "2" },
+        ],
+      },
+    ],
+  },
+  args: {
+    to: "/",
+  },
+};
+
+export default meta;
+type Story = StoryObj<typeof ArticleDetailsPage>;
 
 export const Light: Story = {
   args: {},

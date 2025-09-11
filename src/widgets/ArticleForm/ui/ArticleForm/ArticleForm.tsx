@@ -4,17 +4,17 @@ import s from "./ArticleForm.module.scss";
 import { Input } from "@/shared/ui/Input/Input";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import { ArticleBlockTypes, ArticleTypeItems } from "../../model/item";
-import { createAndEditArticlePage } from "@/pages/CreateAndEditArticlePage/model/types/createAndEditArticlePage";
+import { createAndEditArticlePage } from "@/pages/CreateAndEditArticlePage";
 import { Button, ButtonTheme } from "@/shared/ui/Button/Button";
-import { ArticleType } from "@/entities/Article";
 import { Text } from "@/shared/ui/Text/Text";
 import {
   ArticleBlock,
-  ArticleBlockType,
   ArticleCodeBlock,
   ArticleImageBlock,
   ArticleTextBlock,
-} from "@/entities/Article/model/types/article";
+  ArticleType,
+  ArticleBlockType,
+} from "@/entities/Article";
 import { CreateArticleImageBlock } from "../CreateArticleImageBlock/CreateArticleImageBlock";
 import { CreateArticleCodeBlock } from "../CreateArticleCodeBlock/CreateArticleCodeBlock";
 import { CreateArticleTextBlock } from "../CreateArticleTextBlock/CreateArticleTextBlock";

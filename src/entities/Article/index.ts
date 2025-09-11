@@ -1,14 +1,9 @@
-export {
-  ArticleBlockType,
-  ArticleImageBlock,
-  ArticleCodeBlock,
-  ArticleTextBlock,
-  ArticleBlock,
-} from "./model/types/article";
+export type { ArticleImageBlock, ArticleCodeBlock, ArticleTextBlock, ArticleBlock } from "./model/types/article";
+export type { Article } from "./model/types/article";
+export type { ArticleDetailsSchema } from "./model/types/articleDetailsSchema";
+
 export { getArticleDetailsData } from "./model/selectors/articleDetails";
 export { ArticleTypeTabs } from "./ui/ArticleTypeTabs/ArticleTypeTabs";
-export { ArticleSortField } from "./model/types/article";
+export { ArticleSortField, ArticleBlockType, ArticleView, ArticleType } from "./model/consts/consts";
 export { ArticleDetails } from "./ui/ArticleDetails/ArticleDetails";
-export { Article, ArticleView, ArticleType } from "./model/types/article";
-export { ArticleDetailsSchema } from "./model/types/articleDetailsSchema";
 export { ArticleList } from "./ui/ArticleList/ArticleList";

@@ -1,7 +1,7 @@
 import { Currency } from "@/entities/Currency";
 import { validateProfileData } from "./validateProfileData";
 import { Country } from "@/entities/Country";
-import { ValidateProfileError } from "../../types/EditableProfileCardSchema";
+import { ValidateProfileError } from "../../consts/consts";
 
 const data = {
   first: "Макc",

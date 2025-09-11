@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
-
 import { ArticleDetails } from "./ArticleDetails";
 import { StoreDecorator } from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
-import { Article, ArticleBlockType, ArticleType } from "../../model/types/article";
+import { Article } from "../../model/types/article";
+import { ArticleType, ArticleBlockType } from "../../model/consts/consts";
 
 const meta: Meta<typeof ArticleDetails> = {
   title: "entities/Article/ArticleDetails",
@@ -101,11 +101,11 @@ Primary.decorators = [
     })(Story),
 ];
 
-export const isLoading: Story = {
+export const IsLoading: Story = {
   args: {},
 };
 
-isLoading.decorators = [
+IsLoading.decorators = [
   (Story) =>
     StoreDecorator({
       articleDetails: {

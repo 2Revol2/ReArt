@@ -7,7 +7,7 @@ import { useAppDispatch } from "@/shared/hooks/useAppDispatch/useAppDispatch";
 import { getProfileForm } from "../../model/selectors/getProfileForm/getProfileForm";
 import { getProfileIsLoading } from "../../model/selectors/getProfileIsLoading/getProfileIsLoading";
 import { getProfileError } from "../../model/selectors/getProfileError/getProfileError";
-import { ValidateProfileError } from "../../model/types/EditableProfileCardSchema";
+import { ValidateProfileError } from "../../model/consts/consts";
 import { getProfileReadonly } from "../../model/selectors/getProfileReadonly/getProfileReadonly";
 import { useInitialEffect } from "@/shared/hooks/useInitialEffect/useInitialEffect";
 import { fetchProfileData } from "../../model/services/fetchProfileData/fetchProfileData";

@@ -2,7 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import { ThunkConfig } from "@/app/providers/StoreProvider";
 import { Article } from "@/entities/Article";
 import { getCreateAndEditArticleData } from "../../selectors/createAndEditArticlePage";
-import { ValidateArticleError } from "../../types/createAndEditArticlePage";
+import { ValidateArticleError } from "../../consts/consts";
 import { validateArticleData } from "../validateArticleData/validateArticleData";
 
 export const updateArticleData = createAsyncThunk<Article, void, ThunkConfig<ValidateArticleError[]>>(

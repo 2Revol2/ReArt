@@ -1,9 +1,9 @@
-import { HTMLAttributeAnchorTarget, memo, useCallback } from "react";
+import { HTMLAttributeAnchorTarget, memo } from "react";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
 import s from "./ArticleListItem.module.scss";
 import { classNames } from "@/shared/lib/classNames/classNames";
-import { Article, ArticleBlockType, ArticleTextBlock, ArticleView } from "../../model/types/article";
+import { Article, ArticleTextBlock } from "../../model/types/article";
+import { ArticleView, ArticleBlockType } from "../../model/consts/consts";
 import { Text } from "@/shared/ui/Text/Text";
 import EyeIcon from "@/shared/assets/icons/eye.svg";
 import { Icon } from "@/shared/ui/Icon/Icon";

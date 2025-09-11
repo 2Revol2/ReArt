@@ -1,5 +1,6 @@
 import { ArticleBlockType } from "@/entities/Article";
-import { createAndEditArticlePage, ValidateArticleError } from "../../types/createAndEditArticlePage";
+import { createAndEditArticlePage } from "../../types/createAndEditArticlePage";
+import { ValidateArticleError } from "../../consts/consts";
 
 export const validateArticleData = (article?: createAndEditArticlePage) => {
   if (!article) {

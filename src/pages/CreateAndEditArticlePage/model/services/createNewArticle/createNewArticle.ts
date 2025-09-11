@@ -3,7 +3,7 @@ import { getUserAuthData } from "@/entities/User";
 import { ThunkConfig } from "@/app/providers/StoreProvider";
 import { getCreateAndEditArticleData } from "../../selectors/createAndEditArticlePage";
 import { Article } from "@/entities/Article";
-import { ValidateArticleError } from "../../types/createAndEditArticlePage";
+import { ValidateArticleError } from "../../consts/consts";
 import { validateArticleData } from "../validateArticleData/validateArticleData";
 
 export const createNewArticle = createAsyncThunk<Article, void, ThunkConfig<ValidateArticleError[]>>(

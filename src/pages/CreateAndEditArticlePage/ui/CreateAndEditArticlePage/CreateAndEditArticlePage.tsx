@@ -29,7 +29,7 @@ import { PageLoader } from "@/widgets/PageLoader";
 import { updateArticleData } from "../../model/services/updateArticleData/updateArticleData";
 import { RoutePaths } from "@/shared/config/routeConfig/routeConfig";
 import { classNames } from "@/shared/lib/classNames/classNames";
-import { ValidateArticleError } from "../../model/types/createAndEditArticlePage";
+import { ValidateArticleError } from "../../model/consts/consts";
 import { Text, TextTheme } from "@/shared/ui/Text/Text";
 
 interface CreateAndEditArticlePageProps {

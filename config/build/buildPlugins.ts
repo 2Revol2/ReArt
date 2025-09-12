@@ -1,4 +1,5 @@
 import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
+import CircularDependencyPlugin from "circular-dependency-plugin";
 import CopyPlugin from "copy-webpack-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import webpack from "webpack";
@@ -30,6 +31,12 @@ export function buildPlugins({ paths, isDev, apiUrl, project }: BuildOptions): w
     plugin.push(new webpack.HotModuleReplacementPlugin());
     plugin.push(new BundleAnalyzerPlugin({ openAnalyzer: false }));
     plugin.push(new ReactRefreshWebpackPlugin());
+    plugin.push(
+      new CircularDependencyPlugin({
+        exclude: /node_modules/,
+        failOnError: true,
+      }),
+    );
   }
 
   return plugin;

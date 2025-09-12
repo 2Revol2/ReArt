@@ -9,7 +9,7 @@ import { getIsUserAdmin, getIsUserManager, getUserAuthData } from "@/entities/Us
 import { userActions } from "@/entities/User/model/slice/userSlice";
 import { Text } from "@/shared/ui/Text/Text";
 import { AppLink } from "@/shared/ui/AppLink/AppLink";
-import { RoutePaths } from "@/shared/config/routeConfig/routeConfig";
+import { RoutePaths } from "@/shared/constants/router";
 import { Dropdown } from "@/shared/ui/Dropdown/Dropdown";
 import { Avatar } from "@/shared/ui/Avatar/Avatar";
 import { HStack } from "@/shared/ui/Stack";

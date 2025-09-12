@@ -27,7 +27,7 @@ import { useInitialEffect } from "@/shared/hooks/useInitialEffect/useInitialEffe
 import { fetchArticleData } from "../../model/services/fetchArticleData/fetchArticleData";
 import { PageLoader } from "@/widgets/PageLoader";
 import { updateArticleData } from "../../model/services/updateArticleData/updateArticleData";
-import { RoutePaths } from "@/shared/config/routeConfig/routeConfig";
+import { RoutePaths } from "@/shared/constants/router";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import { ValidateArticleError } from "../../model/consts/consts";
 import { Text, TextTheme } from "@/shared/ui/Text/Text";

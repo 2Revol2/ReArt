@@ -1,47 +1,15 @@
-import { RouteProps } from "react-router-dom";
+import { UserRoles } from "@/entities/User";
 import { AboutPage } from "@/pages/AboutPage";
+import { AdminPanelPage } from "@/pages/AdminPanelPage";
+import { ArcticleDetailsPage } from "@/pages/ArticleDetailsPage";
+import { ArcticlesPage } from "@/pages/ArticlesPage";
+import { CreateAndEditArticlePage } from "@/pages/CreateAndEditArticlePage";
+import { ForbiddenPage } from "@/pages/ForbiddenPage";
 import { MainPage } from "@/pages/MainPage";
 import { NotFoundPage } from "@/pages/NotFoundPage";
 import { ProfilePage } from "@/pages/ProfilePage";
-import { ArcticlesPage } from "@/pages/ArticlesPage";
-import { ArcticleDetailsPage } from "@/pages/ArticleDetailsPage";
-import { CreateAndEditArticlePage } from "@/pages/CreateAndEditArticlePage";
-import { AdminPanelPage } from "@/pages/AdminPanelPage";
-import { UserRoles } from "@/entities/User";
-import { ForbiddenPage } from "@/pages/ForbiddenPage";
-
-export type AppRoutesProps = RouteProps & {
-  authOnly?: boolean;
-  roles?: UserRoles[];
-};
-
-export const enum AppRoutes {
-  MAIN = "main",
-  ABOUT = "about",
-  PROFILE = "profile",
-  ACTICLES = "acticles",
-  ACTICLES_DETAILS = "acticles_details",
-  ACTICLES_CREATE = "acticles_create",
-  ACTICLES_EDIT = "acticles_edit",
-  ADMIN_PANEL = "admin_panel",
-  FORBIDDEN = "forbidden",
-
-  NOT_FOUND = "not_found",
-}
-
-export const RoutePaths: Record<AppRoutes, string> = {
-  [AppRoutes.MAIN]: "/",
-  [AppRoutes.ABOUT]: "/about",
-  [AppRoutes.PROFILE]: "/profile/",
-  [AppRoutes.ACTICLES]: "/articles",
-  [AppRoutes.ACTICLES_DETAILS]: "/articles/",
-  [AppRoutes.ACTICLES_CREATE]: "/articles/new",
-  [AppRoutes.ACTICLES_EDIT]: "/articles/:id/edit",
-  [AppRoutes.ADMIN_PANEL]: "/admin",
-  [AppRoutes.FORBIDDEN]: "/forbidden",
-
-  [AppRoutes.NOT_FOUND]: "*",
-};
+import { AppRoutesProps } from "@/shared/types/router";
+import { AppRoutes, RoutePaths } from "@/shared/constants/router";
 
 export const routerConfig: Record<AppRoutes, AppRoutesProps> = {
   [AppRoutes.MAIN]: {

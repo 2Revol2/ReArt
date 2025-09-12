@@ -1,0 +1,22 @@
+{
+  "Cancel": "Cancel",
+  "City": "City",
+  "Data not found": "Data not found",
+  "Edit": "Edit",
+  "First and last name are required": "First and last name are required",
+  "Incorrect age": "Incorrect age",
+  "Incorrect city": "Incorrect city",
+  "Incorrect country": "Incorrect country",
+  "Profile": "Profile",
+  "Save": "Save",
+  "Select county": "Select county",
+  "Select currency": "Select currency",
+  "Server error while saving": "Server error while saving",
+  "There was an error loading your profile": "There was an error loading your profile",
+  "Try refresh the page": "Try refresh the page",
+  "Your age": "Your age",
+  "Your avatar": "Your avatar",
+  "Your name": "Your name",
+  "Your surname": "Your surname",
+  "Your username": "Your username"
+}

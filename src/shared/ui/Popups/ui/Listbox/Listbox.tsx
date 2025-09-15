@@ -2,9 +2,11 @@ import { Fragment, ReactNode } from "react";
 import { Listbox as HListbox } from "@headlessui/react";
 import s from "./Listbox.module.scss";
 import { classNames } from "@/shared/lib/classNames/classNames";
-import { Button } from "../Button/Button";
-import { HStack } from "../Stack";
+import { Button } from "../../../Button/Button";
+import { HStack } from "../../../Stack";
 import { DropdownDirection } from "@/shared/types/ui";
+import { mapDirectionClass } from "../../styles/consts";
+import popupStyles from "../../styles/popup.module.scss";
 
 export interface ListboxItem {
   value: string;
@@ -23,13 +25,6 @@ interface ListboxProps {
   label?: string;
 }
 
-const mapDirectionClass: Record<DropdownDirection, string> = {
-  "bottom left": s.optionsBottomLeft,
-  "bottom right": s.optionsBottomRight,
-  "top left": s.optionsTopLeft,
-  "top right": s.optionsTopRight,
-};
-
 export const Listbox = ({
   options,
   className,
@@ -42,22 +37,28 @@ export const Listbox = ({
 }: ListboxProps) => {
   return (
     <HStack gap="4" align="center">
-      {label && <span className={classNames(s.label, { [s.disabled]: readonly }, [])}>{`${label}>`}</span>}
+      {label && <span className={classNames(s.label, { [popupStyles.disabled]: readonly }, [])}>{`${label}>`}</span>}
       <HListbox
         disabled={readonly}
         as="div"
-        className={classNames(s.listbox, { [s.disabled]: readonly }, [className])}
+        className={classNames(s.listbox, { [popupStyles.disabled]: readonly }, [className, popupStyles.popup])}
         value={value}
         onChange={onChange}
       >
-        <HListbox.Button className={s.trigger}>
+        <HListbox.Button className={popupStyles.trigger}>
           <Button disabled={readonly}>{value ?? defaultValue}</Button>
         </HListbox.Button>
         <HListbox.Options className={classNames(s.optionsList, {}, [mapDirectionClass[direction]])}>
           {options?.map((option) => (
             <HListbox.Option key={option.value} value={option.value} as={Fragment} disabled={option.disabled}>
               {({ active, selected }) => (
-                <li className={classNames(s.option, { [s.active]: active, [s.disabled]: option.disabled }, [])}>
+                <li
+                  className={classNames(
+                    s.option,
+                    { [popupStyles.active]: active, [popupStyles.disabled]: option.disabled },
+                    [],
+                  )}
+                >
                   {selected && "✓"}
                   {option.content}
                 </li>

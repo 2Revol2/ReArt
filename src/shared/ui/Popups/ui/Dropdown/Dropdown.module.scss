@@ -1,0 +1,15 @@
+.items {
+  position: absolute;
+  display: flex;
+  z-index: 9999;
+  flex-direction: column;
+  background-color: var(--dropdown-bg-color);
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+}
+
+.item {
+  width: 100%;
+  padding: 10px 15px;
+  cursor: pointer;
+}

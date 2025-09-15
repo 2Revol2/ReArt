@@ -31,4 +31,9 @@ Red.decorators = [(Story) => ThemeDecorator(Theme.RED)(Story), (Story) => StoreD
 export const AuthNavbar: Story = {
   args: {},
 };
-AuthNavbar.decorators = [(Story) => StoreDecorator({ user: { authData: {} } })(Story)];
+AuthNavbar.decorators = [
+  (Story) =>
+    StoreDecorator({
+      user: { authData: { avatar: "https://cs-games.net/uploads/posts/2020-07/1595354020_3358.jpg" } },
+    })(Story),
+];

@@ -1,0 +1,8 @@
+.menu {
+  position: absolute;
+  z-index: 9999;
+  background-color: var(--dropdown-bg-color);
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+  padding: 10px 15px;
+}

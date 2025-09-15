@@ -1,3 +1,4 @@
+export { userActions } from "./model/slice/userSlice";
 export { UserRoles } from "./model/consts/consts";
 export { getUserInited } from "./model/selectors/getUserInited/getUserInited";
 export { getUserAuthData } from "./model/selectors/getUserAuthData/getUserAuthData";

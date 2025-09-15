@@ -1,7 +1,7 @@
 .items {
   position: absolute;
   display: flex;
-  z-index: 9999;
+  z-index: var(--dropdown-z-index);
   flex-direction: column;
   background-color: var(--dropdown-bg-color);
   border-radius: 5px;

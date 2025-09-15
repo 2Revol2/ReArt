@@ -1,6 +1,6 @@
 .optionsList {
   position: absolute;
-  z-index: 9999;
+  z-index: var(--listbox-z-inde);
   background-color: var(--listbox-bg-color);
   border-radius: 5px;
   box-shadow:

@@ -3,6 +3,7 @@ import { classNames, Mods } from "@/shared/lib/classNames/classNames";
 import s from "./Modal.module.scss";
 import { Portal } from "../Portal/Portal";
 import { useTheme } from "@/app/providers/ThemeProvider";
+import { Overlay } from "../Overlay/Overlay";
 
 interface ModalProps {
   children?: ReactNode;
@@ -31,10 +32,6 @@ export const Modal = ({ className, children, isOpen, onClose, lazy }: ModalProps
       }, ANIMATION_DELAY);
     }
   }, [onClose]);
-
-  const onContentClick = (e: React.MouseEvent) => {
-    e.stopPropagation();
-  };
 
   const onKeyDown = useCallback(
     (e: KeyboardEvent) => {
@@ -74,11 +71,8 @@ export const Modal = ({ className, children, isOpen, onClose, lazy }: ModalProps
   return (
     <Portal>
       <div className={classNames(s.modal, mods, [className, theme])}>
-        <div onClick={closeHandler} className={s.overlay}>
-          <div onClick={onContentClick} className={s.content}>
-            {children}
-          </div>
-        </div>
+        <Overlay onClick={closeHandler} />
+        <div className={s.content}>{children}</div>
       </div>
     </Portal>
   );

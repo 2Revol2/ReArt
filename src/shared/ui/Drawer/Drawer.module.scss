@@ -1,44 +1,22 @@
-.drawer {
+.Drawer {
   position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  opacity: 0;
-  pointer-events: none;
-  z-index: var(--negative-z-index);
-  color: var(--primary-color);
-  width: 100%;
+  z-index: 100;
   display: flex;
-  justify-content: center;
   align-items: flex-end;
 }
 
-.content {
-  width: 100%;
-  height: 70%;
-  padding: 20px;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-  background-color: var(--bg-color);
-  transition: 0.3s transform;
-  transform: translateY(100%);
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-.opened {
-  pointer-events: auto;
-  opacity: 1;
-  z-index: var(--drawer-z-index);
-
-  .content {
-    transform: translateY(0%);
-  }
-}
-
-.isClosing {
-  .content {
-    transform: translateY(100%);
-  }
+.sheet {
+  z-index: var(--modal-z-index);
+  position: fixed;
+  left: 2vw;
+  height: calc(100vh + 100px);
+  width: 96vw;
+  border-radius: 12px 12px 0;
+  background: var(--bg-color);
+  touch-action: none;
+  padding: 15px;
 }

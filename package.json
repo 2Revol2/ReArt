@@ -141,10 +141,5 @@
         "preset": "iPhone 7"
       }
     }
-  },
-  "msw": {
-    "workerDirectory": [
-      "public"
-    ]
   }
 }

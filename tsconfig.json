@@ -14,7 +14,7 @@
     "isolatedModules": true,
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
   },
   "ts-node": {
     "compilerOptions": {

@@ -17,7 +17,9 @@ export const Popover = (props: PopoverProps) => {
   const { className, trigger, direction = "bottom left", children } = props;
   return (
     <HPopover className={classNames(s.popover, {}, [className, popupStyles.popup])}>
-      <HPopover.Button className={popupStyles.trigger}>{trigger}</HPopover.Button>
+      <HPopover.Button as="div" className={popupStyles.trigger}>
+        {trigger}
+      </HPopover.Button>
 
       <HPopover.Panel className={classNames(s.menu, {}, [mapDirectionClass[direction]])}>{children}</HPopover.Panel>
     </HPopover>

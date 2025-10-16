@@ -26,7 +26,7 @@ export const Dropdown = ({ className, trigger, items, direction = "bottom left" 
     <Menu as="div" className={classNames(s.dropdown, {}, [className, popupStyles.popup])}>
       <Menu.Button className={popupStyles.trigger}>{trigger}</Menu.Button>
       <Menu.Items className={classNames(s.items, {}, [mapDirectionClass[direction]])}>
-        {items.map((item) => {
+        {items.map((item, index) => {
           const content = ({ active }: { active: boolean }) => (
             <button
               disabled={item.disabled}
@@ -40,14 +40,14 @@ export const Dropdown = ({ className, trigger, items, direction = "bottom left" 
 
           if (item.href) {
             return (
-              <Menu.Item as={AppLink} to={item.href} disabled={item.disabled}>
+              <Menu.Item as={AppLink} key={index} to={item.href} disabled={item.disabled}>
                 {content}
               </Menu.Item>
             );
           }
 
           return (
-            <Menu.Item as={Fragment} disabled={item.disabled}>
+            <Menu.Item as={Fragment} key={index} disabled={item.disabled}>
               {content}
             </Menu.Item>
           );

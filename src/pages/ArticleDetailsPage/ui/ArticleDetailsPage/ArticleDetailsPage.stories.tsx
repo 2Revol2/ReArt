@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import ArticleDetailsPage from "./ArticleDetailsPage";
 import { ThemeDecorator } from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { Theme } from "@/app/providers/ThemeProvider";
-import { ArticleType, ArticleBlockType } from "@/entities/Article";
+import { ArticleBlockType, ArticleType } from "@/entities/Article";
 import { StoreDecorator } from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
 
 const article = {
@@ -58,6 +58,11 @@ const article = {
   ],
 };
 
+const articleRating = {
+  rating: 3,
+  feedback: "123",
+};
+
 const meta: Meta<typeof ArticleDetailsPage> = {
   title: "pages/ArticleDetailsPage",
   component: ArticleDetailsPage,
@@ -72,6 +77,12 @@ const meta: Meta<typeof ArticleDetailsPage> = {
           { ...article, id: "2" },
         ],
       },
+      {
+        url: `${__API__}/article-ratings?userId=1&articleId=1`,
+        method: "GET",
+        status: 200,
+        response: [articleRating],
+      },
     ],
   },
   args: {
@@ -85,15 +96,6 @@ type Story = StoryObj<typeof ArticleDetailsPage>;
 export const Light: Story = {
   args: {},
 };
-Light.decorators = [
-  (Story) =>
-    StoreDecorator({
-      articleDetails: {
-        data: article,
-      },
-    })(Story),
-];
-
 Light.decorators = [
   (Story) =>
     StoreDecorator({

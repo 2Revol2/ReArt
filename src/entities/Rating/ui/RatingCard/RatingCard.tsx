@@ -11,19 +11,20 @@ import { Textarea } from "@/shared/ui/Textarea/Textarea";
 import { Drawer } from "@/shared/ui/Drawer/Drawer";
 
 interface RatingCardProps {
-  classNames?: string;
+  className?: string;
   title?: string;
   feedbackTitle?: string;
   hasFeedback?: boolean;
   onCancel?: (stars: number) => void;
   onAccept?: (stars: number, feedback?: string) => void;
+  rating?: number;
 }
 
 export const RatingCard = (props: RatingCardProps) => {
-  const { classNames, title, feedbackTitle, hasFeedback, onCancel, onAccept } = props;
+  const { className, title, feedbackTitle, hasFeedback, onCancel, onAccept, rating = 0 } = props;
   const { t } = useTranslation("article");
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [starsCount, setStarsCount] = useState(0);
+  const [starsCount, setStarsCount] = useState(rating);
   const [feedback, setFeedback] = useState("");
 
   const onSelectStars = useCallback(
@@ -56,10 +57,10 @@ export const RatingCard = (props: RatingCardProps) => {
   );
 
   return (
-    <Card>
-      <VStack gap="16" align="center" className={classNames}>
-        <Text title={title} />
-        <StarRating onSelect={onSelectStars} />
+    <Card max>
+      <VStack gap="16" align="center" className={className}>
+        <Text title={starsCount ? t("Thank you for your feedback") : title} />
+        <StarRating selectedStars={starsCount} onSelect={onSelectStars} />
       </VStack>
       <BrowserView>
         <Modal isOpen={isModalOpen} lazy>

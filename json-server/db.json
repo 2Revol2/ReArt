@@ -1003,5 +1003,13 @@
       "articleId": "10",
       "id": "gnGpeVK"
     }
+  ],
+  "profile-ratings": [
+    {
+      "rating": 3,
+      "userId": "2",
+      "profileId": "1",
+      "id": "hek0PUM"
+    }
   ]
 }

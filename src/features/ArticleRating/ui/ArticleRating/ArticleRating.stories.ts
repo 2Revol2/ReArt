@@ -1,7 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import ArticleRating from "./ArticleRating";
-import { ThemeDecorator } from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import { Theme } from "@/app/providers/ThemeProvider";
 import { StoreDecorator } from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
 
 const articleRating = {
@@ -12,16 +10,6 @@ const articleRating = {
 const meta: Meta<typeof ArticleRating> = {
   title: "features/ArticleRating",
   component: ArticleRating,
-  parameters: {
-    mockData: [
-      {
-        url: `${__API__}/article-ratings?userId=1&articleId=1`,
-        method: "GET",
-        status: 200,
-        response: [articleRating],
-      },
-    ],
-  },
   args: {
     articleId: "1",
   },
@@ -43,13 +31,39 @@ Light.decorators = [
       },
     })(Story),
 ];
+Light.parameters = {
+  mockData: [
+    {
+      url: `${__API__}/article-ratings?userId=1&articleId=1`,
+      method: "GET",
+      status: 200,
+      response: [articleRating],
+    },
+  ],
+};
 
-export const Dark: Story = {
+export const WithoutRating: Story = {
   args: {},
 };
-Dark.decorators = [(Story) => ThemeDecorator(Theme.DARK)(Story), (Story) => StoreDecorator({})(Story)];
 
-export const Red: Story = {
-  args: {},
+WithoutRating.decorators = [
+  (Story) =>
+    StoreDecorator({
+      user: {
+        authData: {
+          id: "1",
+        },
+      },
+    })(Story),
+];
+
+WithoutRating.parameters = {
+  mockData: [
+    {
+      url: `${__API__}/article-ratings?userId=1&articleId=1`,
+      method: "GET",
+      status: 200,
+      response: [],
+    },
+  ],
 };
-Red.decorators = [(Story) => ThemeDecorator(Theme.RED)(Story), (Story) => StoreDecorator({})(Story)];

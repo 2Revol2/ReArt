@@ -9,7 +9,7 @@ import { ArticleDetailsPageHeader } from "../ArticleDetailsPageHeader/ArticleDet
 import { VStack } from "@/shared/ui/Stack";
 import { ArticleRecommendationList } from "@/features/ArticleRecommendationList";
 import { ArticleDetailsComments } from "../ArticleDetailsComments/ArticleDetailsComments";
-import { ArticleRating } from "@/features/articleRating";
+import { ArticleRating } from "@/features/ArticleRating";
 
 const reducers: ReducersList = {
   articleDetailsPage: articleDetailsPageReducer,

@@ -1,8 +1,7 @@
 import { memo, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import s from "./CreateArticleCodeBlock.module.scss";
-import { ArticleCodeBlock } from "@/entities/Article/model/types/article";
-import { Input } from "@/shared/ui/Input/Input";
+import { ArticleCodeBlock } from "@/entities/Article";
 import { Text } from "@/shared/ui/Text/Text";
 import { Button, ButtonTheme } from "@/shared/ui/Button/Button";
 import { HStack, VStack } from "@/shared/ui/Stack";

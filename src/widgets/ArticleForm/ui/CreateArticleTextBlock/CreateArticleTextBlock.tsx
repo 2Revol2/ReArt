@@ -1,7 +1,7 @@
 import { memo, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import s from "./CreateArticleTextBlock.module.scss";
-import { ArticleTextBlock } from "@/entities/Article/model/types/article";
+import { ArticleTextBlock } from "@/entities/Article";
 import { Input } from "@/shared/ui/Input/Input";
 import { Text } from "@/shared/ui/Text/Text";
 import { Button, ButtonTheme } from "@/shared/ui/Button/Button";

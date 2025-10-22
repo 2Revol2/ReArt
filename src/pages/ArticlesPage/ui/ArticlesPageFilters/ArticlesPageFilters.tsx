@@ -10,13 +10,12 @@ import {
   getArticlePageType,
   getArticlePageView,
 } from "../../model/selectors/articlePageSelectors";
-import { ArticleSortField, ArticleType, ArticleView, ArticleTypeTabs } from "@/entities/Article";
+import { ArticleSortField, ArticleSortSelector, ArticleType, ArticleTypeTabs, ArticleView } from "@/entities/Article";
 import { articlesPageAction } from "../../model/slices/articlesPageSlice";
 import { useAppDispatch } from "@/shared/hooks/useAppDispatch/useAppDispatch";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import { Card } from "@/shared/ui/Card/Card";
 import { Input } from "@/shared/ui/Input/Input";
-import { ArticleSortSelector } from "@/entities/Article/ui/ArticleSortSelector/ArticleSortSelector";
 import { SortOrder } from "@/shared/types";
 import { fetchArticlesList } from "../../model/services/fetchArticlesList/fetchArticlesList";
 import { useDebounce } from "@/shared/hooks/useDebounce/useDebounce";

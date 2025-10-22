@@ -4,7 +4,7 @@ import { DynamicModuleLoader, ReducersList } from "@/shared/lib/components/Dynam
 import { articlesPageReducer } from "../../model/slices/articlesPageSlice";
 import { useAppDispatch } from "@/shared/hooks/useAppDispatch/useAppDispatch";
 import { useInitialEffect } from "@/shared/hooks/useInitialEffect/useInitialEffect";
-import { Page } from "@/widgets/Page/Page";
+import { Page } from "@/widgets/Page";
 import { fetchArticlesNextPage } from "../../model/services/fetchArticlesNextPage/fetchArticlesNextPage";
 import { initArticlesPage } from "../../model/services/initArticlesPage/initArticlesPage";
 import { ArticlesPageFilters } from "../ArticlesPageFilters/ArticlesPageFilters";

@@ -2,7 +2,7 @@ import { memo, useCallback } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
-import { Page } from "@/widgets/Page/Page";
+import { Page } from "@/widgets/Page";
 import { DynamicModuleLoader, ReducersList } from "@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
 import {
   createAndEditArticlePageActions,
@@ -16,11 +16,11 @@ import {
 } from "../../model/selectors/createAndEditArticlePage";
 import { useAppDispatch } from "@/shared/hooks/useAppDispatch/useAppDispatch";
 import {
-  ArticleType,
   ArticleBlockType,
   ArticleCodeBlock,
   ArticleImageBlock,
   ArticleTextBlock,
+  ArticleType,
 } from "@/entities/Article";
 import { createNewArticle } from "../../model/services/createNewArticle/createNewArticle";
 import { useInitialEffect } from "@/shared/hooks/useInitialEffect/useInitialEffect";

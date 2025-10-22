@@ -1,4 +1,4 @@
-import { ArticleType, ArticleBlockType } from "@/entities/Article/model/consts/consts";
+import { ArticleBlockType, ArticleType } from "@/entities/Article";
 import { fetchArticlesList } from "./fetchArticlesList";
 import { TestAsyncThunk } from "@/shared/config/tests/TestAsyncThunk/TestAsyncThunk";
 

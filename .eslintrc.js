@@ -56,7 +56,7 @@ module.exports = {
     "no-param-reassign": "off",
     "react/no-array-index-key": "off",
     "no-plusplus": "off",
-    "revol/path-checker": "error",
+    "revol/path-checker": ["error", { alias: "@" }],
   },
   globals: {
     __IS_DEV__: true,

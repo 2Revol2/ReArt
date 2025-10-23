@@ -1,20 +1,14 @@
 import { StoryFn } from "@storybook/react";
 import { StoreProvider } from "@/app/providers/StoreProvider";
 import { StateSchema } from "@/app/providers/StoreProvider/config/StateSchema";
-// TODO
-// eslint-disable-next-line revol/public-api-imports
-import { loginReducer } from "@/features/AuthByUsername/model/slice/loginSlice";
+import { loginReducer } from "@/features/AuthByUsername/testing";
 import { ReducersList } from "@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
-// eslint-disable-next-line revol/public-api-imports
-import { articleDetailsReducer } from "@/entities/Article/model/slice/articleDetailsSlice";
-// eslint-disable-next-line revol/public-api-imports
-import { addNewCommentReducer } from "@/features/AddNewComment/model/slices/addNewCommentSlice";
-// eslint-disable-next-line revol/public-api-imports
-import { articleDetailsPageReducer } from "@/pages/ArticleDetailsPage/model/slice";
-// eslint-disable-next-line revol/public-api-imports
-import { profileReducer } from "@/features/EditableProfileCard/model/slice/profileSlice";
+import { articleDetailsReducer } from "@/entities/Article/testing";
+import { addNewCommentReducer } from "@/features/AddNewComment/testing";
+import { articleDetailsPageReducer } from "@/pages/ArticleDetailsPage/testing";
+import { profileReducer } from "@/features/EditableProfileCard/testing";
 
-const defauldAsyncReducers: ReducersList = {
+const defaultAsyncReducers: ReducersList = {
   loginForm: loginReducer,
   profile: profileReducer,
   articleDetails: articleDetailsReducer,
@@ -25,7 +19,7 @@ const defauldAsyncReducers: ReducersList = {
 export const StoreDecorator = (state: DeepPartial<StateSchema>, asyncReducers?: ReducersList) =>
   function (StoryCom: StoryFn) {
     return (
-      <StoreProvider initialState={state} asyncReducers={{ ...defauldAsyncReducers, ...asyncReducers }}>
+      <StoreProvider initialState={state} asyncReducers={{ ...defaultAsyncReducers, ...asyncReducers }}>
         <StoryCom />
       </StoreProvider>
     );

@@ -1,9 +1,8 @@
-import { ArticleBlockType, ArticleType } from "@/entities/Article";
+import { ArticleBlockType, ArticleType, createAndEditArticle } from "@/entities/Article";
 import { createNewArticle } from "./createNewArticle";
 import { TestAsyncThunk } from "@/shared/config/tests/TestAsyncThunk/TestAsyncThunk";
-import { createAndEditArticlePage } from "../../types/createAndEditArticlePage";
 
-export const articleResponse: createAndEditArticlePage = {
+export const articleResponse: createAndEditArticle = {
   id: "1",
   title: "Hello World",
   subtitle: "My first article",

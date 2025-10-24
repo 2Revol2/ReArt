@@ -1,8 +1,7 @@
-import { ArticleBlockType } from "@/entities/Article";
-import { createAndEditArticlePage } from "../../types/createAndEditArticlePage";
+import { ArticleBlockType, createAndEditArticle } from "@/entities/Article";
 import { ValidateArticleError } from "../../consts/consts";
 
-export const validateArticleData = (article?: createAndEditArticlePage) => {
+export const validateArticleData = (article?: createAndEditArticle) => {
   if (!article) {
     return [ValidateArticleError.NO_DATA];
   }

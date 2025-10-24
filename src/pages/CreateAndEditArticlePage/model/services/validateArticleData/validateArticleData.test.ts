@@ -1,9 +1,8 @@
-import { ArticleBlockType, ArticleType } from "@/entities/Article";
-import { createAndEditArticlePage } from "../../types/createAndEditArticlePage";
+import { ArticleBlockType, ArticleType, createAndEditArticle } from "@/entities/Article";
 import { ValidateArticleError } from "../../consts/consts";
 import { validateArticleData } from "./validateArticleData";
 
-export const data: createAndEditArticlePage = {
+export const data: createAndEditArticle = {
   id: "1",
   title: "Hello World",
   subtitle: "My first article",

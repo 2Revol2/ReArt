@@ -1,5 +1,7 @@
 import { StoryFn } from "@storybook/react";
-import { Theme, ThemeProvider } from "@/app/providers/ThemeProvider";
+// eslint-disable-next-line revol/layer-imports
+import { ThemeProvider } from "@/app/providers/ThemeProvider";
+import { Theme } from "@/shared/constants/theme";
 
 export const ThemeDecorator = (theme: Theme) =>
   function (StoryCom: StoryFn) {

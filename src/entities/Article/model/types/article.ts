@@ -34,3 +34,5 @@ export interface Article {
   type: ArticleType[];
   blocks: ArticleBlock[];
 }
+
+export type createAndEditArticle = Partial<Omit<Article, "user">>;

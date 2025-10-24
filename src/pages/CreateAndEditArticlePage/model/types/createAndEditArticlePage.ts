@@ -1,10 +1,8 @@
-import { Article } from "@/entities/Article";
 import { ValidateArticleError } from "../consts/consts";
-
-export type createAndEditArticlePage = Partial<Omit<Article, "user">>;
+import { createAndEditArticle } from "@/entities/Article";
 
 export interface CreateAndEditArticlePageSchema {
-  data: createAndEditArticlePage;
+  data: createAndEditArticle;
   isLoading: boolean;
   error?: string;
   validateErrors?: ValidateArticleError[];

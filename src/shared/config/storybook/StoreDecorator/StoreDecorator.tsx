@@ -1,6 +1,5 @@
 import { StoryFn } from "@storybook/react";
-import { StoreProvider } from "@/app/providers/StoreProvider";
-import { StateSchema } from "@/app/providers/StoreProvider/config/StateSchema";
+import { StateSchema, StoreProvider } from "@/app/providers/StoreProvider";
 import { loginReducer } from "@/features/AuthByUsername/testing";
 import { ReducersList } from "@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
 import { articleDetailsReducer } from "@/entities/Article/testing";

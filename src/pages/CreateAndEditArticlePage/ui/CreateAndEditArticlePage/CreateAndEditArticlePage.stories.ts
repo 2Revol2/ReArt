@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import CreateAndEditArticlePage from "./CreateAndEditArticlePage";
 import { ThemeDecorator } from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import { Theme } from "@/app/providers/ThemeProvider";
 import { StoreDecorator } from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
+import { Theme } from "@/shared/constants/theme";
 
 const meta: Meta<typeof CreateAndEditArticlePage> = {
   title: "pages/CreateAndEditArticlePage",

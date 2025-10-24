@@ -1,5 +1,11 @@
 export { ArticleSortSelector } from "./ui/ArticleSortSelector/ArticleSortSelector";
-export type { ArticleImageBlock, ArticleCodeBlock, ArticleTextBlock, ArticleBlock } from "./model/types/article";
+export type {
+  ArticleImageBlock,
+  ArticleCodeBlock,
+  ArticleTextBlock,
+  ArticleBlock,
+  createAndEditArticle,
+} from "./model/types/article";
 export type { Article } from "./model/types/article";
 export type { ArticleDetailsSchema } from "./model/types/articleDetailsSchema";
 export { getArticleDetailsData } from "./model/selectors/articleDetails";

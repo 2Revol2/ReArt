@@ -57,6 +57,7 @@ module.exports = {
     "react/no-array-index-key": "off",
     "no-plusplus": "off",
     "revol/path-checker": ["error", { alias: "@" }],
+    "revol/layer-imports": ["error", { alias: "@", ignoreImportPatterns: ["**/StoreProvider", "**/testing"] }],
     "revol/public-api-imports": [
       "error",
       { alias: "@", testFilesPatterns: ["**/*.test.*", "**/*.stories.*", "**/StoreDecorator.tsx"] },

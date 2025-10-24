@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { ThemeDecorator } from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import { Theme } from "@/app/providers/ThemeProvider";
+
+import { Theme } from "@/shared/constants/theme";
 
 const meta: Meta<typeof LanguageSwitcher> = {
   title: "features/LanguageSwitcher",

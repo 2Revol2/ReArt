@@ -1,10 +1,10 @@
-import { MutableRefObject, ReactNode, useCallback, useEffect, useRef, useState } from "react";
+import { ReactNode } from "react";
 import { classNames, Mods } from "@/shared/lib/classNames/classNames";
 import s from "./Modal.module.scss";
 import { Portal } from "../Portal/Portal";
-import { useTheme } from "@/app/providers/ThemeProvider";
 import { Overlay } from "../Overlay/Overlay";
 import { useModal } from "@/shared/hooks/useModal/useModal";
+import { useTheme } from "@/shared/hooks/useTheme/useTheme";
 
 interface ModalProps {
   children?: ReactNode;

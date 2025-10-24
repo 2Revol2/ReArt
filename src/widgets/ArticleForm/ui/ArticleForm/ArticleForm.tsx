@@ -4,16 +4,16 @@ import s from "./ArticleForm.module.scss";
 import { Input } from "@/shared/ui/Input/Input";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import { ArticleBlockTypes, ArticleTypeItems } from "../../model/item";
-import { createAndEditArticlePage } from "@/pages/CreateAndEditArticlePage";
 import { Button, ButtonTheme } from "@/shared/ui/Button/Button";
 import { Text } from "@/shared/ui/Text/Text";
 import {
   ArticleBlock,
+  ArticleBlockType,
   ArticleCodeBlock,
   ArticleImageBlock,
   ArticleTextBlock,
   ArticleType,
-  ArticleBlockType,
+  createAndEditArticle,
 } from "@/entities/Article";
 import { CreateArticleImageBlock } from "../CreateArticleImageBlock/CreateArticleImageBlock";
 import { CreateArticleCodeBlock } from "../CreateArticleCodeBlock/CreateArticleCodeBlock";
@@ -23,7 +23,7 @@ import { HStack, VStack } from "@/shared/ui/Stack";
 interface ArticleFormProps {
   className?: string;
   isEdit?: boolean;
-  data?: createAndEditArticlePage;
+  data?: createAndEditArticle;
   onChangeTitle?: (value: string) => void;
   onChangeImage?: (value: string) => void;
   onChangeSubtitle?: (value: string) => void;

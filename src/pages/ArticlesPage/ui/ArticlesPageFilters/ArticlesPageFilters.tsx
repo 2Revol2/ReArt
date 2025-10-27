@@ -14,8 +14,8 @@ import { ArticleSortField, ArticleSortSelector, ArticleType, ArticleTypeTabs, Ar
 import { articlesPageAction } from "../../model/slices/articlesPageSlice";
 import { useAppDispatch } from "@/shared/hooks/useAppDispatch/useAppDispatch";
 import { classNames } from "@/shared/lib/classNames/classNames";
-import { Card } from "@/shared/ui/Card/Card";
-import { Input } from "@/shared/ui/Input/Input";
+import { Card } from "@/shared/ui/Card";
+import { Input } from "@/shared/ui/Input";
 import { SortOrder } from "@/shared/types";
 import { fetchArticlesList } from "../../model/services/fetchArticlesList/fetchArticlesList";
 import { useDebounce } from "@/shared/hooks/useDebounce/useDebounce";

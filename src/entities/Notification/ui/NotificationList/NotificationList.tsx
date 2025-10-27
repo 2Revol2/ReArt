@@ -3,7 +3,7 @@ import { useGetNotifications } from "../../api/notificationApi";
 import { VStack } from "@/shared/ui/Stack";
 import { NotificationItem } from "../NotificationItem/NotificationItem";
 import { classNames } from "@/shared/lib/classNames/classNames";
-import { Skeleton } from "@/shared/ui/Skeleton/Skeleton";
+import { Skeleton } from "@/shared/ui/Skeleton";
 
 interface NotificationListProps {
   className?: string;

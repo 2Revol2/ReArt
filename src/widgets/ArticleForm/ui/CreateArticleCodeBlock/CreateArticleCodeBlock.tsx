@@ -2,10 +2,10 @@ import { memo, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import s from "./CreateArticleCodeBlock.module.scss";
 import { ArticleCodeBlock } from "@/entities/Article";
-import { Text } from "@/shared/ui/Text/Text";
-import { Button, ButtonTheme } from "@/shared/ui/Button/Button";
+import { Text } from "@/shared/ui/Text";
+import { Button, ButtonTheme } from "@/shared/ui/Button";
 import { HStack, VStack } from "@/shared/ui/Stack";
-import { Textarea } from "@/shared/ui/Textarea/Textarea";
+import { Textarea } from "@/shared/ui/Textarea";
 
 interface CreateArticleCodeBlockProps {
   block: ArticleCodeBlock;

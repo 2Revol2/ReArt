@@ -30,7 +30,7 @@ import { updateArticleData } from "../../model/services/updateArticleData/update
 import { RoutePaths } from "@/shared/constants/router";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import { ValidateArticleError } from "../../model/consts/consts";
-import { Text, TextTheme } from "@/shared/ui/Text/Text";
+import { Text, TextTheme } from "@/shared/ui/Text";
 
 interface CreateAndEditArticlePageProps {
   className?: string;

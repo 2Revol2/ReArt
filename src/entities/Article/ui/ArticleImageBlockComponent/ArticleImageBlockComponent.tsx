@@ -1,6 +1,6 @@
 import { memo } from "react";
 import { ArticleImageBlock } from "../../model/types/article";
-import { Text, TextAlign } from "@/shared/ui/Text/Text";
+import { Text, TextAlign } from "@/shared/ui/Text";
 import s from "./ArticleImageBlockComponent.module.scss";
 
 interface ArticleImageBlockComponentProps {

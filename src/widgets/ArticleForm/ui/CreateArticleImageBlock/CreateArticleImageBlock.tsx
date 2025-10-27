@@ -2,9 +2,9 @@ import { memo, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import s from "./CreateArticleImageBlock.module.scss";
 import { ArticleImageBlock } from "@/entities/Article";
-import { Input } from "@/shared/ui/Input/Input";
-import { Text } from "@/shared/ui/Text/Text";
-import { Button, ButtonTheme } from "@/shared/ui/Button/Button";
+import { Input } from "@/shared/ui/Input";
+import { Text } from "@/shared/ui/Text";
+import { Button, ButtonTheme } from "@/shared/ui/Button";
 import { HStack, VStack } from "@/shared/ui/Stack";
 
 interface CreateArticleImageBlockProps {

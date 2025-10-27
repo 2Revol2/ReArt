@@ -3,7 +3,7 @@ import s from "./ThemeSwitcher.module.scss";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import Moon from "@/shared/assets/icons/moon.svg";
 import Sun from "@/shared/assets/icons/sun.svg";
-import { Button, ButtonTheme } from "@/shared/ui/Button/Button";
+import { Button, ButtonTheme } from "@/shared/ui/Button";
 import Heart from "@/shared/assets/icons/heart.svg";
 import { Theme } from "@/shared/constants/theme";
 import { useTheme } from "@/shared/hooks/useTheme/useTheme";

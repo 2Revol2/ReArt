@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { memo } from "react";
 import s from "./ArticleRecommendationList.module.scss";
 import { classNames } from "@/shared/lib/classNames/classNames";
-import { Text } from "@/shared/ui/Text/Text";
+import { Text } from "@/shared/ui/Text";
 import { ArticleList } from "@/entities/Article";
 import { useGetArticleRecommendationsList } from "../../model/api/articleRecommendationsApi";
 

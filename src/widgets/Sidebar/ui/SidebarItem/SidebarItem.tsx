@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { memo } from "react";
-import { AppLink } from "@/shared/ui/AppLink/AppLink";
+import { AppLink } from "@/shared/ui/AppLink";
 import s from "./SidebarItem.module.scss";
 import { SidebarItemType } from "../../model/types/sidebar";
 import { getUserAuthData } from "@/entities/User";

@@ -1,11 +1,11 @@
 import { memo, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import s from "./ArticleForm.module.scss";
-import { Input } from "@/shared/ui/Input/Input";
+import { Input } from "@/shared/ui/Input";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import { ArticleBlockTypes, ArticleTypeItems } from "../../model/item";
-import { Button, ButtonTheme } from "@/shared/ui/Button/Button";
-import { Text } from "@/shared/ui/Text/Text";
+import { Button, ButtonTheme } from "@/shared/ui/Button";
+import { Text } from "@/shared/ui/Text";
 import {
   ArticleBlock,
   ArticleBlockType,

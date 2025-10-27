@@ -4,7 +4,7 @@ import { useCallback } from "react";
 import { RatingCard } from "@/entities/Rating";
 import { getUserAuthData } from "@/entities/User";
 import { useGetArticleRating, useRateArticle } from "../../api/articleRatingApi";
-import { Skeleton } from "@/shared/ui/Skeleton/Skeleton";
+import { Skeleton } from "@/shared/ui/Skeleton";
 
 export interface ArticleRatingProps {
   className?: string;

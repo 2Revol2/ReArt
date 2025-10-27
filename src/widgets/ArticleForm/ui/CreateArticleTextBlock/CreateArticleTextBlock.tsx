@@ -2,10 +2,10 @@ import { memo, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import s from "./CreateArticleTextBlock.module.scss";
 import { ArticleTextBlock } from "@/entities/Article";
-import { Input } from "@/shared/ui/Input/Input";
-import { Text } from "@/shared/ui/Text/Text";
-import { Button, ButtonTheme } from "@/shared/ui/Button/Button";
-import { Textarea } from "@/shared/ui/Textarea/Textarea";
+import { Input } from "@/shared/ui/Input";
+import { Text } from "@/shared/ui/Text";
+import { Button, ButtonTheme } from "@/shared/ui/Button";
+import { Textarea } from "@/shared/ui/Textarea";
 import { HStack, VStack } from "@/shared/ui/Stack";
 
 interface CreateArticleTextBlockProps {

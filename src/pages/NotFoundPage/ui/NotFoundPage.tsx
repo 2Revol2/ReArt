@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import s from "./NotFoundPage.module.scss";
-import { Text } from "@/shared/ui/Text/Text";
+import { Text } from "@/shared/ui/Text";
 import { Page } from "@/widgets/Page";
 
 export const NotFoundPage = () => {

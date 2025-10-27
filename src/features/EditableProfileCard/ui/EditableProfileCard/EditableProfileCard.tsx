@@ -14,7 +14,7 @@ import { fetchProfileData } from "../../model/services/fetchProfileData/fetchPro
 import { profileActions, profileReducer } from "../../model/slice/profileSlice";
 import { Currency } from "@/entities/Currency";
 import { Country } from "@/entities/Country";
-import { Text, TextTheme } from "@/shared/ui/Text/Text";
+import { Text, TextTheme } from "@/shared/ui/Text";
 import { getProfileValidateErrors } from "../../model/selectors/getProfileValidateErrors/getProfileValidateErrors";
 import { DynamicModuleLoader, ReducersList } from "@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
 import { EditableProfileCardHeader } from "../EditableProfileCardHeader/EditableProfileCardHeader";

@@ -19,7 +19,7 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["react", "@typescript-eslint", "i18next", "react-hooks", "revol"],
+  plugins: ["react", "@typescript-eslint", "i18next", "react-hooks", "revol", "unused-imports"],
   rules: {
     "max-len": ["error", { code: 120, ignoreComments: true }],
     "react/jsx-filename-extension": [2, { extensions: [".js", ".jsx", ".tsx"] }],
@@ -62,6 +62,7 @@ module.exports = {
       "error",
       { alias: "@", testFilesPatterns: ["**/*.test.*", "**/*.stories.*", "**/StoreDecorator.tsx"] },
     ],
+    "unused-imports/no-unused-imports": "error",
   },
   globals: {
     __IS_DEV__: true,

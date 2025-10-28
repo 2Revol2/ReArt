@@ -1,5 +1,4 @@
 import { CreateAndEditArticlePageSchema } from "../types/createAndEditArticlePage";
-import { updateArticleData } from "../services/updateArticleData/updateArticleData";
 import { ArticleBlockType, ArticleType } from "@/entities/Article";
 import { createAndEditArticlePageActions, createAndEditArticlePageReducer } from "./createAndEditArticlePageSlice";
 
